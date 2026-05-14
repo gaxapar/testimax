@@ -19,7 +19,7 @@ import callbacks
 import keyboards
 import states
 import texts
-from config import Config
+from config import config
 from database import DAO, models
 from utils import MiniTestAnswer
 
@@ -553,8 +553,6 @@ async def handle_back_to_main_menu(
 
 
 async def main():
-    config = Config()  # pyright: ignore [reportCallIssue]
-
     bot = Bot(token=config.bot_token, defaults=BotDefaults(text_format=TextFormat.HTML))
 
     redis = Redis()

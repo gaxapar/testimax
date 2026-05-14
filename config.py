@@ -11,3 +11,6 @@ class Config(BaseSettings):
     db_password: str = Field(repr=False)
     db_name: str
     db_host: str
+
+
+config = Config() # pyright: ignore [reportCallIssue]
