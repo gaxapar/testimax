@@ -66,7 +66,11 @@ test_menu = """
 <b>🏆 Позиция теста в топе</b> - {place_in_top}
 """
 
-test_share_text = "<a href='https://max.ru/{bot_username}?start={test_id}'>Нажми, чтобы пройти тест «{title}»</a>"
+test_share_text = """
+Нажми, чтобы пройти тест «{title}»
+
+https://max.ru/{bot_username}?start={test_id}
+"""
 
 my_tests_list = """
 <b>🗂 Ваши тесты:

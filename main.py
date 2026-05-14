@@ -11,6 +11,7 @@ from maxo.fsm.context import FSMContext
 from maxo.routing import filters, updates
 from maxo.routing.dispatcher import Dispatcher
 from maxo.routing.facades import BotStartedFacade, MessageCallbackFacade, MessageCreatedFacade
+from maxo.routing.filters.command import CommandObject
 from maxo.routing.routers.simple import Router
 from maxo.transport.long_polling import LongPolling
 from redis.asyncio import Redis
@@ -44,9 +45,68 @@ async def handle_bot_start(update: updates.BotStarted, facade: BotStartedFacade,
         dao.add(instance=user)
         await dao.commit()
 
-    await facade.send_message(text=texts.start)
+    await facade.send_message(text=texts.start.format(full_name=user.name))
     await facade.send_message(text=texts.main_menu, keyboard=keyboards.main_menu)
 
+
+@router.message_created(filters.CommandStart())
+async def handle_start_command(
+    update: updates.MessageCreated,
+    command: CommandObject,
+    facade: MessageCreatedFacade,
+    dao: DAO,
+) -> None:
+    user_id: int = update.user_id # pyright: ignore [reportAssignmentType]
+    username: str = update.message.sender.username # pyright: ignore [reportAttributeAccessIssue, reportAssignmentType]
+    full_name: str = update.message.sender.full_name # pyright: ignore [reportAttributeAccessIssue, reportAssignmentType]
+
+    if not command.args:
+        user = await dao.get_user_by_id(user_id=user_id)
+
+        if not user:
+            user = models.User(id=user_id, username=username, name=full_name)
+
+            dao.add(instance=user)
+            await dao.commit()
+
+        await facade.send_message(text=texts.start.format(full_name=user.name))
+        await facade.send_message(text=texts.main_menu, keyboard=keyboards.main_menu)
+
+        return
+
+    user = await dao.get_user_by_id(user_id=user_id)
+
+    if not command.args.isdigit():
+        await facade.send_message(text=texts.start.format(full_name=user.name))
+        await facade.send_message(text=texts.main_menu, keyboard=keyboards.main_menu)
+
+        return
+
+    mini_test_id = int(command.args)
+
+    mini_test = await dao.get_mini_test_by_id(mini_test_id=mini_test_id)
+
+    if not mini_test:
+        await facade.send_message(text=texts.start.format(full_name=user.name))
+        await facade.send_message(text=texts.main_menu, keyboard=keyboards.main_menu)
+
+        return
+
+    media = None
+
+    if mini_test.photo_file_id:
+        media = [
+            types.PhotoAttachmentRequest(payload=types.PhotoAttachmentRequestPayload(token=mini_test.photo_file_id)),
+        ]
+
+    keyboard = keyboards.proceed_mini_test(mini_test_id=mini_test_id)
+
+    if media:
+        await facade.delete_message()
+        await facade.answer(text=mini_test.title, media=media, keyboard=keyboard)
+
+    else:
+        await facade.answer_text(text=mini_test.title, keyboard=keyboard)
 
 @router.message_callback(callbacks.MiniTestsList.filter())
 async def handle_mini_tests_list(
@@ -170,7 +230,6 @@ async def handle_save_mini_test(
     user_id = update.user.user_id
 
     data = await state.get_data()
-    title: str = data["title"]
     answers: list[MiniTestAnswer] = data["answers"]
     mini_test_id: int | None = data.get("mini_test_id")
 
@@ -184,6 +243,8 @@ async def handle_save_mini_test(
             return
 
     else:
+        title: str = data["title"]
+
         mini_test = models.MiniTest(title=title, creator_user_id=user_id)
         dao.add(instance=mini_test)
 
