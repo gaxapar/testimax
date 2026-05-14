@@ -578,6 +578,7 @@ async def main():
     dispatcher = Dispatcher(workflow_data={"redis": redis})
     dispatcher.include_router(router=router)
 
+    dispatcher.bot_started.outer_middleware(DatabaseMiddleware(database_manager=database_manager)) # pyright: ignore[reportArgumentType]
     dispatcher.message_created.outer_middleware(DatabaseMiddleware(database_manager=database_manager)) # pyright: ignore[reportArgumentType]
     dispatcher.message_callback.outer_middleware(DatabaseMiddleware(database_manager=database_manager)) # pyright: ignore[reportArgumentType]
 

@@ -2,18 +2,18 @@ from typing import Any
 
 from maxo import Ctx
 from maxo.routing.interfaces.middleware import BaseMiddleware, NextMiddleware
-from maxo.routing.updates import MessageCallback, MessageCreated
+from maxo.routing.updates import BotStarted, MessageCallback, MessageCreated
 
 from database import DAO, DatabaseManager
 
 
-class DatabaseMiddleware(BaseMiddleware[MessageCreated | MessageCallback]):
+class DatabaseMiddleware(BaseMiddleware[BotStarted | MessageCreated | MessageCallback]):
     def __init__(self, database_manager: DatabaseManager) -> None:
         self.database_manager = database_manager
 
     async def __call__(
         self,
-        update: MessageCreated | MessageCallback,  # noqa: ARG002
+        update: BotStarted | MessageCreated | MessageCallback,  # noqa: ARG002
         ctx: Ctx,
         next: NextMiddleware[MessageCreated | MessageCallback],  # noqa: A002
     ) -> Any:  # noqa: ANN401
