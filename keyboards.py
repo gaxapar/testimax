@@ -176,7 +176,7 @@ def mini_tests_page(mini_tests: Sequence[MiniTest], page: int, pages_count: int)
     keyboard = [
         [
             types.CallbackButton(
-                text=f"{page - 1 * PAGE_SIZE + num}. {mini_test.title}",
+                text=f"{(page - 1) * PAGE_SIZE + num}. {mini_test.title}",
                 payload=callbacks.OpenMiniTestToProceed(mini_test_id=mini_test.id).pack(),
             ),
         ]

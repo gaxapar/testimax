@@ -45,6 +45,23 @@ async def handle_bot_start(update: updates.BotStarted, facade: BotStartedFacade,
         dao.add(instance=user)
         await dao.commit()
 
+    if update.payload and update.unsafe_payload.isdigit():
+        mini_test_id = int(update.unsafe_payload)
+
+        mini_test = await dao.get_mini_test_by_id(mini_test_id=mini_test_id)
+
+        media = None
+
+        if mini_test.photo_file_id:
+            media = [
+                types.PhotoAttachmentRequest(payload=types.PhotoAttachmentRequestPayload(token=mini_test.photo_file_id)),
+            ]
+
+        keyboard = keyboards.proceed_mini_test(mini_test_id=mini_test_id)
+        await facade.send_message(text=mini_test.title, media=media, keyboard=keyboard)
+
+        return
+
     await facade.send_message(text=texts.start.format(full_name=user.name))
     await facade.send_message(text=texts.main_menu, keyboard=keyboards.main_menu)
 
@@ -56,9 +73,9 @@ async def handle_start_command(
     facade: MessageCreatedFacade,
     dao: DAO,
 ) -> None:
-    user_id: int = update.user_id # pyright: ignore [reportAssignmentType]
-    username: str = update.message.sender.username # pyright: ignore [reportAttributeAccessIssue, reportAssignmentType]
-    full_name: str = update.message.sender.full_name # pyright: ignore [reportAttributeAccessIssue, reportAssignmentType]
+    user_id: int = update.user_id  # pyright: ignore [reportAssignmentType]
+    username: str = update.message.sender.username  # pyright: ignore [reportAttributeAccessIssue, reportAssignmentType]
+    full_name: str = update.message.sender.full_name  # pyright: ignore [reportAttributeAccessIssue, reportAssignmentType]
 
     if not command.args:
         user = await dao.get_user_by_id(user_id=user_id)
@@ -107,6 +124,7 @@ async def handle_start_command(
 
     else:
         await facade.answer_text(text=mini_test.title, keyboard=keyboard)
+
 
 @router.message_callback(callbacks.MiniTestsList.filter())
 async def handle_mini_tests_list(
@@ -639,9 +657,9 @@ async def main():
     dispatcher = Dispatcher(workflow_data={"redis": redis})
     dispatcher.include_router(router=router)
 
-    dispatcher.bot_started.outer_middleware(DatabaseMiddleware(database_manager=database_manager)) # pyright: ignore[reportArgumentType]
-    dispatcher.message_created.outer_middleware(DatabaseMiddleware(database_manager=database_manager)) # pyright: ignore[reportArgumentType]
-    dispatcher.message_callback.outer_middleware(DatabaseMiddleware(database_manager=database_manager)) # pyright: ignore[reportArgumentType]
+    dispatcher.bot_started.outer_middleware(DatabaseMiddleware(database_manager=database_manager))  # pyright: ignore[reportArgumentType]
+    dispatcher.message_created.outer_middleware(DatabaseMiddleware(database_manager=database_manager))  # pyright: ignore[reportArgumentType]
+    dispatcher.message_callback.outer_middleware(DatabaseMiddleware(database_manager=database_manager))  # pyright: ignore[reportArgumentType]
 
     await LongPolling(dispatcher=dispatcher).start(bot=bot, drop_pending_updates=True)
 
