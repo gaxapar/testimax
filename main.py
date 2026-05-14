@@ -20,7 +20,8 @@ import keyboards
 import states
 import texts
 from config import config
-from database import DAO, models
+from database import DAO, DatabaseManager, models
+from middlewares import DatabaseMiddleware
 from utils import MiniTestAnswer
 
 router = Router()
@@ -563,12 +564,22 @@ async def handle_back_to_main_menu(
 
 
 async def main():
+    database_manager = DatabaseManager(
+        user=config.db_user,
+        password=config.db_password,
+        db_name=config.db_name,
+        host=config.db_host,
+    )
+
     bot = Bot(token=config.bot_token, defaults=BotDefaults(text_format=TextFormat.HTML))
 
     redis = Redis()
 
     dispatcher = Dispatcher(workflow_data={"redis": redis})
     dispatcher.include_router(router=router)
+
+    dispatcher.message_created.outer_middleware(DatabaseMiddleware(database_manager=database_manager)) # pyright: ignore[reportArgumentType]
+    dispatcher.message_callback.outer_middleware(DatabaseMiddleware(database_manager=database_manager)) # pyright: ignore[reportArgumentType]
 
     await LongPolling(dispatcher=dispatcher).start(bot=bot, drop_pending_updates=True)
 
