@@ -32,7 +32,17 @@ with Path.open(here / "channels.json") as file:
 
 
 @router.bot_started()
-async def handle_bot_start(_: updates.BotStarted, facade: BotStartedFacade) -> None:
+async def handle_bot_start(update: updates.BotStarted, facade: BotStartedFacade, dao: DAO) -> None:
+    user_id = update.user.user_id
+
+    user = await dao.get_user_by_id(user_id=user_id)
+
+    if not user:
+        user = models.User(id=user_id, username=update.user.username, name=update.user.full_name)
+
+        dao.add(instance=user)
+        await dao.commit()
+
     await facade.send_message(text=texts.start)
     await facade.send_message(text=texts.main_menu, keyboard=keyboards.main_menu)
 
