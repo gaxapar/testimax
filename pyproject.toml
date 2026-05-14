@@ -1,0 +1,14 @@
+[tool.ruff]
+line-length = 120
+exclude = ["alembic/*"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["D", "F811", "ANN201", "RUF001", "N818"]
+
+[tool.ruff.lint.pylint]
+max-args = 8
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
