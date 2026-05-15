@@ -173,7 +173,7 @@ async def handle_open_interactive_test(
     keyboard = keyboards.interactive_test_menu(interactive_test=interactive_test)
 
     await facade.delete_message()
-    await facade.answer(text=interactive_test.title, media=media, keyboard=keyboard)
+    await facade.answer(text=interactive_test.description, media=media, keyboard=keyboard)
 
 
 @router.message_callback(callbacks.ProceedInteractiveTest.filter())
