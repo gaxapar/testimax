@@ -25,6 +25,24 @@ class RandomMiniTest(Payload, prefix="random_mini_test"):
     pass
 
 
+class InteractiveTestsList(Payload, prefix="interactive_tests_list"):
+    page: int
+
+
+class OpenInteractiveTest(Payload, prefix="open_interactive_test"):
+    slug: str
+
+
+class ProceedInteractiveTest(Payload, prefix="proceed_interactive_test"):
+    slug: str
+
+
+class InteractiveTestOption(Payload, prefix="interactive_test_option"):
+    slug: str
+    question_index: int
+    option_index: int
+
+
 class SaveMiniTest(Payload, prefix="save_mini_test"):
     pass
 

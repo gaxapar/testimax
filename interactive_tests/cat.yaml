@@ -1,0 +1,126 @@
+slug: cat
+title: 🐱 Какой ты котик?
+photo: ofAeeFgmjPD60fsTHs5g58JbdP7UUYjXMdNTWvWQYDbG8kDSJd77ogdU0zVfx4zNLSZTpaNVPZ3oCPhANTkpMOuKAvXWCbOFGIcui6bfo9o=
+description: |
+  <i><b>Какой ты котик?</b></i>
+
+  Давай узнаем, какой ты котик? В нашем тесте 5 вопросов, которые помогут нам определить, какой ты котик.
+
+results:
+  - slug: independent_cat
+    description: |
+      <b>😼 Независимый кот</b>
+
+      Вы самодостаточны и цените личное пространство.
+
+  - slug: domestic_cat
+    description: |
+      <b>🐱 Домашний котик</b>
+
+      Вы милый, дружелюбный и любите комфорт. Вам важно тепло и уют.
+
+  - slug: wild_cat
+    description: |
+      <b>🐅 Дикий тигрёнок</b>
+
+      В вас много энергии, смелости и лидерских качеств.
+
+questions:
+  - question: Как вы проводите свободное время?
+    photo: 0ZYUNgj4fX5F6aEje+/Nema/7IjzksRPUfnIc0w4Pg6fxbdQeFgSB4Md/bgOLwBgaBTUjiJR94PlSh4yY3KvR4xNij/PADfQL629OVsK3j0=
+    options:
+      - text: Сплю или отдыхаю
+        points:
+          domestic_cat: 2
+
+      - text: Играю во что-нибудь
+        points:
+          wild_cat: 2
+
+      - text: Иду гулять и исследовать
+        points:
+          wild_cat: 1
+          independent_cat: 1
+
+      - text: Сижу в телефоне
+        points:
+          independent_cat: 2
+
+  - question: Как вы реагируете на незнакомцев?
+    photo: d0dVC6BCwdqvV0xQnQ2UmLykY/IT6Hhmmqym751NSF0/gIfwQjTVvNGEhiDAVHZeYPKrb3RFmNrEJiy2/v1Kp9S8RQsucBijfTROY0OB67I=
+    options:
+      - text: С подозрением наблюдаю
+        points:
+          independent_cat: 2
+
+      - text: Быстро иду знакомиться
+        points:
+          domestic_cat: 2
+
+      - text: Игнорирую
+        points:
+          independent_cat: 2
+
+      - text: Держусь настороже
+        points:
+          independent_cat: 2
+
+  - question: Ваша идеальная еда?
+    photo: fGd1XHWdCSm4kwczbqzKEuCeWU5I4sJ4f1Y8JtsrpuAFX5UMK1Gcx1UfvEi705jvcbtJJQ/jVyWJgCw7xWf64HeJj4WFVnNyXeXcCstAfkY=
+    options:
+      - text: Что-нибудь вкусное
+        points:
+          domestic_cat: 2
+
+      - text: Что-то необычное
+        points:
+          wild_cat: 2
+
+      - text: Лёгкий перекус
+        points:
+          domestic_cat: 1
+          independent_cat: 1
+
+      - text: Всё подряд
+        points:
+          wild_cat: 2
+
+  - question: Какой вы в компании?
+    photo: Y3zcMc4MEOhI9IhOEGX/KF8jrq4XrjStm+8nPSN/mdxFZmF4QU37DVBRuNTHjUtZHiU3WAahq3OAu6iHGpS29f8ng6DQj2F6Bs7Kaqw/4oM=
+    options:
+      - text: Душа компании
+        points:
+          wild_cat: 2
+
+      - text: Спокойный наблюдатель
+        points:
+          independent_cat: 2
+
+      - text: Люблю доминировать
+        points:
+          wild_cat: 2
+
+      - text: Зависит от настроения
+        points:
+          domestic_cat: 1
+          independent_cat: 1
+
+  - question: Что вам ближе?
+    photo: 9dyfhH5B+uymp1SPI2xhtzANj3H0MVGIROa31ePhTEEqkxSpns74vA2VisVRcalWra4BfEh8VBG0LL6HrZGDRHT+/e3hUN5dPrLFnlaKf40=
+    options:
+      - text: Уют и тепло
+        points:
+          domestic_cat: 2
+
+      - text: Свобода и приключения
+        points:
+          wild_cat: 2
+
+      - text: Веселье и движ
+        points:
+          wild_cat: 1
+          domestic_cat: 1
+
+      - text: Тишина и одиночество
+        points:
+          independent_cat: 2

@@ -20,6 +20,7 @@ import callbacks
 import keyboards
 import states
 import texts
+import utils
 from config import config
 from database import DAO, DatabaseManager, models
 from middlewares import DatabaseMiddleware
@@ -28,9 +29,20 @@ from utils import MiniTestAnswer
 router = Router()
 
 here = Path(__file__).parent
+interactive_tests_folder = here / "interactive_tests"
 
 with Path.open(here / "channels.json") as file:
     channels: list[dict[str, Any]] = json.load(file)
+
+INTERACTIVE_TESTS_PAGE_SIZE = 8
+
+interactive_tests: dict[str, utils.InteractiveTest] = {}
+
+for test_file in interactive_tests_folder.glob("*.yaml"):
+    interactive_test = utils.load_interactive_test(path=test_file)
+    interactive_tests[interactive_test.slug] = interactive_test
+
+INTERACTIVE_TESTS_PAGES_COUNT = (len(interactive_tests) + INTERACTIVE_TESTS_PAGE_SIZE - 1) // INTERACTIVE_TESTS_PAGE_SIZE  # noqa: E501 # fmt: skip
 
 
 @router.bot_started()
@@ -54,7 +66,9 @@ async def handle_bot_start(update: updates.BotStarted, facade: BotStartedFacade,
 
         if mini_test.photo_file_id:
             media = [
-                types.PhotoAttachmentRequest(payload=types.PhotoAttachmentRequestPayload(token=mini_test.photo_file_id)),
+                types.PhotoAttachmentRequest(
+                    payload=types.PhotoAttachmentRequestPayload(token=mini_test.photo_file_id),
+                ),
             ]
 
         keyboard = keyboards.proceed_mini_test(mini_test_id=mini_test_id)
@@ -125,6 +139,113 @@ async def handle_start_command(
     else:
         await facade.answer_text(text=mini_test.title, keyboard=keyboard)
 
+
+@router.message_callback(callbacks.InteractiveTestsList.filter())
+async def handle_interactive_tests_list(
+    _: updates.MessageCallback,
+    payload: callbacks.InteractiveTestsList,
+    facade: MessageCallbackFacade,
+) -> None:
+    keyboard = keyboards.interactive_tests_page(
+        interactive_tests=list(interactive_tests.values()),
+        page=payload.page,
+        pages_count=INTERACTIVE_TESTS_PAGES_COUNT,
+    )
+    await facade.edit_message(text=texts.interactive_tests_list_menu, keyboard=keyboard)
+
+
+@router.message_callback(callbacks.OpenInteractiveTest.filter())
+async def handle_open_interactive_test(
+    _: updates.MessageCallback,
+    payload: callbacks.OpenInteractiveTest,
+    facade: MessageCallbackFacade,
+) -> None:
+    interactive_test = interactive_tests.get(payload.slug)
+
+    if not interactive_test:
+        await facade.answer_text(text=texts.interactive_test_not_found)
+        return
+
+    keyboard = keyboards.interactive_test_menu(interactive_test=interactive_test)
+    await facade.edit_message(text=interactive_test.description, keyboard=keyboard)
+
+
+@router.message_callback(callbacks.ProceedInteractiveTest.filter())
+async def handle_proceed_interactive_test(
+    _: updates.MessageCallback,
+    payload: callbacks.ProceedInteractiveTest,
+    facade: MessageCallbackFacade,
+    state: FSMContext,
+) -> None:
+    interactive_test = interactive_tests.get(payload.slug)
+
+    if not interactive_test:
+        await facade.answer_text(text=texts.interactive_test_not_found)
+        return
+
+    for result in interactive_test.results:
+        await state.update_data({result.slug: 0})
+
+    question_text = interactive_test.questions[0].question
+
+    text = texts.interactive_test_question_wrapper.format(
+        test_title=interactive_test.title,
+        question_number=1,
+        total_questions=len(interactive_test.questions),
+        question=question_text,
+    )
+    keyboard = keyboards.proceed_interactive_test_menu(interactive_test=interactive_test, question_index=0)
+
+    await facade.edit_message(text=text, keyboard=keyboard)
+
+
+@router.message_callback(callbacks.InteractiveTestOption.filter())
+async def handle_interactive_test_question_answer(
+    _: updates.MessageCallback,
+    payload: callbacks.InteractiveTestOption,
+    facade: MessageCallbackFacade,
+    state: FSMContext,
+) -> None:
+    interactive_test = interactive_tests.get(payload.slug)
+
+    if not interactive_test:
+        await facade.answer_text(text=texts.interactive_test_not_found)
+        return
+
+    question_index = payload.question_index
+    option_index = payload.option_index
+
+    question = interactive_test.questions[question_index]
+    option = question.options[option_index]
+
+    data = await state.get_data()
+
+    for result_slug, points in option.points.items():
+        current_points = data.get(result_slug, 0)
+        await state.update_data({result_slug: current_points + points})
+
+    if question_index == len(interactive_test.questions) - 1:
+        data = await state.get_data()
+        best_result = max(interactive_test.results, key=lambda r: data.get(r.slug, 0))
+
+        await state.clear()
+
+        await facade.edit_message(text=best_result.description)
+
+    question_index += 1
+    next_question = interactive_test.questions[question_index]
+
+    text = texts.interactive_test_question_wrapper.format(
+        test_title=interactive_test.title,
+        question_number=question_index + 1,
+        total_questions=len(interactive_test.questions),
+        question=next_question.question,
+    )
+    keyboard = keyboards.proceed_interactive_test_menu(interactive_test=interactive_test, question_index=question_index)
+
+    await facade.edit_message(text=text, keyboard=keyboard)
+
+    await facade.send_message(text=texts.main_menu, keyboard=keyboards.main_menu)
 
 @router.message_callback(callbacks.MiniTestsList.filter())
 async def handle_mini_tests_list(

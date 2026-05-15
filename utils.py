@@ -1,8 +1,9 @@
-import asyncio
 import logging
-from contextlib import suppress
-from typing import Any, Self, TypedDict
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import TypedDict
 
+import yaml
 from maxo import Bot
 
 logger = logging.getLogger(__name__)
@@ -13,35 +14,58 @@ class MiniTestAnswer(TypedDict):
     photo_file_id: str | None
 
 
-class SendActionLoop:
-    def __init__(self, bot: Bot, interval: float = 3.0, **send_action_kwargs: Any) -> None:  # noqa: ANN401
-        self.bot = bot
-        self.interval = interval
-        self.send_action_kwargs = send_action_kwargs
-        self._task: asyncio.Task[None] | None = None
+@dataclass
+class TestResult:
+    slug: str
+    description: str
 
-    async def _run(self) -> None:
-        while True:
-            try:
-                await self.bot.send_action(**self.send_action_kwargs)
-            except Exception:
-                logger.exception("Failed to send chat action")
 
-            await asyncio.sleep(self.interval)
+@dataclass
+class TestOption:
+    text: str
+    points: dict[str, int]
 
-    async def __aenter__(self) -> Self:
-        self._task = asyncio.create_task(self._run())
 
-        return self
+@dataclass
+class TestQuestion:
+    question: str
+    photo: str
+    options: list[TestOption]
 
-    async def __aexit__(self, exc_type: object, exc: object, tb: object) -> None:
-        if self._task is None:
-            return
 
-        self._task.cancel()
+@dataclass
+class InteractiveTest:
+    slug: str
+    title: str
+    photo: str
+    description: str
+    results: list[TestResult] = field(default_factory=list)
+    questions: list[TestQuestion] = field(default_factory=list)
 
-        with suppress(asyncio.CancelledError):
-            await self._task
+
+def load_interactive_test(path: Path) -> InteractiveTest:
+    with path.open() as file:
+        data = yaml.safe_load(file)
+
+    results = [TestResult(slug=r["slug"], description=r["description"]) for r in data["results"]]
+
+    questions = [
+        TestQuestion(
+            question=q["question"],
+            photo=q["photo"],
+            options=[TestOption(text=o["text"], points=o["points"]) for o in q["options"]],
+        )
+        for q in data["questions"]
+    ]
+
+    return InteractiveTest(
+        slug=data["slug"],
+        title=data["title"],
+        photo=data["photo"],
+        description=data["description"],
+        results=results,
+        questions=questions,
+    )
 
 
 async def is_subbed(bot: Bot, user_id: int, channels: list[dict[str, int]]) -> bool:

@@ -4,6 +4,7 @@ mini_tests_list_button = "💣 Пройти мини-тест"
 friendship_test_button = "❤️ Сертификат дружбы"
 my_mini_tests_button = "🧩 Мои тесты"
 random_mini_test_button = "🎲 Случайный тест"
+interactive_tests_button = "📋 Интерактивные тесты"
 save_mini_test_button = "✅ Сохранить"
 share_mini_test_button = "📤 Поделиться"
 add_mini_test_photo_button = "🎆 Добавить облолжку"
@@ -16,6 +17,7 @@ create_mini_test_button = "➕ Создать тест"
 proceed_mini_test_button = "💥 Пройти"
 previous_page_button = "⬅️"
 next_page_button = "➡️"
+proceed_interactive_test_button = "👉🏻 Пройти"
 
 start = """
 <b>👋 Привет, {full_name}!
@@ -111,3 +113,19 @@ send_mini_test_photo = """
 """
 
 send_mini_test_photo_invalid = "Пожалуйста, отправь фото для обложки к своему тесту."
+
+interactive_tests_list_menu = """
+<b>Интерактивные тесты ✍️</b>
+
+<i>Выбирай тест и проходи его!</i>
+"""
+
+interactive_test_not_found = "Интерактивный тест не найден"
+
+
+interactive_test_question_wrapper = """
+<b>{test_title}</b>
+
+Вопрос {question_number}/{total_questions}
+👉 Твой ответ на вопрос: <b>"{question}"</b>
+"""
