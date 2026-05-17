@@ -1,11 +1,11 @@
 from collections.abc import Sequence
 
-import callback_payload
 from maxo import types
 
 import texts
 from utils import InteractiveTest
 
+from . import callback_payload
 from .main import PAGE_SIZE
 
 

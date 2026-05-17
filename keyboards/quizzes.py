@@ -1,13 +1,13 @@
 import urllib.parse
 from collections.abc import Sequence
 
-import callback_payload
 from maxo import types
 
 import texts
 from database.models import Quiz
 from utils import QuizAnswerDict
 
+from . import callback_payload
 from .main import PAGE_SIZE
 
 save_quiz = [[types.CallbackButton(text=texts.save_quiz_button, payload=callback_payload.SaveQuiz().pack())]]

@@ -1,7 +1,8 @@
-import callback_payload
 from maxo import types
 
 import texts
+
+from . import callback_payload
 
 PAGE_SIZE = 10
 

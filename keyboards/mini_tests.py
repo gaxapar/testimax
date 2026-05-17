@@ -1,12 +1,12 @@
 import urllib.parse
 from collections.abc import Sequence
 
-import callback_payload
 from maxo import types
 
 import texts
 from database.models import MiniTest, MiniTestAnswer
 
+from . import callback_payload
 from .main import PAGE_SIZE
 
 
