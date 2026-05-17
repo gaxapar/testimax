@@ -15,7 +15,7 @@ from keyboards import callback_payload
 
 router = Router()
 
-here = Path(__file__).parent
+here = Path(__file__).parent.parent
 interactive_tests_folder = here / "interactive_tests"
 
 with Path.open(here / "channels.json") as file:
