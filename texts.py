@@ -129,3 +129,97 @@ interactive_test_question_wrapper = """
 Вопрос {question_number}/{total_questions}
 👉 Твой ответ на вопрос: <b>"{question}"</b>
 """
+
+
+# Quiz texts
+quizzes_list_button = "🧠 Пройти квиз"
+my_quizzes_button = "📚 Мои квизы"
+random_quiz_button = "🎲 Случайный квиз"
+save_quiz_button = "✅ Сохранить квиз"
+share_quiz_button = "📤 Поделиться квизом"
+add_quiz_photo_button = "🖼 Добавить обложку квиза"
+quiz_questions_button = "❓ Вопросы"
+delete_quiz_button = "❌ Удалить квиз"
+delete_quiz_confirm_button = "Да, удалить"
+add_quiz_question_button = "➕ Добавить вопрос"
+create_quiz_button = "➕ Создать квиз"
+proceed_quiz_button = "▶️ Пройти квиз"
+
+quizzes_list_menu = "<b>Лучшие квизы, собранные со всего Telegram! 🌐</b>"
+
+quiz_not_found = "Квиз не найден"
+quiz_question_not_found = "Вопрос квиза не найден"
+
+quiz_questions_menu = """
+<b>⚙️ Меню управления квизом:</b>
+
+<b>Вопросы:</b> {questions}
+"""
+
+no_quizzes_available = "Пока нет ни одного квиза 😔"
+no_questions_available = "Пока нет ни одного вопроса 😔"
+
+my_quizzes_list = """
+<b>🗂 Ваши квизы:
+
+💫 Создано</b> - <i>{user_quizzes_count}</i>
+"""
+
+send_quiz_photo = """
+<b>🖼 Добавление обложки квиза</b>
+
+💬 Отправь фото для обложки к своему квизу.
+"""
+
+send_quiz_photo_invalid = "Пожалуйста, отправь фото для обложки к своему квизу."
+
+
+delete_quiz_confirm = """
+<b>🗑 Удаление квиза</b>
+
+Ты правда хочешь удалить квиз <code>{title}</code>?
+"""
+
+enter_quiz_title = """
+<b>⭐️ Придумай название для квиза
+
+✍️ Отправь мне название твоего будущего квиза
+
+💡 Пример:</b> <i>«Узнай твою профессию»</i>
+
+<i>🔒 Созданный квиз появится в общем списке после 5 использований.</i>
+"""
+
+enter_quiz_title_invalid = "Введи название для квиза в виде текста. Например: «Узнай твою профессию»"
+
+enter_quiz_question = """
+<b>✍️ Введите текст вопроса</b>
+
+Можно отправить фото с подписью.
+"""
+
+enter_quiz_question_invalid = "Введи вопрос в виде текста или фото с подписью."
+
+enter_quiz_answers = """
+<b>🌟 Придумай варианты ответов</b>
+
+Отправляй варианты ответов по одному. Пометь правильный ответ, начав сообщение с "*".
+"""
+
+enter_quiz_answers_invalid = 'Введи вариант ответа в виде текста. Пометь правильный ответ, начав сообщение с "*".'
+
+enter_more_quiz_answers = """
+<b>✅ Вариант ответа успешно добавлен!</b>
+
+Отправляй следующие варианты ответов или нажми сохранить вопрос.
+"""
+
+quiz_menu = """
+<b>⚙️ Меню управления твоим квизом:</b>
+
+<b>✏️ Название квиза</b> - {title}
+<b>📊 Количество использований</b> - {usages}
+<b>🏆 Позиция квиза в топе</b> - {place_in_top}
+"""
+
+choose_correct_answer = "<b>Выберите правильный ответ для текущего вопроса:</b>"

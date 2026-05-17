@@ -1,7 +1,7 @@
 import logging
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import TypedDict
+from typing import NotRequired, TypedDict
 
 import yaml
 from maxo import Bot
@@ -12,6 +12,17 @@ logger = logging.getLogger(__name__)
 class MiniTestAnswer(TypedDict):
     text: str
     photo_file_id: str | None
+
+
+class QuizAnswerDict(TypedDict):
+    text: str
+    is_correct: NotRequired[bool]
+
+
+class QuizQuestionDict(TypedDict):
+    text: str
+    photo_file_id: str | None
+    answers: list[QuizAnswerDict]
 
 
 @dataclass

@@ -44,7 +44,37 @@ def upgrade() -> None:
         sa.Column('mini_test_id', sa.Integer(), sa.ForeignKey('mini_tests.id'), nullable=False),
     )
 
+    op.create_table(
+        'quizes',
+        sa.Column('id', sa.Integer(), primary_key=True),
+        sa.Column('title', sa.String(), nullable=False),
+        sa.Column('photo_file_id', sa.String(), nullable=True),
+        sa.Column('creator_user_id', sa.Integer(), sa.ForeignKey('users.id'), nullable=False),
+        sa.Column('usages', sa.Integer(), nullable=False, default=0),
+    )
+
+    op.create_table(
+        'quizes_questions',
+        sa.Column('id', sa.Integer(), primary_key=True),
+        sa.Column('text', sa.String(), nullable=False),
+        sa.Column('photo_file_id', sa.String(), nullable=True),
+        sa.Column('quiz_id', sa.Integer(), sa.ForeignKey('quizes.id'), nullable=False),
+    )
+
+    op.create_table(
+        'quizes_answers',
+        sa.Column('id', sa.Integer(), primary_key=True),
+        sa.Column('text', sa.String(), nullable=False),
+        sa.Column('question_id', sa.Integer(), sa.ForeignKey('quizes_questions.id'), nullable=False),
+        sa.Column('is_correct', sa.Boolean(), nullable=False, server_default=sa.text('false')),
+    )
+
 
 def downgrade() -> None:
     """Downgrade schema."""
-    pass
+    op.drop_table('quizes_answers')
+    op.drop_table('quizes_questions')
+    op.drop_table('quizes')
+    op.drop_table('mini_test_answers')
+    op.drop_table('mini_tests')
+    op.drop_table('users')

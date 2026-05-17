@@ -2,11 +2,11 @@ from sqlalchemy import BigInteger
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from .base import Base
-from .mini_test_answer import MiniTestAnswer
+from .quiz_question import QuizQuestion
 
 
-class MiniTest(Base):
-    __tablename__ = "mini_tests"
+class Quiz(Base):
+    __tablename__ = "quizes"
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True)
     title: Mapped[str]
@@ -14,4 +14,4 @@ class MiniTest(Base):
     creator_user_id: Mapped[int]
     usages: Mapped[int] = mapped_column(default=0)
 
-    answers: Mapped[list[MiniTestAnswer]] = relationship("MiniTestAnswer", cascade="all, delete-orphan")
+    questions: Mapped[list[QuizQuestion]] = relationship("QuizQuestion", cascade="all, delete-orphan")

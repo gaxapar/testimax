@@ -1,10 +1,6 @@
 from maxo.routing.filters.payload import Payload
 
 
-class Cancel(Payload, prefix="cancel"):
-    pass
-
-
 class MiniTestsList(Payload, prefix="mini_tests_list"):
     page: int
 
@@ -23,24 +19,6 @@ class CreateMiniTest(Payload, prefix="create_mini_test"):
 
 class RandomMiniTest(Payload, prefix="random_mini_test"):
     pass
-
-
-class InteractiveTestsList(Payload, prefix="interactive_tests_list"):
-    page: int
-
-
-class OpenInteractiveTest(Payload, prefix="open_interactive_test"):
-    slug: str
-
-
-class ProceedInteractiveTest(Payload, prefix="proceed_interactive_test"):
-    slug: str
-
-
-class InteractiveTestOption(Payload, prefix="interactive_test_option"):
-    slug: str
-    question_index: int
-    option_index: int
 
 
 class SaveMiniTest(Payload, prefix="save_mini_test"):
@@ -93,12 +71,4 @@ class BackToMiniTestDetails(Payload, prefix="back_to_mini_test_details"):
 
 
 class BackToMyMiniTests(Payload, prefix="back_to_my_mini_tests"):
-    pass
-
-
-class BackToMainMenu(Payload, prefix="back_to_main_menu"):
-    pass
-
-
-class Empty(Payload, prefix="empty"):
     pass

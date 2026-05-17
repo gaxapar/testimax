@@ -6,7 +6,7 @@ from .models import Base
 class ConnectionUrl:
     url_pattern = "postgresql+{connector}://{user}:{password}@{host}/{db_name}"
 
-    def __init__(self, user: str, password: str, db_name: str, host: str):
+    def __init__(self, user: str, password: str, db_name: str, host: str) -> None:
         self.data = {"user": user, "password": password, "db_name": db_name, "host": host}
 
     @property
