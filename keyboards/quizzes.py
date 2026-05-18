@@ -150,6 +150,8 @@ def quiz_question_editor_keyboard(
     quiz_id: int,
     answers: Sequence[models.QuizAnswer],
 ) -> list[list[types.CallbackButton]]:
+    sorted_answers = sorted(answers, key=lambda answer: answer.id)
+
     keyboard: list[list[types.CallbackButton]] = [
         [
             types.CallbackButton(
@@ -157,7 +159,7 @@ def quiz_question_editor_keyboard(
                 payload=callback_payload.EditQuizAnswer(answer_id=answer.id).pack(),
             ),
             types.CallbackButton(
-                text="✅" if answer.is_correct else "⭐",
+                text="✅" if answer.is_correct else "•",
                 payload=callback_payload.SetQuizAnswerCorrect(answer_id=answer.id).pack(),
             ),
             types.CallbackButton(
@@ -165,7 +167,7 @@ def quiz_question_editor_keyboard(
                 payload=callback_payload.DeleteQuizAnswer(answer_id=answer.id).pack(),
             ),
         ]
-        for answer in answers
+        for answer in sorted_answers
     ]
 
     keyboard.extend(

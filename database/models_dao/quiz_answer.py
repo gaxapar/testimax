@@ -16,7 +16,7 @@ class QuizAnswerDAO:
         return result.scalar()
 
     async def get_answers_by_question_id(self, question_id: int) -> Sequence[QuizAnswer]:
-        statement = select(QuizAnswer).where(QuizAnswer.question_id == question_id)
+        statement = select(QuizAnswer).where(QuizAnswer.question_id == question_id).order_by(QuizAnswer.id.asc())
 
         result = await self.session.execute(statement)
         return result.scalars().all()
