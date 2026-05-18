@@ -85,6 +85,18 @@ class ProceedQuiz(Payload, prefix="proceed_quiz"):
     quiz_id: int
 
 
+class ProceedQuizReview(Payload, prefix="proceed_quiz_review"):
+    quiz_id: int
+
+
+class ApproveQuizReview(Payload, prefix="approve_quiz_review"):
+    quiz_id: int
+
+
+class DeclineQuizReview(Payload, prefix="decline_quiz_review"):
+    quiz_id: int
+
+
 class BackToQuizDetails(Payload, prefix="back_to_quiz_details"):
     quiz_id: int
 

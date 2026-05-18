@@ -14,5 +14,6 @@ class Quiz(Base):
     photo_file_id: Mapped[str | None]
     creator_user_id: Mapped[int]
     usages: Mapped[int] = mapped_column(default=0)
+    is_active: Mapped[bool] = mapped_column(default=False)
 
     questions: Mapped[list[QuizQuestion]] = relationship("QuizQuestion", cascade="all, delete-orphan")

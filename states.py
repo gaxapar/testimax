@@ -36,6 +36,7 @@ class AddQuizPhoto(StatesGroup):
 
 class ProceedQuiz(StatesGroup):
     answering_question = State()
+    reviewing_quiz = State()
 
 
 class EditQuizAnswer(StatesGroup):

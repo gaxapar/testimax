@@ -1,10 +1,5 @@
 from .common import BackToMainMenu, Cancel, Empty
-from .interactive_tests import (
-    InteractiveTestOption,
-    InteractiveTestsList,
-    OpenInteractiveTest,
-    ProceedInteractiveTest,
-)
+from .interactive_tests import InteractiveTestOption, InteractiveTestsList, OpenInteractiveTest, ProceedInteractiveTest
 from .mini_tests import (
     AddMiniTestAnswer,
     AddMiniTestPhoto,
@@ -30,10 +25,12 @@ from .quizzes import (
     AddQuizAnswerToQuestion,
     AddQuizPhoto,
     AddQuizQuestion,
+    ApproveQuizReview,
     BackToMyQuizzes,
     BackToQuizDetails,
     ContinueQuizAnswers,
     CreateQuiz,
+    DeclineQuizReview,
     DeleteQuiz,
     DeleteQuizAnswer,
     DeleteQuizConfirm,
@@ -43,6 +40,7 @@ from .quizzes import (
     MyQuizzes,
     OpenQuizToProceed,
     ProceedQuiz,
+    ProceedQuizReview,
     QuizAnswer,
     QuizDetails,
     QuizQuestions,
@@ -59,6 +57,7 @@ __all__ = (
     "AddQuizAnswerToQuestion",
     "AddQuizPhoto",
     "AddQuizQuestion",
+    "ApproveQuizReview",
     "BackToMainMenu",
     "BackToMiniTestDetails",
     "BackToMyMiniTests",
@@ -68,6 +67,7 @@ __all__ = (
     "ContinueQuizAnswers",
     "CreateMiniTest",
     "CreateQuiz",
+    "DeclineQuizReview",
     "DeleteMiniTest",
     "DeleteMiniTestConfirm",
     "DeleteQuiz",
@@ -91,6 +91,7 @@ __all__ = (
     "ProceedInteractiveTest",
     "ProceedMiniTest",
     "ProceedQuiz",
+    "ProceedQuizReview",
     "QuizAnswer",
     "QuizDetails",
     "QuizQuestions",

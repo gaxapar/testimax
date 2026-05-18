@@ -6,7 +6,7 @@ from maxo import types
 import texts
 from database import models
 from database.models import Quiz
-from utils import QuizAnswerDict
+from utils import QUIZ_ANSWER_CORRECT_MARK, QUIZ_ANSWER_NEUTRAL_MARK, QuizAnswerDict
 
 from . import callback_payload
 from .main import PAGE_SIZE
@@ -97,24 +97,6 @@ def delete_quiz_confirm(quiz_id: int) -> list[list[types.CallbackButton]]:
     ]
 
 
-def quiz_questions_menu(quiz_id: int) -> list[list[types.CallbackButton]]:
-    # Deprecated simple menu; use dynamic listing when questions provided
-    return [
-        [
-            types.CallbackButton(
-                text=texts.add_quiz_question_button,
-                payload=callback_payload.AddQuizQuestion(quiz_id=quiz_id).pack(),
-            ),
-        ],
-        [
-            types.CallbackButton(
-                text=texts.back,
-                payload=callback_payload.BackToQuizDetails(quiz_id=quiz_id).pack(),
-            ),
-        ],
-    ]
-
-
 def quiz_questions_menu_with_items(
     quiz_id: int,
     questions: Sequence[models.QuizQuestion],
@@ -159,7 +141,7 @@ def quiz_question_editor_keyboard(
                 payload=callback_payload.EditQuizAnswer(answer_id=answer.id).pack(),
             ),
             types.CallbackButton(
-                text="✅" if answer.is_correct else "•",
+                text=QUIZ_ANSWER_CORRECT_MARK if answer.is_correct else QUIZ_ANSWER_NEUTRAL_MARK,
                 payload=callback_payload.SetQuizAnswerCorrect(answer_id=answer.id).pack(),
             ),
             types.CallbackButton(
@@ -202,6 +184,32 @@ def proceed_quiz(quiz_id: int) -> list[list[types.CallbackButton]]:
             types.CallbackButton(
                 text=texts.back,
                 payload=callback_payload.BackToMainMenu().pack(),
+            ),
+        ],
+    ]
+
+
+def proceed_quiz_review(quiz_id: int) -> list[list[types.CallbackButton]]:
+    return [
+        [
+            types.CallbackButton(
+                text=texts.proceed_quiz_review_button,
+                payload=callback_payload.ProceedQuizReview(quiz_id=quiz_id).pack(),
+            ),
+        ],
+    ]
+
+
+def quiz_review_action_keyboard(quiz_id: int) -> list[list[types.CallbackButton]]:
+    return [
+        [
+            types.CallbackButton(
+                text=texts.approve_quiz_button,
+                payload=callback_payload.ApproveQuizReview(quiz_id=quiz_id).pack(),
+            ),
+            types.CallbackButton(
+                text=texts.decline_quiz_button,
+                payload=callback_payload.DeclineQuizReview(quiz_id=quiz_id).pack(),
             ),
         ],
     ]

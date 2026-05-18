@@ -7,10 +7,12 @@ class Config(BaseSettings):
 
     bot_token: str = Field(repr=False)
 
+    admin_id: int
+
     db_user: str
     db_password: str = Field(repr=False)
     db_name: str
     db_host: str
 
 
-config = Config() # pyright: ignore [reportCallIssue]
+config = Config()  # pyright: ignore [reportCallIssue]

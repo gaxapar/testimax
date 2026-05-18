@@ -1,10 +1,13 @@
 import logging
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import NotRequired, TypedDict
 
 import yaml
 from maxo import Bot
+
+from database import models
 
 logger = logging.getLogger(__name__)
 
@@ -23,6 +26,21 @@ class QuizQuestionDict(TypedDict):
     text: str
     photo_file_id: str | None
     answers: list[QuizAnswerDict]
+
+
+# UI markers for quiz answers
+QUIZ_ANSWER_CORRECT_MARK = "✅"
+QUIZ_ANSWER_NEUTRAL_MARK = "•"
+
+
+def quiz_answer_correct_marker() -> str:
+    """Return the correct-answer marker including trailing space."""
+    return f"{QUIZ_ANSWER_CORRECT_MARK} "
+
+
+def quiz_answer_neutral_marker() -> str:
+    """Return the neutral-answer marker including trailing space."""
+    return f"{QUIZ_ANSWER_NEUTRAL_MARK} "
 
 
 @dataclass
@@ -87,3 +105,31 @@ async def is_subbed(bot: Bot, user_id: int, channels: list[dict[str, int]]) -> b
             return False
 
     return True
+
+
+# Formatting helpers for quizzes
+
+
+def format_question_list(questions: Sequence[str]) -> str:
+    if not questions:
+        return ""
+
+    return "\n".join(f"{index}. {question}" for index, question in enumerate(questions, start=1))
+
+
+def format_answer_list(answers: Sequence[models.QuizAnswer]) -> str:
+    if not answers:
+        return "Ответов пока нет"
+
+    return "\n".join(
+        (
+            f"{index}. {quiz_answer_correct_marker()}{answer.text}"
+            if answer.is_correct
+            else f"{index}. {quiz_answer_neutral_marker()}{answer.text}"
+        )
+        for index, answer in enumerate(answers, start=1)
+    )
+
+
+def build_quiz_question_editor_text(question: models.QuizQuestion, answers: Sequence[models.QuizAnswer]) -> str:
+    return f"<b>Вопрос:</b> {question.text}\n\n<b>Ответы:</b>\n{format_answer_list(answers)}"

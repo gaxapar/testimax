@@ -1,5 +1,4 @@
-from collections.abc import Sequence
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, cast
 
 from maxo import Bot, types
 from maxo.fsm.context import FSMContext
@@ -10,8 +9,13 @@ from maxo.routing.routers.simple import Router
 import keyboards
 import states
 import texts
+from config import config
 from database import DAO, models
 from keyboards import callback_payload
+from utils import (
+    build_quiz_question_editor_text,
+    format_question_list,
+)
 
 if TYPE_CHECKING:
     from utils import QuizQuestionDict
@@ -19,24 +23,39 @@ if TYPE_CHECKING:
 router = Router()
 
 
-def format_question_list(questions: Sequence[str]) -> str:
-    if not questions:
-        return ""
+def build_quiz_review_text(quiz: models.Quiz) -> str:
+    text = f"<b>{quiz.title}</b>"
 
-    return "\n".join(f"{index}. {question}" for index, question in enumerate(questions, start=1))
+    if quiz.description:
+        text += f"\n\n{quiz.description}"
+
+    return text
 
 
-def format_answer_list(answers: Sequence[models.QuizAnswer]) -> str:
-    if not answers:
-        return "Ответов пока нет"
-
-    return "\n".join(
-        f"{index}. {'✅ ' if answer.is_correct else ''}{answer.text}" for index, answer in enumerate(answers, start=1)
+async def send_quiz_to_admin(bot: Bot, quiz: models.Quiz) -> None:
+    review_keyboard = cast(
+        "list[list[types.InlineButtons]]",
+        keyboards.proceed_quiz_review(quiz_id=quiz.id),
     )
 
+    attachments: list[types.AttachmentsRequests | types.Attachments] = [
+        types.InlineKeyboardAttachmentRequest(
+            payload=types.InlineKeyboardAttachmentRequestPayload(
+                buttons=review_keyboard,
+            ),
+        ),
+    ]
 
-def build_quiz_question_editor_text(question: models.QuizQuestion, answers: Sequence[models.QuizAnswer]) -> str:
-    return f"<b>Вопрос:</b> {question.text}\n\n<b>Ответы:</b>\n{format_answer_list(answers)}"
+    if quiz.photo_file_id:
+        attachments.append(
+            types.PhotoAttachmentRequest(payload=types.PhotoAttachmentRequestPayload(token=quiz.photo_file_id)),
+        )
+
+    await bot.send_message(
+        user_id=config.admin_id,
+        text=build_quiz_review_text(quiz),
+        attachments=attachments,
+    )
 
 
 @router.message_callback(callback_payload.QuizzesList.filter())
@@ -322,8 +341,8 @@ async def handle_save_quiz(
         await facade.answer_text(texts.no_questions_available)
         return
 
-    # create quiz
-    quiz = models.Quiz(title=title, description=description, creator_user_id=user_id)
+    # create quiz as draft (not active yet)
+    quiz = models.Quiz(title=title, description=description, creator_user_id=user_id, is_active=False)
     dao.add(instance=quiz)
     await dao.commit()
 
@@ -342,19 +361,12 @@ async def handle_save_quiz(
 
     await dao.commit()
 
+    await send_quiz_to_admin(bot=bot, quiz=quiz)
+
     await state.clear()
 
-    place_in_top = await dao.get_quiz_place_in_top(quiz_id=quiz.id)
-
-    bot_user = await bot.get_my_info()
-
-    if not bot_user.username:
-        return
-
-    text = texts.quiz_menu.format(title=quiz.title, usages=quiz.usages, place_in_top=place_in_top)
-    keyboard = keyboards.quiz_menu(quiz=quiz, bot_username=bot_user.username)
-
-    await facade.edit_message(text=text, keyboard=keyboard)
+    # Quiz saved as draft and awaits admin review
+    await facade.edit_message(text=texts.quiz_sent_for_review, keyboard=keyboards.main_menu)
 
 
 @router.message_callback(callback_payload.QuizDetails.filter())
@@ -805,7 +817,7 @@ async def handle_open_quiz_to_proceed(
 
     quiz = await dao.get_quiz_by_id(quiz_id=quiz_id)
 
-    if not quiz:
+    if not quiz or not quiz.is_active:
         await facade.answer_text(texts.quiz_not_found)
         return
 
@@ -900,7 +912,7 @@ async def handle_proceed_quiz(
 
     quiz = await dao.get_quiz_by_id(quiz_id=quiz_id)
 
-    if not quiz:
+    if not quiz or not quiz.is_active:
         await facade.answer_text(texts.quiz_not_found)
         return
 
@@ -939,6 +951,55 @@ async def handle_proceed_quiz(
     await facade.edit_message(text=question.text, media=media, keyboard=keyboard)
 
 
+@router.message_callback(callback_payload.ProceedQuizReview.filter())
+async def handle_proceed_quiz_review(
+    update: updates.MessageCallback,
+    payload: callback_payload.ProceedQuizReview,
+    facade: MessageCallbackFacade,
+    dao: DAO,
+    state: FSMContext,
+) -> None:
+    if update.user.user_id != config.admin_id:
+        await facade.answer_text(texts.quiz_not_found)
+        return
+
+    quiz_id = payload.quiz_id
+
+    quiz = await dao.get_quiz_by_id(quiz_id=quiz_id)
+
+    if not quiz:
+        await facade.answer_text(texts.quiz_not_found)
+        return
+
+    questions = await dao.get_questions_by_quiz_id(quiz_id=quiz_id)
+
+    if not questions:
+        await facade.answer_text(texts.no_questions_available)
+        return
+
+    await state.set_state(states.ProceedQuiz.answering_question)
+    await state.update_data(
+        quiz_id=quiz_id,
+        questions=questions,
+        current_question_index=0,
+        correct_answers=0,
+        review_mode=True,
+    )
+
+    question = questions[0]
+    answers = await dao.get_answers_by_question_id(question_id=question.id)
+
+    media = None
+    if question.photo_file_id:
+        media = [
+            types.PhotoAttachmentRequest(payload=types.PhotoAttachmentRequestPayload(token=question.photo_file_id)),
+        ]
+
+    keyboard = keyboards.proceed_quiz_answers_keyboard(answers=answers)
+
+    await facade.edit_message(text=question.text, media=media, keyboard=keyboard)
+
+
 @router.message_callback(callback_payload.QuizAnswer.filter())
 async def handle_quiz_answer(
     _: updates.MessageCallback,
@@ -951,6 +1012,7 @@ async def handle_quiz_answer(
     questions = data.get("questions", [])
     current_question_index = data.get("current_question_index", 0)
     correct_answers = data.get("correct_answers", 0)
+    review_mode = data.get("review_mode", False)
 
     if current_question_index >= len(questions):
         await facade.answer_text(texts.quiz_not_found)
@@ -966,13 +1028,22 @@ async def handle_quiz_answer(
         return
 
     # check if answer is correct
-    if selected_answer.is_correct:
+    if selected_answer.is_correct and not review_mode:
         correct_answers += 1
 
     current_question_index += 1
 
     # check if there are more questions
     if current_question_index >= len(questions):
+        if review_mode:
+            await state.set_state(states.ProceedQuiz.reviewing_quiz)
+
+            await facade.edit_message(
+                text=texts.quiz_review_complete,
+                keyboard=keyboards.quiz_review_action_keyboard(quiz_id=data["quiz_id"]),
+            )
+            return
+
         # show results
         total_questions = len(questions)
         result_text = texts.quiz_result.format(correct=correct_answers, total=total_questions)
@@ -999,3 +1070,79 @@ async def handle_quiz_answer(
     keyboard = keyboards.proceed_quiz_answers_keyboard(answers=next_answers)
 
     await facade.edit_message(text=next_question.text, media=media, keyboard=keyboard)
+
+
+@router.message_callback(callback_payload.ApproveQuizReview.filter())
+async def handle_approve_quiz_review(
+    update: updates.MessageCallback,
+    payload: callback_payload.ApproveQuizReview,
+    facade: MessageCallbackFacade,
+    dao: DAO,
+    state: FSMContext,
+    bot: Bot,
+) -> None:
+    if update.user.user_id != config.admin_id:
+        await facade.answer_text(texts.quiz_not_found)
+        return
+
+    data = await state.get_data() or {}
+    if data.get("quiz_id") != payload.quiz_id:
+        await facade.answer_text(texts.quiz_not_found)
+        return
+
+    quiz = await dao.get_quiz_by_id(quiz_id=payload.quiz_id)
+    if not quiz:
+        await facade.answer_text(texts.quiz_not_found)
+        return
+
+    quiz.is_active = True
+    dao.add(instance=quiz)
+    await dao.commit()
+
+    creator = await dao.get_user_by_id(user_id=quiz.creator_user_id)
+    if creator:
+        await bot.send_message(
+            user_id=creator.id,
+            text=texts.quiz_review_approved_creator.format(title=quiz.title),
+        )
+
+    await state.clear()
+    await facade.edit_message(text=texts.quiz_review_approved, keyboard=keyboards.main_menu)
+
+
+@router.message_callback(callback_payload.DeclineQuizReview.filter())
+async def handle_decline_quiz_review(
+    update: updates.MessageCallback,
+    payload: callback_payload.DeclineQuizReview,
+    facade: MessageCallbackFacade,
+    dao: DAO,
+    state: FSMContext,
+    bot: Bot,
+) -> None:
+    if update.user.user_id != config.admin_id:
+        await facade.answer_text(texts.quiz_not_found)
+        return
+
+    data = await state.get_data() or {}
+    if data.get("quiz_id") != payload.quiz_id:
+        await facade.answer_text(texts.quiz_not_found)
+        return
+
+    quiz = await dao.get_quiz_by_id(quiz_id=payload.quiz_id)
+    if not quiz:
+        await facade.answer_text(texts.quiz_not_found)
+        return
+
+    creator = await dao.get_user_by_id(user_id=quiz.creator_user_id)
+
+    await dao.delete(instance=quiz)
+    await dao.commit()
+
+    if creator:
+        await bot.send_message(
+            user_id=creator.id,
+            text=texts.quiz_review_declined_creator.format(title=quiz.title),
+        )
+
+    await state.clear()
+    await facade.edit_message(text=texts.quiz_review_declined, keyboard=keyboards.main_menu)

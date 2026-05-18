@@ -145,6 +145,9 @@ add_quiz_question_button = "➕ Добавить вопрос"
 save_quiz_answers_button = "✅ Сохранить ответы"
 create_quiz_button = "➕ Создать квиз"
 proceed_quiz_button = "▶️ Пройти квиз"
+proceed_quiz_review_button = "▶️ Пройти"
+approve_quiz_button = "✅ Подтвердить"
+decline_quiz_button = "❌ Отклонить"
 
 quizzes_list_menu = "<b>Лучшие квизы, собранные со всего Telegram! 🌐</b>"
 
@@ -260,4 +263,28 @@ quiz_result = """
 <b>✅ Квиз пройден!</b>
 
 <b>Результат:</b> {correct}/{total} правильных ответов
+"""
+
+quiz_review_complete = """
+<b>Квиз пройден для проверки.</b>
+
+Подтвердите публикацию или отклоните квиз.
+"""
+
+quiz_review_approved = "<b>Квиз подтверждён.</b>"
+
+quiz_review_declined = "<b>Квиз отклонён.</b>"
+
+quiz_review_approved_creator = """
+<b>✅ Ваш квиз <code>{title}</code> подтверждён администратором и опубликован.</b>
+"""
+
+quiz_review_declined_creator = """
+<b>❌ Ваш квиз <code>{title}</code> отклонён администратором.</b>
+"""
+
+quiz_sent_for_review = """
+<b>✅ Ваш квиз отправлен на проверку администратору!</b>
+
+После одобрения он появится в общем списке квизов.
 """

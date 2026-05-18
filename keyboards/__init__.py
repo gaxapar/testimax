@@ -1,11 +1,8 @@
-from .interactive_tests import (
-    interactive_test_menu,
-    interactive_tests_page,
-    proceed_interactive_test_menu,
-)
+from .interactive_tests import interactive_test_menu, interactive_tests_page, proceed_interactive_test_menu
 from .main import PAGE_SIZE, cancel, main_menu, save_mini_test
 from .mini_tests import (
     back_to_mini_test,
+    delete_mini_test_confirm,
     mini_test_answers_menu,
     mini_test_menu,
     mini_tests_page,
@@ -13,25 +10,21 @@ from .mini_tests import (
     proceed_mini_test,
     remove_mini_test_answer_menu,
 )
-from .mini_tests import (
-    delete_mini_test_confirm as delete_mini_test_confirm,
-)
 from .quizzes import (
     back_to_quiz,
+    delete_quiz_confirm,
     my_quizzes_keyboard,
     proceed_quiz,
     proceed_quiz_answers_keyboard,
+    proceed_quiz_review,
     quiz_menu,
     quiz_question_editor_keyboard,
-    quiz_questions_menu,
     quiz_questions_menu_with_items,
+    quiz_review_action_keyboard,
     quizzes_page,
     save_quiz,
     save_quiz_answers,
     select_correct_answer_menu,
-)
-from .quizzes import (
-    delete_quiz_confirm as delete_quiz_confirm,
 )
 
 __all__ = (
@@ -53,10 +46,11 @@ __all__ = (
     "proceed_mini_test",
     "proceed_quiz",
     "proceed_quiz_answers_keyboard",
+    "proceed_quiz_review",
     "quiz_menu",
     "quiz_question_editor_keyboard",
-    "quiz_questions_menu",
     "quiz_questions_menu_with_items",
+    "quiz_review_action_keyboard",
     "quizzes_page",
     "remove_mini_test_answer_menu",
     "save_mini_test",

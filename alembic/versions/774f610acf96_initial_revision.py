@@ -52,6 +52,7 @@ def upgrade() -> None:
         sa.Column('photo_file_id', sa.String(), nullable=True),
         sa.Column('creator_user_id', sa.Integer(), sa.ForeignKey('users.id'), nullable=False),
         sa.Column('usages', sa.Integer(), nullable=False, default=0),
+        sa.Column('is_active', sa.Boolean(), nullable=False, server_default=sa.text('false')),
     )
 
     op.create_table(
