@@ -26,6 +26,19 @@ def format_question_list(questions: Sequence[str]) -> str:
     return "\n".join(f"{index}. {question}" for index, question in enumerate(questions, start=1))
 
 
+def format_answer_list(answers: Sequence[models.QuizAnswer]) -> str:
+    if not answers:
+        return "Ответов пока нет"
+
+    return "\n".join(
+        f"{index}. {'✅ ' if answer.is_correct else ''}{answer.text}" for index, answer in enumerate(answers, start=1)
+    )
+
+
+def build_quiz_question_editor_text(question: models.QuizQuestion, answers: Sequence[models.QuizAnswer]) -> str:
+    return f"<b>Вопрос:</b> {question.text}\n\n<b>Ответы:</b>\n{format_answer_list(answers)}"
+
+
 @router.message_callback(callback_payload.QuizzesList.filter())
 async def handle_quizzes_list(
     _: updates.MessageCallback,
@@ -210,26 +223,71 @@ async def handle_edit_quiz_answer_text(
 
     # reopen editor for question
     question = await dao.get_question_by_id(question_id=question_id)
+    if question is None:
+        await facade.answer_text(texts.quiz_question_not_found)
+        await state.clear()
+        return
+
     answers = await dao.get_answers_by_question_id(question_id=question.id)
 
-    keyboard: list[list[types.CallbackButton]] = [
-        [
-            types.CallbackButton(text=a.text, payload=callback_payload.EditQuizAnswer(answer_id=a.id).pack()),
-            types.CallbackButton(text="❌", payload=callback_payload.DeleteQuizAnswer(answer_id=a.id).pack()),
-        ]
-        for a in answers
-    ]
-
-    keyboard.append(
-        [
-            types.CallbackButton(
-                text=texts.back,
-                payload=callback_payload.QuizQuestions(quiz_id=question.quiz_id).pack(),
-            ),
-        ],
+    keyboard = keyboards.quiz_question_editor_keyboard(
+        question_id=question.id,
+        quiz_id=question.quiz_id,
+        answers=answers,
     )
 
-    await facade.edit_message(text=f"<b>Вопрос:</b> {question.text}", keyboard=keyboard)
+    await facade.edit_message(
+        text=build_quiz_question_editor_text(question=question, answers=answers),
+        keyboard=keyboard,
+    )
+    await state.clear()
+
+
+@router.message_created(filters.StateFilter(states.AddQuizAnswerToQuestion.waiting_for_text))
+async def handle_add_quiz_answer_to_question_text(
+    update: updates.MessageCreated,
+    facade: MessageCreatedFacade,
+    state: FSMContext,
+    dao: DAO,
+) -> None:
+    if not update.text:
+        await facade.answer_text(texts.enter_quiz_answer_invalid)
+        return
+
+    data = await state.get_data() or {}
+    question_id = data.get("adding_answer_question_id")
+
+    if not question_id:
+        await facade.answer_text(texts.quiz_question_not_found)
+        await state.clear()
+        return
+
+    question = await dao.get_question_by_id(question_id=question_id)
+    if not question:
+        await facade.answer_text(texts.quiz_question_not_found)
+        await state.clear()
+        return
+
+    existing_answers = await dao.get_answers_by_question_id(question_id=question.id)
+    answer = models.QuizAnswer(
+        text=update.text,
+        question_id=question.id,
+        is_correct=not existing_answers,
+    )
+    dao.add(instance=answer)
+    await dao.commit()
+
+    answers = await dao.get_answers_by_question_id(question_id=question.id)
+    keyboard = keyboards.quiz_question_editor_keyboard(
+        question_id=question.id,
+        quiz_id=question.quiz_id,
+        answers=answers,
+    )
+
+    await facade.edit_message(
+        text=build_quiz_question_editor_text(question=question, answers=answers),
+        keyboard=keyboard,
+    )
     await state.clear()
 
 
@@ -464,24 +522,32 @@ async def handle_delete_quiz_answer(
         await facade.answer_text(texts.quiz_not_found)
         return
 
+    was_correct = answer.is_correct
+
     await dao.delete(instance=answer)
     await dao.commit()
 
-    # reopen editor for question
-    answers = await dao.get_answers_by_question_id(question_id=question.id)
-    keyboard: list[list[types.CallbackButton]] = [
-        [
-            types.CallbackButton(text=a.text, payload=callback_payload.EditQuizAnswer(answer_id=a.id).pack()),
-            types.CallbackButton(text="❌", payload=callback_payload.DeleteQuizAnswer(answer_id=a.id).pack()),
-        ]
-        for a in answers
-    ]
+    remaining_answers = await dao.get_answers_by_question_id(question_id=question.id)
 
-    keyboard.append(
-        [types.CallbackButton(text=texts.back, payload=callback_payload.QuizQuestions(quiz_id=quiz.id).pack())],
+    if was_correct and remaining_answers:
+        first_answer = remaining_answers[0]
+        for current_answer in remaining_answers:
+            current_answer.is_correct = current_answer.id == first_answer.id
+            dao.add(instance=current_answer)
+
+        await dao.commit()
+
+    answers = await dao.get_answers_by_question_id(question_id=question.id)
+    keyboard = keyboards.quiz_question_editor_keyboard(
+        question_id=question.id,
+        quiz_id=quiz.id,
+        answers=answers,
     )
 
-    await facade.edit_message(text=f"<b>Вопрос:</b> {question.text}", keyboard=keyboard)
+    await facade.edit_message(
+        text=build_quiz_question_editor_text(question=question, answers=answers),
+        keyboard=keyboard,
+    )
 
 
 @router.message_callback(callback_payload.DeleteQuiz.filter())
@@ -553,26 +619,16 @@ async def handle_edit_quiz_question(
         return
 
     answers = await dao.get_answers_by_question_id(question_id=question.id)
-
-    # build answers keyboard with edit/delete per answer
-    keyboard: list[list[types.CallbackButton]] = [
-        [
-            types.CallbackButton(text=a.text, payload=callback_payload.EditQuizAnswer(answer_id=a.id).pack()),
-            types.CallbackButton(text="❌", payload=callback_payload.DeleteQuizAnswer(answer_id=a.id).pack()),
-        ]
-        for a in answers
-    ]
-
-    keyboard.append(
-        [
-            types.CallbackButton(
-                text=texts.back,
-                payload=callback_payload.QuizQuestions(quiz_id=question.quiz_id).pack(),
-            ),
-        ],
+    keyboard = keyboards.quiz_question_editor_keyboard(
+        question_id=question.id,
+        quiz_id=question.quiz_id,
+        answers=answers,
     )
 
-    await facade.edit_message(text=f"<b>Вопрос:</b> {question.text}", keyboard=keyboard)
+    await facade.edit_message(
+        text=build_quiz_question_editor_text(question=question, answers=answers),
+        keyboard=keyboard,
+    )
 
 
 @router.message_callback(callback_payload.EditQuizAnswer.filter())
@@ -594,7 +650,58 @@ async def handle_edit_quiz_answer(
     await state.update_data(editing_answer_id=answer.id, editing_question_id=answer.question_id)
     await state.set_state(states.EditQuizAnswer.waiting_for_text)
 
-    await facade.edit_message(text=texts.enter_quiz_answers, keyboard=keyboards.cancel)
+    await facade.edit_message(text=texts.enter_quiz_answer, keyboard=keyboards.cancel)
+
+
+@router.message_callback(callback_payload.AddQuizAnswerToQuestion.filter())
+async def handle_add_quiz_answer_to_question(
+    _: updates.MessageCallback,
+    payload: callback_payload.AddQuizAnswerToQuestion,
+    facade: MessageCallbackFacade,
+    state: FSMContext,
+) -> None:
+    await state.update_data(adding_answer_question_id=payload.question_id)
+    await state.set_state(states.AddQuizAnswerToQuestion.waiting_for_text)
+
+    await facade.edit_message(text=texts.enter_quiz_answer, keyboard=keyboards.cancel)
+
+
+@router.message_callback(callback_payload.SetQuizAnswerCorrect.filter())
+async def handle_set_quiz_answer_correct(
+    _: updates.MessageCallback,
+    payload: callback_payload.SetQuizAnswerCorrect,
+    facade: MessageCallbackFacade,
+    dao: DAO,
+) -> None:
+    answer = await dao.get_answer_by_id(answer_id=payload.answer_id)
+    if not answer:
+        await facade.answer_text(texts.no_answers_available)
+        return
+
+    question = await dao.get_question_by_id(question_id=answer.question_id)
+    if not question:
+        await facade.answer_text(texts.quiz_question_not_found)
+        return
+
+    answers = await dao.get_answers_by_question_id(question_id=question.id)
+
+    for current_answer in answers:
+        current_answer.is_correct = current_answer.id == answer.id
+        dao.add(instance=current_answer)
+
+    await dao.commit()
+
+    answers = await dao.get_answers_by_question_id(question_id=question.id)
+    keyboard = keyboards.quiz_question_editor_keyboard(
+        question_id=question.id,
+        quiz_id=question.quiz_id,
+        answers=answers,
+    )
+
+    await facade.edit_message(
+        text=build_quiz_question_editor_text(question=question, answers=answers),
+        keyboard=keyboard,
+    )
 
 
 @router.message_callback(callback_payload.DeleteQuizConfirm.filter())

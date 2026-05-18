@@ -40,3 +40,7 @@ class ProceedQuiz(StatesGroup):
 
 class EditQuizAnswer(StatesGroup):
     waiting_for_text = State()
+
+
+class AddQuizAnswerToQuestion(StatesGroup):
+    waiting_for_text = State()

@@ -145,6 +145,49 @@ def quiz_questions_menu_with_items(
     return keyboard
 
 
+def quiz_question_editor_keyboard(
+    question_id: int,
+    quiz_id: int,
+    answers: Sequence[models.QuizAnswer],
+) -> list[list[types.CallbackButton]]:
+    keyboard: list[list[types.CallbackButton]] = [
+        [
+            types.CallbackButton(
+                text=answer.text[:30],
+                payload=callback_payload.EditQuizAnswer(answer_id=answer.id).pack(),
+            ),
+            types.CallbackButton(
+                text="✅" if answer.is_correct else "⭐",
+                payload=callback_payload.SetQuizAnswerCorrect(answer_id=answer.id).pack(),
+            ),
+            types.CallbackButton(
+                text="❌",
+                payload=callback_payload.DeleteQuizAnswer(answer_id=answer.id).pack(),
+            ),
+        ]
+        for answer in answers
+    ]
+
+    keyboard.extend(
+        [
+            [
+                types.CallbackButton(
+                    text=texts.add_quiz_answer_button,
+                    payload=callback_payload.AddQuizAnswerToQuestion(question_id=question_id).pack(),
+                ),
+            ],
+            [
+                types.CallbackButton(
+                    text=texts.back,
+                    payload=callback_payload.QuizQuestions(quiz_id=quiz_id).pack(),
+                ),
+            ],
+        ],
+    )
+
+    return keyboard
+
+
 def proceed_quiz(quiz_id: int) -> list[list[types.CallbackButton]]:
     return [
         [

@@ -49,6 +49,14 @@ class DeleteQuizAnswer(Payload, prefix="delete_quiz_answer"):
     answer_id: int
 
 
+class AddQuizAnswerToQuestion(Payload, prefix="add_quiz_answer_to_question"):
+    question_id: int
+
+
+class SetQuizAnswerCorrect(Payload, prefix="set_quiz_answer_correct"):
+    answer_id: int
+
+
 class AddQuizQuestion(Payload, prefix="add_quiz_question"):
     quiz_id: int | None = None
 

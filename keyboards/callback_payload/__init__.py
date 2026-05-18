@@ -27,6 +27,7 @@ from .mini_tests import (
 )
 from .quizzes import (
     AddQuizAnswer,
+    AddQuizAnswerToQuestion,
     AddQuizPhoto,
     AddQuizQuestion,
     BackToMyQuizzes,
@@ -48,12 +49,14 @@ from .quizzes import (
     QuizzesList,
     RandomQuiz,
     SaveQuiz,
+    SetQuizAnswerCorrect,
 )
 
 __all__ = (
     "AddMiniTestAnswer",
     "AddMiniTestPhoto",
     "AddQuizAnswer",
+    "AddQuizAnswerToQuestion",
     "AddQuizPhoto",
     "AddQuizQuestion",
     "BackToMainMenu",
@@ -98,4 +101,5 @@ __all__ = (
     "RemoveMiniTestAnswerList",
     "SaveMiniTest",
     "SaveQuiz",
+    "SetQuizAnswerCorrect",
 )

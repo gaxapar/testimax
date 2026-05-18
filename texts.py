@@ -220,6 +220,14 @@ enter_quiz_answers = """
 
 enter_quiz_answers_invalid = "Введи вариант ответа в виде текста."
 
+enter_quiz_answer = """
+<b>✍️ Введите текст ответа</b>
+
+Можно отправить только текст.
+"""
+
+enter_quiz_answer_invalid = "Введи ответ в виде текста."
+
 enter_more_quiz_answers = """
 <b>✅ Вариант ответа успешно добавлен!</b>
 
@@ -236,6 +244,7 @@ enter_quiz_questions_draft_menu = """
 """
 
 save_quiz_answers_required = "Сначала нажми «Сохранить ответы» для этого вопроса."
+add_quiz_answer_button = "➕ Добавить ответ"
 
 quiz_menu = """
 <b>⚙️ Меню управления твоим квизом:</b>
