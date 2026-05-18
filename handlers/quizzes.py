@@ -577,7 +577,7 @@ async def handle_quiz_answer(
         total_questions = len(questions)
         result_text = texts.quiz_result.format(correct=correct_answers, total=total_questions)
 
-        await facade.edit_message(text=result_text, keyboard=[])
+        await facade.edit_message(text=result_text)
         await facade.answer_text(text=texts.main_menu, keyboard=keyboards.main_menu)
         await state.clear()
         return
