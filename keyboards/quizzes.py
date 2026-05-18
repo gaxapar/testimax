@@ -11,6 +11,9 @@ from . import callback_payload
 from .main import PAGE_SIZE
 
 save_quiz = [[types.CallbackButton(text=texts.save_quiz_button, payload=callback_payload.SaveQuiz().pack())]]
+save_quiz_answers = [
+    [types.CallbackButton(text=texts.save_quiz_answers_button, payload=callback_payload.ContinueQuizAnswers().pack())],
+]
 
 
 def my_quizzes_keyboard(quizzes: Sequence[Quiz]) -> list[list[types.CallbackButton]]:
@@ -128,7 +131,7 @@ def proceed_quiz(quiz_id: int) -> list[list[types.CallbackButton]]:
 
 
 def select_correct_answer_menu(answers: Sequence[QuizAnswerDict]) -> list[list[types.CallbackButton]]:
-    keyboard = [
+    return [
         [
             types.CallbackButton(
                 text=answer["text"][:40],
@@ -137,26 +140,6 @@ def select_correct_answer_menu(answers: Sequence[QuizAnswerDict]) -> list[list[t
         ]
         for i, answer in enumerate(answers)
     ]
-
-    keyboard.append(
-        [
-            types.CallbackButton(
-                text=texts.add_quiz_question_button,
-                payload=callback_payload.ContinueQuizAnswers().pack(),
-            ),
-        ],
-    )
-
-    keyboard.append(
-        [
-            types.CallbackButton(
-                text=texts.back,
-                payload=callback_payload.BackToMainMenu().pack(),
-            ),
-        ],
-    )
-
-    return keyboard
 
 
 def quizzes_page(quizzes: Sequence[Quiz], page: int, pages_count: int) -> list[list[types.CallbackButton]]:

@@ -151,14 +151,7 @@ async def handle_enter_quiz_answers(
 
     await state.update_data(current_question=current_question)
 
-    # prompt to add more answers or save question
-    keyboard = [
-        [types.CallbackButton(text=texts.add_quiz_question_button, payload=callback_payload.AddQuizQuestion().pack())],
-        [types.CallbackButton(text=texts.save_quiz_button, payload=callback_payload.SaveQuiz().pack())],
-        [types.CallbackButton(text=texts.back, payload=callback_payload.BackToMainMenu().pack())],
-    ]
-
-    await facade.answer_text(text=texts.enter_more_quiz_answers, keyboard=keyboard)
+    await facade.answer_text(text=texts.enter_more_quiz_answers, keyboard=keyboards.save_quiz_answers)
 
 
 @router.message_callback(callback_payload.SaveQuiz.filter())
@@ -172,17 +165,11 @@ async def handle_save_quiz(
     user_id = update.user.user_id
     data = await state.get_data() or {}
 
-    # if current_question exists, ask user to choose correct answer
+    # If the user tries to save while a question is still being edited,
+    # keep the save behavior tied to the explicit "save answers" callback.
     current_question = data.get("current_question")
     if current_question:
-        answers = current_question.get("answers", [])
-
-        if not answers:
-            await facade.answer_text(texts.no_answers_available)
-            return
-
-        keyboard = keyboards.select_correct_answer_menu(answers=answers)
-        await facade.edit_message(text=texts.choose_correct_answer, keyboard=keyboard)
+        await facade.answer_text(texts.save_quiz_answers_required)
         return
 
     # otherwise, save whole quiz
@@ -263,6 +250,31 @@ async def handle_quiz_details(
     await facade.edit_message(text=text, keyboard=keyboard)
 
 
+@router.message_callback(callback_payload.ContinueQuizAnswers.filter())
+async def handle_continue_quiz_answers(
+    _: updates.MessageCallback,
+    facade: MessageCallbackFacade,
+    state: FSMContext,
+) -> None:
+    data = await state.get_data() or {}
+    current_question = data.get("current_question")
+
+    if not current_question:
+        await facade.answer_text(texts.quiz_question_not_found)
+        return
+
+    answers = current_question.get("answers", [])
+
+    if not answers:
+        await facade.answer_text(texts.no_answers_available)
+        return
+
+    await state.set_state(states.AddQuizQuestion.waiting_for_correct_answer)
+
+    keyboard = keyboards.select_correct_answer_menu(answers=answers)
+    await facade.edit_message(text=texts.choose_correct_answer, keyboard=keyboard)
+
+
 @router.message_callback(callback_payload.AddQuizAnswer.filter())
 async def handle_add_quiz_answer(
     _: updates.MessageCallback,
@@ -307,17 +319,6 @@ async def handle_add_quiz_answer(
         text=texts.quiz_questions_menu.format(questions=", ".join(q["text"] for q in questions)),
         keyboard=keyboard,
     )
-
-
-@router.message_callback(callback_payload.ContinueQuizAnswers.filter())
-async def handle_continue_quiz_answers(
-    _: updates.MessageCallback,
-    facade: MessageCallbackFacade,
-    state: FSMContext,
-) -> None:
-    # go back to adding answers for current question
-    await state.set_state(states.AddQuizQuestion.waiting_for_answers)
-    await facade.edit_message(text=texts.enter_quiz_answers, keyboard=keyboards.cancel)
 
 
 @router.message_callback(callback_payload.DeleteQuiz.filter())
@@ -493,7 +494,7 @@ async def handle_proceed_quiz(
 
     # present first question for simplicity
     question = questions[0]
-    answers = question.answers
+    answers = await dao.get_answers_by_question_id(question_id=question.id)
 
     media = None
     if question.photo_file_id:

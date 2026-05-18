@@ -24,6 +24,7 @@ from .quizzes import (
     quiz_questions_menu,
     quizzes_page,
     save_quiz,
+    save_quiz_answers,
     select_correct_answer_menu,
 )
 from .quizzes import (
@@ -54,5 +55,6 @@ __all__ = (
     "remove_mini_test_answer_menu",
     "save_mini_test",
     "save_quiz",
+    "save_quiz_answers",
     "select_correct_answer_menu",
 )

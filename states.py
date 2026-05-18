@@ -26,6 +26,7 @@ class CreateQuiz(StatesGroup):
 class AddQuizQuestion(StatesGroup):
     waiting_for_question_text = State()
     waiting_for_answers = State()
+    waiting_for_correct_answer = State()
 
 
 class AddQuizPhoto(StatesGroup):
