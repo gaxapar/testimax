@@ -10,6 +10,7 @@ class Quiz(Base):
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True)
     title: Mapped[str]
+    description: Mapped[str | None]
     photo_file_id: Mapped[str | None]
     creator_user_id: Mapped[int]
     usages: Mapped[int] = mapped_column(default=0)

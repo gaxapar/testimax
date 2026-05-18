@@ -48,6 +48,7 @@ def upgrade() -> None:
         'quizes',
         sa.Column('id', sa.Integer(), primary_key=True),
         sa.Column('title', sa.String(), nullable=False),
+        sa.Column('description', sa.String(), nullable=True),
         sa.Column('photo_file_id', sa.String(), nullable=True),
         sa.Column('creator_user_id', sa.Integer(), sa.ForeignKey('users.id'), nullable=False),
         sa.Column('usages', sa.Integer(), nullable=False, default=0),

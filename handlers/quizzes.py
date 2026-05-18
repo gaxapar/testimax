@@ -79,7 +79,23 @@ async def handle_enter_quiz_title(
         await facade.answer_text(text=texts.enter_quiz_title_invalid)
         return
 
-    await state.update_data(title=update.text, questions=[])
+    await state.update_data(title=update.text)
+    await state.set_state(states.CreateQuiz.waiting_for_description)
+
+    await facade.answer_text(text=texts.enter_quiz_description, keyboard=keyboards.cancel)
+
+
+@router.message_created(filters.StateFilter(states.CreateQuiz.waiting_for_description))
+async def handle_enter_quiz_description(
+    update: updates.MessageCreated,
+    facade: MessageCreatedFacade,
+    state: FSMContext,
+) -> None:
+    if not update.text:
+        await facade.answer_text(text=texts.enter_quiz_description_invalid)
+        return
+
+    await state.update_data(description=update.text, questions=[])
     await state.set_state(states.CreateQuiz.waiting_for_questions)
 
     # show options to add question or save quiz
@@ -174,6 +190,7 @@ async def handle_save_quiz(
 
     # otherwise, save whole quiz
     title: str = data["title"]
+    description: str = data.get("description", "")
     questions = data.get("questions", [])
 
     if not title:
@@ -185,7 +202,7 @@ async def handle_save_quiz(
         return
 
     # create quiz
-    quiz = models.Quiz(title=title, creator_user_id=user_id)
+    quiz = models.Quiz(title=title, description=description, creator_user_id=user_id)
     dao.add(instance=quiz)
     await dao.commit()
 
@@ -457,12 +474,17 @@ async def handle_open_quiz_to_proceed(
 
     keyboard = keyboards.proceed_quiz(quiz_id=quiz_id)
 
+    # build message with title and description
+    message_text = f"<b>{quiz.title}</b>"
+    if quiz.description:
+        message_text += f"\n\n{quiz.description}"
+
     if media:
         await facade.delete_message()
-        await facade.answer(text=quiz.title, media=media, keyboard=keyboard)
+        await facade.answer(text=message_text, media=media, keyboard=keyboard)
 
     else:
-        await facade.edit_message(text=quiz.title, keyboard=keyboard)
+        await facade.edit_message(text=message_text, keyboard=keyboard)
 
 
 @router.message_callback(callback_payload.ProceedQuiz.filter())
