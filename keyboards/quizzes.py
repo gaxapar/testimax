@@ -98,6 +98,7 @@ def delete_quiz_confirm(quiz_id: int) -> list[list[types.CallbackButton]]:
 
 
 def quiz_questions_menu(quiz_id: int) -> list[list[types.CallbackButton]]:
+    # Deprecated simple menu; use dynamic listing when questions provided
     return [
         [
             types.CallbackButton(
@@ -112,6 +113,36 @@ def quiz_questions_menu(quiz_id: int) -> list[list[types.CallbackButton]]:
             ),
         ],
     ]
+
+
+def quiz_questions_menu_with_items(
+    quiz_id: int,
+    questions: Sequence[models.QuizQuestion],
+) -> list[list[types.CallbackButton]]:
+    keyboard = [
+        [
+            types.CallbackButton(
+                text=q.text,
+                payload=callback_payload.EditQuizQuestion(question_id=q.id).pack(),
+            ),
+            types.CallbackButton(text="❌", payload=callback_payload.DeleteQuizQuestion(question_id=q.id).pack()),
+        ]
+        for q in questions
+    ]
+
+    keyboard.extend(
+        [
+            [
+                types.CallbackButton(
+                    text=texts.add_quiz_question_button,
+                    payload=callback_payload.AddQuizQuestion(quiz_id=quiz_id).pack(),
+                ),
+            ],
+            [types.CallbackButton(text=texts.back, payload=callback_payload.BackToQuizDetails(quiz_id=quiz_id).pack())],
+        ],
+    )
+
+    return keyboard
 
 
 def proceed_quiz(quiz_id: int) -> list[list[types.CallbackButton]]:

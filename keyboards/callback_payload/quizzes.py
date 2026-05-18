@@ -33,6 +33,22 @@ class QuizQuestions(Payload, prefix="quiz_questions"):
     quiz_id: int
 
 
+class EditQuizQuestion(Payload, prefix="edit_quiz_question"):
+    question_id: int
+
+
+class DeleteQuizQuestion(Payload, prefix="delete_quiz_question"):
+    question_id: int
+
+
+class EditQuizAnswer(Payload, prefix="edit_quiz_answer"):
+    answer_id: int
+
+
+class DeleteQuizAnswer(Payload, prefix="delete_quiz_answer"):
+    answer_id: int
+
+
 class AddQuizQuestion(Payload, prefix="add_quiz_question"):
     quiz_id: int | None = None
 

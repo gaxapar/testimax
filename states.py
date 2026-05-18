@@ -36,3 +36,7 @@ class AddQuizPhoto(StatesGroup):
 
 class ProceedQuiz(StatesGroup):
     answering_question = State()
+
+
+class EditQuizAnswer(StatesGroup):
+    waiting_for_text = State()
