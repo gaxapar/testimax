@@ -275,6 +275,17 @@ quiz_review_approved = "<b>Квиз подтверждён.</b>"
 
 quiz_review_declined = "<b>Квиз отклонён.</b>"
 
+quiz_review_admin_message = """
+<b>🛡️ ТЕСТ НА ПРОВЕРКУ</b>
+
+<b>{title}</b>
+
+{description}
+
+<b>Вопросов:</b> {questions_count}
+<b>Создатель:</b> <code>{creator_id}</code> {creator_username}
+"""
+
 quiz_review_approved_creator = """
 <b>✅ Ваш квиз <code>{title}</code> подтверждён администратором и опубликован.</b>
 """

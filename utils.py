@@ -2,12 +2,15 @@ import logging
 from collections.abc import Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import NotRequired, TypedDict
+from typing import NotRequired, TypedDict, cast
 
 import yaml
-from maxo import Bot
+from maxo import Bot, types
 
-from database import models
+import keyboards
+import texts
+from config import config
+from database import DAO, models
 
 logger = logging.getLogger(__name__)
 
@@ -133,3 +136,50 @@ def format_answer_list(answers: Sequence[models.QuizAnswer]) -> str:
 
 def build_quiz_question_editor_text(question: models.QuizQuestion, answers: Sequence[models.QuizAnswer]) -> str:
     return f"<b>Вопрос:</b> {question.text}\n\n<b>Ответы:</b>\n{format_answer_list(answers)}"
+
+
+def build_quiz_review_text(quiz: models.Quiz, questions_count: int, creator_username: str | None = None) -> str:
+    description = quiz.description or "—"
+
+    username_display = f"(@{creator_username})" if creator_username else ""
+
+    return texts.quiz_review_admin_message.format(
+        title=quiz.title,
+        description=description,
+        questions_count=questions_count,
+        creator_id=quiz.creator_user_id,
+        creator_username=username_display,
+    )
+
+
+async def send_quiz_to_admin(bot: Bot, quiz: models.Quiz, dao: DAO) -> None:
+    review_keyboard = cast(
+        "list[list[types.InlineButtons]]",
+        keyboards.proceed_quiz_review(quiz_id=quiz.id),
+    )
+
+    attachments: list[types.AttachmentsRequests | types.Attachments] = [
+        types.InlineKeyboardAttachmentRequest(
+            payload=types.InlineKeyboardAttachmentRequestPayload(
+                buttons=review_keyboard,
+            ),
+        ),
+    ]
+
+    if quiz.photo_file_id:
+        attachments.append(
+            types.PhotoAttachmentRequest(payload=types.PhotoAttachmentRequestPayload(token=quiz.photo_file_id)),
+        )
+
+    # include question count in the admin message
+    questions = await dao.get_questions_by_quiz_id(quiz_id=quiz.id)
+    questions_count = len(questions)
+
+    # try to include creator username if available
+    creator = await dao.get_user_by_id(user_id=quiz.creator_user_id)
+
+    await bot.send_message(
+        user_id=config.admin_id,
+        text=build_quiz_review_text(quiz, questions_count=questions_count, creator_username=creator.username),
+        attachments=attachments,
+    )

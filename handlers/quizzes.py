@@ -1,4 +1,4 @@
-from typing import TYPE_CHECKING, cast
+from typing import TYPE_CHECKING
 
 from maxo import Bot, types
 from maxo.fsm.context import FSMContext
@@ -15,47 +15,13 @@ from keyboards import callback_payload
 from utils import (
     build_quiz_question_editor_text,
     format_question_list,
+    send_quiz_to_admin,
 )
 
 if TYPE_CHECKING:
     from utils import QuizQuestionDict
 
 router = Router()
-
-
-def build_quiz_review_text(quiz: models.Quiz) -> str:
-    text = f"<b>{quiz.title}</b>"
-
-    if quiz.description:
-        text += f"\n\n{quiz.description}"
-
-    return text
-
-
-async def send_quiz_to_admin(bot: Bot, quiz: models.Quiz) -> None:
-    review_keyboard = cast(
-        "list[list[types.InlineButtons]]",
-        keyboards.proceed_quiz_review(quiz_id=quiz.id),
-    )
-
-    attachments: list[types.AttachmentsRequests | types.Attachments] = [
-        types.InlineKeyboardAttachmentRequest(
-            payload=types.InlineKeyboardAttachmentRequestPayload(
-                buttons=review_keyboard,
-            ),
-        ),
-    ]
-
-    if quiz.photo_file_id:
-        attachments.append(
-            types.PhotoAttachmentRequest(payload=types.PhotoAttachmentRequestPayload(token=quiz.photo_file_id)),
-        )
-
-    await bot.send_message(
-        user_id=config.admin_id,
-        text=build_quiz_review_text(quiz),
-        attachments=attachments,
-    )
 
 
 @router.message_callback(callback_payload.QuizzesList.filter())
@@ -361,7 +327,7 @@ async def handle_save_quiz(
 
     await dao.commit()
 
-    await send_quiz_to_admin(bot=bot, quiz=quiz)
+    await send_quiz_to_admin(bot=bot, quiz=quiz, dao=dao)
 
     await state.clear()
 
