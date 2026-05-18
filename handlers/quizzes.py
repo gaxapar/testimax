@@ -284,7 +284,7 @@ async def handle_add_quiz_answer_to_question_text(
         answers=answers,
     )
 
-    await facade.edit_message(
+    await facade.answer_text(
         text=build_quiz_question_editor_text(question=question, answers=answers),
         keyboard=keyboard,
     )
