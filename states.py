@@ -31,3 +31,7 @@ class AddQuizQuestion(StatesGroup):
 
 class AddQuizPhoto(StatesGroup):
     waiting_for_photo = State()
+
+
+class ProceedQuiz(StatesGroup):
+    answering_question = State()

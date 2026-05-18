@@ -67,3 +67,7 @@ class BackToQuizDetails(Payload, prefix="back_to_quiz_details"):
 
 class BackToMyQuizzes(Payload, prefix="back_to_my_quizzes"):
     pass
+
+
+class QuizAnswer(Payload, prefix="quiz_answer"):
+    answer_id: int

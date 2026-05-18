@@ -471,6 +471,7 @@ async def handle_proceed_quiz(
     payload: callback_payload.ProceedQuiz,
     facade: MessageCallbackFacade,
     dao: DAO,
+    state: FSMContext,
 ) -> None:
     user_id = update.user.user_id
     quiz_id = payload.quiz_id
@@ -492,7 +493,16 @@ async def handle_proceed_quiz(
         quiz.usages += 1
         await dao.commit()
 
-    # present first question for simplicity
+    # initialize state for quiz progression
+    await state.set_state(states.ProceedQuiz.answering_question)
+    await state.update_data(
+        quiz_id=quiz_id,
+        questions=questions,
+        current_question_index=0,
+        correct_answers=0,
+    )
+
+    # show first question
     question = questions[0]
     answers = await dao.get_answers_by_question_id(question_id=question.id)
 
@@ -502,10 +512,68 @@ async def handle_proceed_quiz(
             types.PhotoAttachmentRequest(payload=types.PhotoAttachmentRequestPayload(token=question.photo_file_id)),
         ]
 
-    # build answers text
-    answers_text = "\n".join(f"{i + 1}. {a.text}" for i, a in enumerate(answers))
+    keyboard = keyboards.proceed_quiz_answers_keyboard(answers=answers)
 
-    await facade.delete_message()
-    await facade.answer(text=f"{question.text}\n\n{answers_text}", media=media)
+    await facade.edit_message(text=question.text, media=media, keyboard=keyboard)
 
-    await facade.answer_text(text=texts.main_menu, keyboard=keyboards.main_menu)
+
+@router.message_callback(callback_payload.QuizAnswer.filter())
+async def handle_quiz_answer(
+    _: updates.MessageCallback,
+    payload: callback_payload.QuizAnswer,
+    facade: MessageCallbackFacade,
+    state: FSMContext,
+    dao: DAO,
+) -> None:
+    data = await state.get_data() or {}
+    questions = data.get("questions", [])
+    current_question_index = data.get("current_question_index", 0)
+    correct_answers = data.get("correct_answers", 0)
+
+    if current_question_index >= len(questions):
+        await facade.answer_text(texts.quiz_not_found)
+        return
+
+    current_question = questions[current_question_index]
+
+    # get selected answer by id
+    selected_answer = await dao.get_answer_by_id(answer_id=payload.answer_id)
+
+    if not selected_answer or selected_answer.question_id != current_question.id:
+        await facade.answer_text(texts.quiz_not_found)
+        return
+
+    # check if answer is correct
+    if selected_answer.is_correct:
+        correct_answers += 1
+
+    current_question_index += 1
+
+    # check if there are more questions
+    if current_question_index >= len(questions):
+        # show results
+        total_questions = len(questions)
+        result_text = texts.quiz_result.format(correct=correct_answers, total=total_questions)
+
+        await facade.edit_message(text=result_text, keyboard=[])
+        await facade.answer_text(text=texts.main_menu, keyboard=keyboards.main_menu)
+        await state.clear()
+        return
+
+    # show next question
+    await state.update_data(current_question_index=current_question_index, correct_answers=correct_answers)
+
+    next_question = questions[current_question_index]
+    next_answers = await dao.get_answers_by_question_id(question_id=next_question.id)
+
+    media = None
+    if next_question.photo_file_id:
+        media = [
+            types.PhotoAttachmentRequest(
+                payload=types.PhotoAttachmentRequestPayload(token=next_question.photo_file_id),
+            ),
+        ]
+
+    keyboard = keyboards.proceed_quiz_answers_keyboard(answers=next_answers)
+
+    await facade.edit_message(text=next_question.text, media=media, keyboard=keyboard)

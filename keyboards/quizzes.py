@@ -4,6 +4,7 @@ from collections.abc import Sequence
 from maxo import types
 
 import texts
+from database import models
 from database.models import Quiz
 from utils import QuizAnswerDict
 
@@ -139,6 +140,18 @@ def select_correct_answer_menu(answers: Sequence[QuizAnswerDict]) -> list[list[t
             ),
         ]
         for i, answer in enumerate(answers)
+    ]
+
+
+def proceed_quiz_answers_keyboard(answers: Sequence[models.QuizAnswer]) -> list[list[types.CallbackButton]]:
+    return [
+        [
+            types.CallbackButton(
+                text=answer.text,
+                payload=callback_payload.QuizAnswer(answer_id=answer.id).pack(),
+            ),
+        ]
+        for answer in answers
     ]
 
 
