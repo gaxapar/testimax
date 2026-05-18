@@ -487,6 +487,62 @@ async def handle_open_quiz_to_proceed(
         await facade.edit_message(text=message_text, keyboard=keyboard)
 
 
+@router.message_callback(callback_payload.RandomQuiz.filter())
+async def handle_random_quiz(
+    _: updates.MessageCallback,
+    facade: MessageCallbackFacade,
+    dao: DAO,
+) -> None:
+    quiz = await dao.get_random_quiz()
+
+    if not quiz:
+        await facade.answer_text(texts.no_quizzes_available)
+        return
+
+    media = None
+    if quiz.photo_file_id:
+        media = [
+            types.PhotoAttachmentRequest(payload=types.PhotoAttachmentRequestPayload(token=quiz.photo_file_id)),
+        ]
+
+    keyboard = keyboards.proceed_quiz(quiz_id=quiz.id)
+
+    # show title + description for the random quiz
+    message_text = f"<b>{quiz.title}</b>"
+    if quiz.description:
+        message_text += f"\n\n{quiz.description}"
+
+    if media:
+        await facade.delete_message()
+        await facade.answer(text=message_text, media=media, keyboard=keyboard)
+    else:
+        await facade.edit_message(text=message_text, keyboard=keyboard)
+
+
+@router.message_callback(callback_payload.QuizQuestions.filter())
+async def handle_quiz_questions(
+    update: updates.MessageCallback,
+    payload: callback_payload.QuizQuestions,
+    facade: MessageCallbackFacade,
+    dao: DAO,
+) -> None:
+    user_id = update.user.user_id
+    quiz_id = payload.quiz_id
+
+    quiz = await dao.get_quiz_by_id(quiz_id=quiz_id)
+
+    if not quiz or quiz.creator_user_id != user_id:
+        await facade.answer_text(texts.quiz_not_found)
+        return
+
+    questions = await dao.get_questions_by_quiz_id(quiz_id=quiz_id)
+
+    keyboard = keyboards.quiz_questions_menu(quiz_id=quiz_id)
+    questions_text = ", ".join(q.text for q in questions) if questions else ""
+
+    await facade.edit_message(text=texts.quiz_questions_menu.format(questions=questions_text), keyboard=keyboard)
+
+
 @router.message_callback(callback_payload.ProceedQuiz.filter())
 async def handle_proceed_quiz(
     update: updates.MessageCallback,
