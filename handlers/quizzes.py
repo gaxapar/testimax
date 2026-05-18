@@ -1,3 +1,4 @@
+from collections.abc import Sequence
 from typing import TYPE_CHECKING
 
 from maxo import Bot, types
@@ -16,6 +17,13 @@ if TYPE_CHECKING:
     from utils import QuizQuestionDict
 
 router = Router()
+
+
+def format_question_list(questions: Sequence[str]) -> str:
+    if not questions:
+        return ""
+
+    return "\n".join(f"{index}. {question}" for index, question in enumerate(questions, start=1))
 
 
 @router.message_callback(callback_payload.QuizzesList.filter())
@@ -353,6 +361,7 @@ async def handle_add_quiz_answer(
     payload: callback_payload.AddQuizAnswer,
     facade: MessageCallbackFacade,
     state: FSMContext,
+    dao: DAO,
 ) -> None:
     data = await state.get_data() or {}
     current_question = data.get("current_question")
@@ -375,6 +384,42 @@ async def handle_add_quiz_answer(
 
     # append question to quiz questions
     questions = data.get("questions", [])
+    editing_quiz_id = data.get("editing_quiz_id")
+
+    if editing_quiz_id:
+        quiz = await dao.get_quiz_by_id(quiz_id=editing_quiz_id)
+
+        if not quiz:
+            await facade.answer_text(texts.quiz_not_found)
+            return
+
+        question = models.QuizQuestion(
+            text=current_question["text"],
+            photo_file_id=current_question.get("photo_file_id"),
+            quiz_id=quiz.id,
+        )
+        dao.add(instance=question)
+        await dao.commit()
+
+        for a in current_question.get("answers", []):
+            answer = models.QuizAnswer(
+                text=a.get("text"),
+                question_id=question.id,
+                is_correct=bool(a.get("is_correct")),
+            )
+            dao.add(instance=answer)
+
+        await dao.commit()
+        await state.clear()
+
+        questions = await dao.get_questions_by_quiz_id(quiz_id=quiz.id)
+        keyboard = keyboards.quiz_questions_menu_with_items(quiz_id=quiz.id, questions=questions)
+        await facade.edit_message(
+            text=texts.quiz_questions_menu.format(questions=format_question_list([q.text for q in questions])),
+            keyboard=keyboard,
+        )
+        return
+
     questions.append(current_question)
     await state.update_data(questions=questions)
     await state.update_data(current_question=None)
@@ -388,7 +433,9 @@ async def handle_add_quiz_answer(
     ]
 
     await facade.edit_message(
-        text=texts.quiz_questions_menu.format(questions=", ".join(q["text"] for q in questions)),
+        text=texts.enter_quiz_questions_draft_menu.format(
+            questions=format_question_list([q["text"] for q in questions]),
+        ),
         keyboard=keyboard,
     )
 
@@ -486,7 +533,7 @@ async def handle_delete_quiz_question(
     # show updated questions menu
     questions = await dao.get_questions_by_quiz_id(quiz_id=quiz.id)
     keyboard = keyboards.quiz_questions_menu_with_items(quiz_id=quiz.id, questions=questions)
-    questions_text = ", ".join(q.text for q in questions) if questions else ""
+    questions_text = format_question_list([q.text for q in questions])
 
     await facade.edit_message(text=texts.quiz_questions_menu.format(questions=questions_text), keyboard=keyboard)
 
@@ -728,7 +775,7 @@ async def handle_quiz_questions(
     questions = await dao.get_questions_by_quiz_id(quiz_id=quiz_id)
 
     keyboard = keyboards.quiz_questions_menu_with_items(quiz_id=quiz_id, questions=questions)
-    questions_text = ", ".join(q.text for q in questions) if questions else ""
+    questions_text = format_question_list([q.text for q in questions])
 
     await facade.edit_message(text=texts.quiz_questions_menu.format(questions=questions_text), keyboard=keyboard)
 
