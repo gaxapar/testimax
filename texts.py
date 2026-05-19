@@ -1,10 +1,10 @@
 back = "⬅ Назад"
 cancel = "🚫 Отмена"
-mini_tests_list_button = "💣 Пройти мини-тест"
+mini_tests_list_button = "💣 Пройти минитест"
 friendship_test_button = "❤️ Сертификат дружбы"
-my_mini_tests_button = "🧩 Мои тесты"
-random_mini_test_button = "🎲 Случайный тест"
-interactive_tests_button = "📋 Интерактивные тесты"
+my_mini_tests_button = "🧩 Мои минитесты"
+random_mini_test_button = "🎲 Случайный минитест"
+interactive_tests_button = "📋 Интерактивные минитесты"
 save_mini_test_button = "✅ Сохранить"
 share_mini_test_button = "📤 Поделиться"
 add_mini_test_photo_button = "🎆 Добавить облолжку"
@@ -13,7 +13,7 @@ delete_mini_test_button = "❌ Удалить минитест"
 delete_mini_test_confirm_button = "Да, удалить"
 add_mini_test_answer_button = "➕ Добавить вариант"
 remove_mini_test_answer_button = "➖ Удалить вариант"
-create_mini_test_button = "➕ Создать тест"
+create_mini_test_button = "➕ Создать минитест"
 proceed_mini_test_button = "💥 Пройти"
 previous_page_button = "⬅️"
 next_page_button = "➡️"
@@ -22,75 +22,75 @@ proceed_interactive_test_button = "👉🏻 Пройти"
 start = """
 <b>👋 Привет, {full_name}!
 
-Я бот в котором ты можешь пройти разные мини-тесты, а так же сделать тест на проверку друзей и получить сертификат дружбы ✍️❤️</b>
+Я бот, в котором ты можешь пройти разные минитесты и тесты-квизы, а также создавать собственные тесты и делиться ими с другими.</b>
 """  # noqa: E501
 
 main_menu = "💼 Меню бота:"
 
 
-enter_test_title = """
-<b>⭐️ Придумай название для теста
+enter_mini_test_title = """
+<b>⭐️ Придумай название для минитеста
 
-✍️ Отправь мне название или вопрос твоего будущего теста🤩
+✍️ Отправь мне название или вопрос твоего будущего минитеста 🤩
 
 💡 Пример:</b> <i>«Какой ты зайка?»</i>
 
-<i>🔒 Созданный тест появится в общем списке после 5 использований.</i>
+<i>🔒 Созданный минитест появится в общем списке после 5 использований.</i>
 """
 
-enter_test_title_invalid = "Введи название для теста в виде текста. Например: «Какой ты зайка?»"
+enter_mini_test_title_invalid = "Введи название для минитеста в виде текста. Например: «Какой ты зайка?»"
 
-enter_test_answers = """
+enter_mini_test_answers = """
 <b>🌟 Придумай ответы
 
-✍️ Отлично, теперь оправь мне варианты ответов для своего теста
+✍️ Отлично, теперь оправь мне варианты ответов для своего минитеста
 
 💡 Пример:</b> <i>«Сегодня ты черный зайка :)»</i>
 
 <i>🖼 Можно отправлять фото с подписью</i>
 """
 
-enter_test_answers_invalid = """
+enter_mini_test_answers_invalid = """
 Введи вариант ответа в виде текста или фото с подписью. Например: «Сегодня ты черный зайка :)»
 """
 
-enter_more_answers = """
+enter_more_mini_test_answers = """
 <b>✅ Вариант ответа успешно добавлен! ✅</b>
 
-<i>✨ Отправляй следующие варианты ответов к своему тесту или сохраняй варианты</i>
+<i>✨ Отправляй следующие варианты ответов к своему минитесту или сохраняй варианты</i>
 """
 
-test_menu = """
+mini_test_menu = """
 <b>⚙️ Меню управления твоим мини-тестом:</b>
 
-<b>✏️ Название теста</b> - {title}
+<b>✏️ Название минитеста</b> - {title}
 <b>📊 Количество использований</b> - {usages}
-<b>🏆 Позиция теста в топе</b> - {place_in_top}
+<b>🏆 Позиция минитеста в топе</b> - {place_in_top}
 """
 
-test_share_text = """
-Нажми, чтобы пройти тест «{title}»
+mini_test_share_text = """
+Нажми, чтобы пройти минитест «{title}»
 
-https://max.ru/{bot_username}?start={test_id}
+https://max.ru/{bot_username}?start=mini-{test_id}
 """
 
-my_tests_list = """
-<b>🗂 Ваши тесты:
+my_mini_tests_list = """
+<b>🗂 Ваши минитесты:
 
 💫 Создано</b> - <i>{user_tests_count}</i>
 """
 
 delete_mini_test_confirm = """
-<b>🗑 Удаление мини-теста</b>
+<b>🗑 Удаление минитеста</b>
 
-Ты правда хочешь удалить мини-тест <code>{title}</code>?
+Ты правда хочешь удалить минитест <code>{title}</code>?
 """
 
-mini_test_not_found = "Мини-тест не найден"
+mini_test_not_found = "Минитест не найден"
 mini_test_answer_not_found = "Вариант ответа не найден"
 
 mini_test_answers_menu = """
-<b>⚙️ Меню управления твоим мини-тестом:</b>
+<b>⚙️ Меню управления твоим минитестом:</b>
 
 <b>Варианты:</b> {answers}
 """
@@ -98,18 +98,18 @@ mini_test_answers_menu = """
 remove_mini_test_answer_menu = """
 <b>🗑 Удаление варианта ответа</b>
 
-💬 Выбери ответ который хочешь удалить из мини-теста.
+💬 Выбери ответ который хочешь удалить из минитеста.
 """
 
-no_tests_available = "Пока нет ни одного мини-теста 😔"
+no_tests_available = "Пока нет ни одного минитеста 😔"
 no_answers_available = "Пока нет ни одного варианта ответа 😔"
 
-mini_tests_list_menu = "<b>Лучшие быстрые тесты, собранные со всего Telegram! 🌐</b>"
+mini_tests_list_menu = "<b>Лучшие минитесты, собранные со всего Max! 🌐</b>"
 
 send_mini_test_photo = """
 <b>🖼 Добавление обложки</b>
 
-💬 Отправь фото для обложки к своему тесту.
+💬 Отправь фото для обложки к своему минитесту.
 """
 
 send_mini_test_photo_invalid = "Пожалуйста, отправь фото для обложки к своему тесту."
@@ -132,80 +132,80 @@ interactive_test_question_wrapper = """
 
 
 # Quiz texts
-quizzes_list_button = "🧠 Пройти квиз"
-my_quizzes_button = "📚 Мои квизы"
-random_quiz_button = "🎲 Случайный квиз"
-save_quiz_button = "✅ Сохранить квиз"
-share_quiz_button = "📤 Поделиться квизом"
-add_quiz_photo_button = "🖼 Добавить обложку квиза"
+quizzes_list_button = "🧠 Пройти тест"
+my_quizzes_button = "📚 Мои тесты"
+random_quiz_button = "🎲 Случайный тест"
+save_quiz_button = "✅ Сохранить тест"
+share_quiz_button = "📤 Поделиться тестом"
+add_quiz_photo_button = "🖼 Добавить обложку теста"
 quiz_questions_button = "❓ Вопросы"
-delete_quiz_button = "❌ Удалить квиз"
+delete_quiz_button = "❌ Удалить тест"
 delete_quiz_confirm_button = "Да, удалить"
 add_quiz_question_button = "➕ Добавить вопрос"
 save_quiz_answers_button = "✅ Сохранить ответы"
-create_quiz_button = "➕ Создать квиз"
-proceed_quiz_button = "▶️ Пройти квиз"
+create_quiz_button = "➕ Создать тест"
+proceed_quiz_button = "▶️ Пройти тест"
 proceed_quiz_review_button = "▶️ Пройти"
 approve_quiz_button = "✅ Подтвердить"
 decline_quiz_button = "❌ Отклонить"
 
-quizzes_list_menu = "<b>Лучшие квизы, собранные со всего Telegram! 🌐</b>"
+quizzes_list_menu = "<b>Лучшие тесты, собранные со всего Max! 🌐</b>"
 
-quiz_not_found = "Квиз не найден"
-quiz_question_not_found = "Вопрос квиза не найден"
+quiz_not_found = "Тест не найден"
+quiz_question_not_found = "Вопрос теста не найден"
 
 quiz_questions_menu = """
-<b>⚙️ Меню управления квизом:</b>
+<b>⚙️ Меню управления тестом:</b>
 
 <b>Вопросы:</b>
 {questions}
 """
 
-no_quizzes_available = "Пока нет ни одного квиза 😔"
+no_quizzes_available = "Пока нет ни одного теста 😔"
 no_questions_available = "Пока нет ни одного вопроса 😔"
 
 my_quizzes_list = """
-<b>🗂 Ваши квизы:
+<b>🗂 Ваши тесты:
 
 💫 Создано</b> - <i>{user_quizzes_count}</i>
 """
 
 send_quiz_photo = """
-<b>🖼 Добавление обложки квиза</b>
+<b>🖼 Добавление обложки теста</b>
 
-💬 Отправь фото для обложки к своему квизу.
+💬 Отправь фото для обложки к своему тесту.
 """
 
-send_quiz_photo_invalid = "Пожалуйста, отправь фото для обложки к своему квизу."
+send_quiz_photo_invalid = "Пожалуйста, отправь фото для обложки к своему тесту."
 
 
 delete_quiz_confirm = """
-<b>🗑 Удаление квиза</b>
+<b>🗑 Удаление теста</b>
 
-Ты правда хочешь удалить квиз <code>{title}</code>?
+Ты правда хочешь удалить тест <code>{title}</code>?
 """
 
 enter_quiz_title = """
-<b>⭐️ Придумай название для квиза
+<b>⭐️ Придумай название для теста
 
-✍️ Отправь мне название твоего будущего квиза
+✍️ Отправь мне название твоего будущего теста
 
 💡 Пример:</b> <i>«Узнай твою профессию»</i>
 
-<i>🔒 Созданный квиз появится в общем списке после 5 использований.</i>
+<i>🔒 Созданный тест появится в общем списке после 5 использований.</i>
 """
 
-enter_quiz_title_invalid = "Введи название для квиза в виде текста. Например: «Узнай твою профессию»"
+enter_quiz_title_invalid = "Введи название для теста в виде текста. Например: «Узнай твою профессию»"
 
 enter_quiz_description = """
-<b>📝 Придумай описание для квиза
+<b>📝 Придумай описание для теста
 
-✍️ Отправь мне описание квиза, чтобы люди поняли о чем он
+✍️ Отправь мне описание теста, чтобы люди поняли о чем он
 
 💡 Пример:</b> <i>«Пройдите тест из 5 вопросов и узнайте, кем вы могли бы работать в альтернативной реальности»</i>
 """
 
-enter_quiz_description_invalid = "Введи описание для квиза в виде текста."
+enter_quiz_description_invalid = "Введи описание для теста в виде текста."
 
 enter_quiz_question = """
 <b>✍️ Введите текст вопроса</b>
@@ -238,42 +238,48 @@ enter_more_quiz_answers = """
 """
 
 enter_quiz_questions_draft_menu = """
-<b>🧩 Вопрос добавлен в черновик квиза</b>
+<b>🧩 Вопрос добавлен в черновик теста</b>
 
 <b>Сейчас в черновике:</b>
 {questions}
 
-Отправляй следующий вопрос или нажми <b>«Сохранить квиз»</b>.
+Отправляй следующий вопрос или нажми <b>«Сохранить тест»</b>.
 """
 
 save_quiz_answers_required = "Сначала нажми «Сохранить ответы» для этого вопроса."
 add_quiz_answer_button = "➕ Добавить ответ"
 
 quiz_menu = """
-<b>⚙️ Меню управления твоим квизом:</b>
+<b>⚙️ Меню управления твоим тестом:</b>
 
-<b>✏️ Название квиза</b> - {title}
+<b>✏️ Название теста</b> - {title}
 <b>📊 Количество использований</b> - {usages}
-<b>🏆 Позиция квиза в топе</b> - {place_in_top}
+<b>🏆 Позиция теста в топе</b> - {place_in_top}
+"""
+
+quiz_share_text = """
+Нажми, чтобы пройти тест «{title}»
+
+https://max.ru/{bot_username}?start=quiz-{test_id}
 """
 
 choose_correct_answer = "<b>Выберите правильный ответ для текущего вопроса:</b>"
 
 quiz_result = """
-<b>✅ Квиз пройден!</b>
+<b>✅ Тест пройден!</b>
 
 <b>Результат:</b> {correct}/{total} правильных ответов
 """
 
 quiz_review_complete = """
-<b>Квиз пройден для проверки.</b>
+<b>Тест пройден для проверки.</b>
 
-Подтвердите публикацию или отклоните квиз.
+Подтвердите публикацию или отклоните тест.
 """
 
-quiz_review_approved = "<b>Квиз подтверждён.</b>"
+quiz_review_approved = "<b>Тест подтверждён.</b>"
 
-quiz_review_declined = "<b>Квиз отклонён.</b>"
+quiz_review_declined = "<b>Тест отклонён.</b>"
 
 quiz_review_admin_message = """
 <b>🛡️ ТЕСТ НА ПРОВЕРКУ</b>
@@ -287,15 +293,15 @@ quiz_review_admin_message = """
 """
 
 quiz_review_approved_creator = """
-<b>✅ Ваш квиз <code>{title}</code> подтверждён администратором и опубликован.</b>
+<b>✅ Ваш тест <code>{title}</code> подтверждён администратором и опубликован.</b>
 """
 
 quiz_review_declined_creator = """
-<b>❌ Ваш квиз <code>{title}</code> отклонён администратором.</b>
+<b>❌ Ваш тест <code>{title}</code> отклонён администратором.</b>
 """
 
 quiz_sent_for_review = """
-<b>✅ Ваш квиз отправлен на проверку администратору!</b>
+<b>✅ Ваш тест отправлен на проверку администратору!</b>
 
-После одобрения он появится в общем списке квизов.
+После одобрения он появится в общем списке тестов.
 """

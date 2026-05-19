@@ -49,7 +49,7 @@ def my_quizzes_keyboard(quizzes: Sequence[Quiz]) -> list[list[types.CallbackButt
 
 
 def quiz_menu(quiz: Quiz, bot_username: str) -> list[list[types.CallbackButton | types.LinkButton]]:
-    text_to_share = texts.test_share_text.format(bot_username=bot_username, test_id=quiz.id, title=quiz.title)
+    text_to_share = texts.quiz_share_text.format(bot_username=bot_username, test_id=quiz.id, title=quiz.title)
 
     return [
         [

@@ -51,12 +51,12 @@ async def handle_my_mini_tests(
 
     if not mini_tests:
         await state.set_state(states.CreateMiniTest.waiting_for_title)
-        await facade.edit_message(text=texts.enter_test_title, keyboard=keyboards.cancel)
+        await facade.edit_message(text=texts.enter_mini_test_title, keyboard=keyboards.cancel)
 
         return
 
     keyboard = keyboards.my_mini_tests_keyboard(mini_tests=mini_tests)
-    await facade.edit_message(text=texts.my_tests_list.format(user_tests_count=len(mini_tests)), keyboard=keyboard)
+    await facade.edit_message(text=texts.my_mini_tests_list.format(user_tests_count=len(mini_tests)), keyboard=keyboard)
 
 
 @router.message_callback(callback_payload.CreateMiniTest.filter())
@@ -66,7 +66,7 @@ async def handle_create_mini_test(
     state: FSMContext,
 ) -> None:
     await state.set_state(states.CreateMiniTest.waiting_for_title)
-    await facade.edit_message(text=texts.enter_test_title, keyboard=keyboards.cancel)
+    await facade.edit_message(text=texts.enter_mini_test_title, keyboard=keyboards.cancel)
 
 
 @router.message_created(filters.StateFilter(states.CreateMiniTest.waiting_for_title))
@@ -76,14 +76,14 @@ async def handle_enter_test_title(
     state: FSMContext,
 ) -> None:
     if not update.text:
-        await facade.answer_text(text=texts.enter_test_title)
+        await facade.answer_text(text=texts.enter_mini_test_title)
 
         return
 
     await state.update_data(title=update.text)
     await state.set_state(states.CreateMiniTest.waiting_for_answers)
 
-    await facade.answer_text(text=texts.enter_test_answers, keyboard=keyboards.cancel)
+    await facade.answer_text(text=texts.enter_mini_test_answers, keyboard=keyboards.cancel)
 
 
 @router.message_created(filters.StateFilter(states.AddMiniTestAnswer.waiting_for_answers))
@@ -94,7 +94,7 @@ async def handle_enter_test_answers(
     state: FSMContext,
 ) -> None:
     if not update.text:
-        await facade.answer_text(text=texts.enter_test_answers_invalid)
+        await facade.answer_text(text=texts.enter_mini_test_answers_invalid)
 
         return
 
@@ -114,7 +114,7 @@ async def handle_enter_test_answers(
 
     await state.update_data(answers=answers)
 
-    await facade.answer_text(text=texts.enter_more_answers, keyboard=keyboards.save_mini_test)
+    await facade.answer_text(text=texts.enter_more_mini_test_answers, keyboard=keyboards.save_mini_test)
 
 
 @router.message_callback(callback_payload.SaveMiniTest.filter())
@@ -167,7 +167,7 @@ async def handle_save_mini_test(
     if not bot_user.username:
         return
 
-    text = texts.test_menu.format(title=mini_test.title, usages=mini_test.usages, place_in_top=place_in_top)
+    text = texts.mini_test_menu.format(title=mini_test.title, usages=mini_test.usages, place_in_top=place_in_top)
     keyboard = keyboards.mini_test_menu(mini_test=mini_test, bot_username=bot_user.username)
 
     await facade.edit_message(text=text, keyboard=keyboard)
@@ -198,7 +198,7 @@ async def handle_mini_test_details(
     if not bot_user.username:
         return
 
-    text = texts.test_menu.format(title=mini_test.title, usages=mini_test.usages, place_in_top=place_in_top)
+    text = texts.mini_test_menu.format(title=mini_test.title, usages=mini_test.usages, place_in_top=place_in_top)
     keyboard = keyboards.mini_test_menu(mini_test=mini_test, bot_username=bot_user.username)
 
     await facade.edit_message(text=text, keyboard=keyboard)
@@ -248,7 +248,7 @@ async def handle_delete_mini_test_confirm(
     mini_tests = await dao.get_mini_tests_by_user_id(user_id=user_id)
 
     keyboard = keyboards.my_mini_tests_keyboard(mini_tests=mini_tests)
-    await facade.edit_message(text=texts.my_tests_list.format(user_tests_count=len(mini_tests)), keyboard=keyboard)
+    await facade.edit_message(text=texts.my_mini_tests_list.format(user_tests_count=len(mini_tests)), keyboard=keyboard)
 
 
 @router.message_callback(callback_payload.AddMiniTestPhoto.filter())
@@ -311,7 +311,7 @@ async def handle_save_mini_test_photo(
     if not bot_user.username:
         return
 
-    text = texts.test_menu.format(title=mini_test.title, usages=mini_test.usages, place_in_top=place_in_top)
+    text = texts.mini_test_menu.format(title=mini_test.title, usages=mini_test.usages, place_in_top=place_in_top)
     keyboard = keyboards.mini_test_menu(mini_test=mini_test, bot_username=bot_user.username)
 
     await facade.answer_text(text=text, keyboard=keyboard)
@@ -361,7 +361,7 @@ async def handle_add_mini_test_answer(
     await state.update_data(mini_test_id=mini_test_id)
     await state.set_state(states.AddMiniTestAnswer.waiting_for_answers)
 
-    await facade.edit_message(text=texts.enter_test_answers, keyboard=keyboards.cancel)
+    await facade.edit_message(text=texts.enter_mini_test_answers, keyboard=keyboards.cancel)
 
 
 @router.message_callback(callback_payload.RemoveMiniTestAnswerList.filter())

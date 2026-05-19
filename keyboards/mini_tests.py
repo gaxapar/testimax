@@ -42,7 +42,11 @@ def my_mini_tests_keyboard(mini_tests: Sequence[MiniTest]) -> list[list[types.Ca
 
 
 def mini_test_menu(mini_test: MiniTest, bot_username: str) -> list[list[types.CallbackButton | types.LinkButton]]:
-    text_to_share = texts.test_share_text.format(bot_username=bot_username, test_id=mini_test.id, title=mini_test.title)
+    text_to_share = texts.mini_test_share_text.format(
+        bot_username=bot_username,
+        test_id=mini_test.id,
+        title=mini_test.title,
+    )
 
     return [
         [
