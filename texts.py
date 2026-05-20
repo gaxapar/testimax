@@ -277,10 +277,6 @@ quiz_review_complete = """
 Подтвердите публикацию или отклоните тест.
 """
 
-quiz_review_approved = "<b>Тест подтверждён.</b>"
-
-quiz_review_declined = "<b>Тест отклонён.</b>"
-
 quiz_review_admin_message = """
 <b>🛡️ ТЕСТ НА ПРОВЕРКУ</b>
 
@@ -305,3 +301,7 @@ quiz_sent_for_review = """
 
 После одобрения он появится в общем списке тестов.
 """
+
+quiz_review_approved_admin = "<b>✅ Тест <code>{title}</code> одобрен.</b>"
+
+quiz_review_declined_admin = "<b>❌ Тест <code>{title}</code> отклонён.</b>"

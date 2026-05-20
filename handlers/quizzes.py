@@ -1073,7 +1073,7 @@ async def handle_approve_quiz_review(
         )
 
     await state.clear()
-    await facade.edit_message(text=texts.quiz_review_approved, keyboard=keyboards.main_menu)
+    await facade.edit_message(text=texts.quiz_review_approved_admin.format(title=quiz.title))
 
 
 @router.message_callback(callback_payload.DeclineQuizReview.filter())
@@ -1111,4 +1111,4 @@ async def handle_decline_quiz_review(
         )
 
     await state.clear()
-    await facade.edit_message(text=texts.quiz_review_declined, keyboard=keyboards.main_menu)
+    await facade.edit_message(text=texts.quiz_review_declined_admin.format(title=quiz.title))
