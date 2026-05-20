@@ -27,7 +27,7 @@ async def handle_bot_start(update: updates.BotStarted, facade: BotStartedFacade,
         dao.add(instance=user)
         await dao.commit()
 
-    if update.payload is str:
+    if type(update.payload) is str:
         if match := MINI_TEST_PAYLOAD_REGEX.match(update.payload):
             mini_test_id = int(match.group(1))
 
