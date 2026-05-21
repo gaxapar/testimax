@@ -6,4 +6,12 @@ from .quiz_question import QuizQuestionDAO
 from .referral_stats import ReferralStatsDAO
 from .user import UserDAO
 
-__all__ = ("MiniTestAnswerDAO", "MiniTestDAO", "QuizAnswerDAO", "QuizDAO", "QuizQuestionDAO", "ReferralStatsDAO", "UserDAO")
+__all__ = (
+    "MiniTestAnswerDAO",
+    "MiniTestDAO",
+    "QuizAnswerDAO",
+    "QuizDAO",
+    "QuizQuestionDAO",
+    "ReferralStatsDAO",
+    "UserDAO",
+)

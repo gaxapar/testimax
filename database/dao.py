@@ -1,7 +1,15 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from .models import AnyModel
-from .models_dao import MiniTestAnswerDAO, MiniTestDAO, QuizAnswerDAO, QuizDAO, QuizQuestionDAO, ReferralStatsDAO, UserDAO
+from .models_dao import (
+    MiniTestAnswerDAO,
+    MiniTestDAO,
+    QuizAnswerDAO,
+    QuizDAO,
+    QuizQuestionDAO,
+    ReferralStatsDAO,
+    UserDAO,
+)
 
 
 class DAO(MiniTestAnswerDAO, MiniTestDAO, UserDAO, QuizDAO, QuizQuestionDAO, QuizAnswerDAO, ReferralStatsDAO):

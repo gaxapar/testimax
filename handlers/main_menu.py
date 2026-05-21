@@ -11,9 +11,9 @@ import texts
 from database import DAO, models
 from keyboards import callback_payload
 from op_access import (
-    block_callback_by_op_access,
     OP_CHANNELS_PHASE1,
     OP_NOT_CONFIRMED_TEXT,
+    block_callback_by_op_access,
     is_op_access_required,
     optional_step_is_waiting,
     pass_op_access_if_allowed,
@@ -29,7 +29,7 @@ router = Router()
 
 
 @router.bot_started()
-async def handle_bot_start(update: updates.BotStarted, facade: BotStartedFacade, dao: DAO) -> None:
+async def handle_bot_start(update: updates.BotStarted, facade: BotStartedFacade, dao: DAO) -> None:  # noqa: C901, PLR0912
     user_id = update.user.user_id
 
     user = await dao.get_user_by_id(user_id=user_id)

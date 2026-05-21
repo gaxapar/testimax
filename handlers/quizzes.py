@@ -1,3 +1,4 @@
+import contextlib
 from typing import TYPE_CHECKING
 
 from maxo import Bot, types
@@ -1078,13 +1079,11 @@ async def handle_approve_quiz_review(
 
     creator = await dao.get_user_by_id(user_id=quiz.creator_user_id)
     if creator:
-        try:
+        with contextlib.suppress(MaxBotForbiddenError):
             await bot.send_message(
                 user_id=creator.id,
                 text=texts.quiz_review_approved_creator.format(title=quiz.title),
             )
-        except MaxBotForbiddenError:
-            pass
 
     await state.clear()
     await facade.edit_message(text=texts.quiz_review_approved_admin.format(title=quiz.title))
@@ -1119,13 +1118,11 @@ async def handle_decline_quiz_review(
     await dao.commit()
 
     if creator:
-        try:
+        with contextlib.suppress(MaxBotForbiddenError):
             await bot.send_message(
                 user_id=creator.id,
                 text=texts.quiz_review_declined_creator.format(title=quiz.title),
             )
-        except MaxBotForbiddenError:
-            pass
 
     await state.clear()
     await facade.edit_message(text=texts.quiz_review_declined_admin.format(title=quiz.title))
