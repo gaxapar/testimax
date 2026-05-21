@@ -11,7 +11,9 @@ from maxo.routing.routers.simple import Router
 import keyboards
 import texts
 import utils
+from database import DAO
 from keyboards import callback_payload
+from op_access import block_callback_by_op_access
 
 router = Router()
 
@@ -34,10 +36,14 @@ INTERACTIVE_TESTS_PAGES_COUNT = (len(interactive_tests) + INTERACTIVE_TESTS_PAGE
 
 @router.message_callback(callback_payload.InteractiveTestsList.filter())
 async def handle_interactive_tests_list(
-    _: updates.MessageCallback,
+    update: updates.MessageCallback,
     payload: callback_payload.InteractiveTestsList,
     facade: MessageCallbackFacade,
+    dao: DAO,
 ) -> None:
+    if await block_callback_by_op_access(user_id=update.user.user_id, facade=facade, dao=dao):
+        return
+
     keyboard = keyboards.interactive_tests_page(
         interactive_tests=list(interactive_tests.values()),
         page=payload.page,

@@ -1,6 +1,7 @@
 from typing import TYPE_CHECKING
 
 from maxo import Bot, types
+from maxo.errors.api import MaxBotForbiddenError
 from maxo.fsm.context import FSMContext
 from maxo.routing import filters, updates
 from maxo.routing.facades import MessageCallbackFacade, MessageCreatedFacade
@@ -12,6 +13,7 @@ import texts
 from config import config
 from database import DAO, models
 from keyboards import callback_payload
+from op_access import block_callback_by_op_access
 from utils import (
     build_quiz_question_editor_text,
     format_question_list,
@@ -26,11 +28,14 @@ router = Router()
 
 @router.message_callback(callback_payload.QuizzesList.filter())
 async def handle_quizzes_list(
-    _: updates.MessageCallback,
+    update: updates.MessageCallback,
     payload: callback_payload.QuizzesList,
     facade: MessageCallbackFacade,
     dao: DAO,
 ) -> None:
+    if await block_callback_by_op_access(user_id=update.user.user_id, facade=facade, dao=dao):
+        return
+
     page = payload.page
 
     quizzes = await dao.get_quizzes_page(page=page)
@@ -52,6 +57,9 @@ async def handle_my_quizzes(
     dao: DAO,
     state: FSMContext,
 ) -> None:
+    if await block_callback_by_op_access(user_id=update.user.user_id, facade=facade, dao=dao):
+        return
+
     user_id = update.user.user_id
 
     quizzes = await dao.get_quizzes_by_user_id(user_id=user_id)
@@ -811,10 +819,13 @@ async def handle_open_quiz_to_proceed(
 
 @router.message_callback(callback_payload.RandomQuiz.filter())
 async def handle_random_quiz(
-    _: updates.MessageCallback,
+    update: updates.MessageCallback,
     facade: MessageCallbackFacade,
     dao: DAO,
 ) -> None:
+    if await block_callback_by_op_access(user_id=update.user.user_id, facade=facade, dao=dao):
+        return
+
     quiz = await dao.get_random_quiz()
 
     if not quiz:
@@ -1067,10 +1078,13 @@ async def handle_approve_quiz_review(
 
     creator = await dao.get_user_by_id(user_id=quiz.creator_user_id)
     if creator:
-        await bot.send_message(
-            user_id=creator.id,
-            text=texts.quiz_review_approved_creator.format(title=quiz.title),
-        )
+        try:
+            await bot.send_message(
+                user_id=creator.id,
+                text=texts.quiz_review_approved_creator.format(title=quiz.title),
+            )
+        except MaxBotForbiddenError:
+            pass
 
     await state.clear()
     await facade.edit_message(text=texts.quiz_review_approved_admin.format(title=quiz.title))
@@ -1105,10 +1119,13 @@ async def handle_decline_quiz_review(
     await dao.commit()
 
     if creator:
-        await bot.send_message(
-            user_id=creator.id,
-            text=texts.quiz_review_declined_creator.format(title=quiz.title),
-        )
+        try:
+            await bot.send_message(
+                user_id=creator.id,
+                text=texts.quiz_review_declined_creator.format(title=quiz.title),
+            )
+        except MaxBotForbiddenError:
+            pass
 
     await state.clear()
     await facade.edit_message(text=texts.quiz_review_declined_admin.format(title=quiz.title))

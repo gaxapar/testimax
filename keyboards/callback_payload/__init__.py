@@ -1,4 +1,4 @@
-from .common import BackToMainMenu, Cancel, Empty
+from .common import BackToMainMenu, Cancel, Empty, OpChannelsCheck
 from .interactive_tests import InteractiveTestOption, InteractiveTestsList, OpenInteractiveTest, ProceedInteractiveTest
 from .mini_tests import (
     AddMiniTestAnswer,
@@ -88,6 +88,7 @@ __all__ = (
     "OpenInteractiveTest",
     "OpenMiniTestToProceed",
     "OpenQuizToProceed",
+    "OpChannelsCheck",
     "ProceedInteractiveTest",
     "ProceedMiniTest",
     "ProceedQuiz",

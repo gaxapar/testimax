@@ -11,3 +11,7 @@ class BackToMainMenu(Payload, prefix="back_to_main_menu"):
 
 class Empty(Payload, prefix="empty"):
     pass
+
+
+class OpChannelsCheck(Payload, prefix="op_channels_check"):
+    pass

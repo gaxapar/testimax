@@ -1,4 +1,4 @@
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from database.models import User
@@ -12,3 +12,9 @@ class UserDAO:
 
         result = await self.session.execute(statement)
         return result.scalar()
+
+    async def get_passed_op_users_count(self) -> int:
+        statement = select(func.count()).select_from(User).where(User.is_op_ref_user, User.op_access_granted)
+
+        result = await self.session.execute(statement)
+        return result.scalar_one()

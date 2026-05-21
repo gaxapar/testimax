@@ -11,6 +11,7 @@ import states
 import texts
 from database import DAO, models
 from keyboards import callback_payload
+from op_access import block_callback_by_op_access
 from utils import MiniTestAnswer
 
 router = Router()
@@ -18,11 +19,14 @@ router = Router()
 
 @router.message_callback(callback_payload.MiniTestsList.filter())
 async def handle_mini_tests_list(
-    _: updates.MessageCallback,
+    update: updates.MessageCallback,
     payload: callback_payload.MiniTestsList,
     facade: MessageCallbackFacade,
     dao: DAO,
 ) -> None:
+    if await block_callback_by_op_access(user_id=update.user.user_id, facade=facade, dao=dao):
+        return
+
     page = payload.page
 
     mini_tests = await dao.get_mini_tests_page(page=page)
@@ -45,6 +49,9 @@ async def handle_my_mini_tests(
     dao: DAO,
     state: FSMContext,
 ) -> None:
+    if await block_callback_by_op_access(user_id=update.user.user_id, facade=facade, dao=dao):
+        return
+
     user_id = update.user.user_id
 
     mini_tests = await dao.get_mini_tests_by_user_id(user_id=user_id)
@@ -424,10 +431,13 @@ async def handle_remove_mini_test_answer(
 
 @router.message_callback(callback_payload.RandomMiniTest.filter())
 async def handle_random_mini_test(
-    _: updates.MessageCallback,
+    update: updates.MessageCallback,
     facade: MessageCallbackFacade,
     dao: DAO,
 ) -> None:
+    if await block_callback_by_op_access(user_id=update.user.user_id, facade=facade, dao=dao):
+        return
+
     mini_test = await dao.get_random_mini_test()
 
     if not mini_test:

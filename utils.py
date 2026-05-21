@@ -6,6 +6,7 @@ from typing import NotRequired, TypedDict, cast
 
 import yaml
 from maxo import Bot, types
+from maxo.errors.api import MaxBotForbiddenError
 
 import keyboards
 import texts
@@ -178,8 +179,11 @@ async def send_quiz_to_admin(bot: Bot, quiz: models.Quiz, dao: DAO) -> None:
     # try to include creator username if available
     creator = await dao.get_user_by_id(user_id=quiz.creator_user_id)
 
-    await bot.send_message(
-        user_id=config.admin_id,
-        text=build_quiz_review_text(quiz, questions_count=questions_count, creator_username=creator.username),
-        attachments=attachments,
-    )
+    try:
+        await bot.send_message(
+            user_id=config.admin_id,
+            text=build_quiz_review_text(quiz, questions_count=questions_count, creator_username=creator.username),
+            attachments=attachments,
+        )
+    except MaxBotForbiddenError:
+        logger.warning("Cannot send quiz review to admin %s: chat denied", config.admin_id)
