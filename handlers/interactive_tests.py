@@ -44,8 +44,12 @@ async def handle_interactive_tests_list(
     if await block_callback_by_op_access(user_id=update.user.user_id, facade=facade, dao=dao):
         return
 
+    interactive_tests_page = list(interactive_tests.values())[
+        (payload.page - 1) * INTERACTIVE_TESTS_PAGE_SIZE : payload.page * INTERACTIVE_TESTS_PAGE_SIZE
+    ]
+
     keyboard = keyboards.interactive_tests_page(
-        interactive_tests=list(interactive_tests.values()),
+        interactive_tests=interactive_tests_page,
         page=payload.page,
         pages_count=INTERACTIVE_TESTS_PAGES_COUNT,
     )
