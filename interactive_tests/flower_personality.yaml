@@ -194,7 +194,7 @@ questions:
       - text: "Гармония"
         points:
           lily_flower: 2
-rose_flower: 1
+          rose_flower: 1
 
       - text: "Драйв"
         points:

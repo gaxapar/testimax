@@ -182,7 +182,7 @@ questions:
         points:
           chill_student: 2
           creative_student: 1
-- question: "Как вы относитесь к домашке?"
+  - question: "Как вы относитесь к домашке?"
     photo: 2lE6xE6hQ42TTvPre/zceMaTjNpfC2OwX+YLIt+IKDOYRcGEXA1cJKKLfze66qgJKZWHk997FwbxRUX164SBuW4fjwjbjydcfedBZlgOVKE=
     options:
       - text: "Делаю сразу"

@@ -1,0 +1,147 @@
+slug: world_capitals
+title: 🌍 Столицы мира
+photo: 5v88I9wQYuuVG9Sz9Q3cYsrCVmyB9+s5OUFx/qXsyK54FohgJOpjWLZjGjLRA7P/20evC6iRfuCOjXi2QrO/kXLXOmg1R4pWV/g2B4vCYGI=
+
+description: |
+  <i><b>🌍 Столицы мира</b></i>
+
+  Давай узнаем, насколько ты знаешь столицы мира? В нашем тесте 6 вопросов, которые помогут нам определить, насколько ты знаешь столицы мира.
+
+results:
+  - slug: beginner
+    photo: ""
+    description: |
+      <b>🌱 Новичок</b>
+
+      Ты только начинаешь разбираться в географии и столицах мира.
+
+  - slug: learner
+    photo: ""
+    description: |
+      <b>📚 Любитель географии</b>
+
+      Ты знаешь многие столицы, но некоторые вопросы всё ещё вызывают сложности.
+
+  - slug: traveler
+    photo: ""
+    description: |
+      <b>✈️ Путешественник</b>
+
+      Ты хорошо ориентируешься в странах и столицах мира.
+
+  - slug: expert
+    photo: ""
+    description: |
+      <b>🧭 Эксперт по столицам</b>
+
+      У тебя отличные знания географии и мировой карты.
+
+  - slug: genius
+    photo: 
+    description: |
+      <b>🌍 Гений географии</b>
+
+      Ты великолепно знаешь столицы мира и легко узнаёшь страны по флагам.
+
+    - question: "Перед Вами флаг государства. Какой город является его столицей?"
+    photo: su2ryeaRYmeKilo8Urt6dvVPNkzQqoNWX8PR0Z60d16z4E0pV5yuFcntIXxTF1HnUl+6fFNXpJPFsBwhXZu25OK0dM0W2WQyULvtUKK3+s4=
+    options:
+      - text: "Куала-Лумпур"
+        points:
+          genius: 2
+          expert: 1
+      - text: "Аддис-Абеба"
+        points:
+          learner: 1
+      - text: "Афины"
+        points:
+          beginner: 1
+      - text: "Буэнос-Айрес"
+        points:
+          beginner: 1
+
+  - question: "Назовите столицу государства с данным флагом."
+    photo: Nm4Q+PInCXW9dKPy5swO9yA08GqHVG92QRFN/wPZ78eAWiFZc4//HwK94+dnFf0FZIolyooV8hEfOFZmn1AbnKw5GKzkCa15gtjEQ6x07+0=
+    options:
+      - text: "Париж"
+        points:
+          genius: 2
+          expert: 1
+      - text: "Бухарест"
+        points:
+          learner: 1
+      - text: "Оттава"
+        points:
+          beginner: 1
+      - text: "Амстердам"
+        points:
+          learner: 1
+
+  - question: "Столицей страны с зелёно-бело-красным триколором является…"
+    photo: 72/Fw/LdDD9vCF8CQ+tjCPIy91VLTifjEH3uEwaOXg5oxGaryl1Pi6bgRhEWEOR+gZSKruNpeafnkP/iG0c8+/1/yI1tsy4zPFVHFa4eOf8=
+    options:
+      - text: "Рим"
+        points:
+          genius: 2
+          expert: 1
+      - text: "Будапешт"
+        points:
+          learner: 1
+      - text: "Вена"
+        points:
+          beginner: 1
+      - text: "София"
+        points:
+          beginner: 1
+
+  - question: "Столица страны, которой принадлежит данный флаг, - это:"
+    photo: C7D3uueK7PykHS8IBk1Hm2HUaUyiI6Mf440iWH1KvqSEPZOGLwc27UcEXAYaaNW5bzqEdSsacXPDX8KCC8gUwFJ/bMTwMcJBDn8fi7Ch0KU=
+    options:
+      - text: "Бразилиа"
+        points:
+          genius: 2
+          expert: 1
+      - text: "Мехико"
+        points:
+          learner: 1
+      - text: "Лиссабон"
+        points:
+          beginner: 1
+      - text: "Сеул"
+        points:
+          beginner: 1
+
+  - question: "Столичный город государства с данным флагом называется..."
+    photo: Q8cDT4YEzPywXmEDNBJumRim/zrNmawE5TmZ1o4D8wAJnz9it7OORhIq29jBHKZ7J0B71qZLr2SgnjGun1SCRwIoTot7Z4B/vPTd6AaeHl0=
+    options:
+      - text: "Анкара"
+        points:
+          genius: 2
+          expert: 1
+      - text: "Абу-Даби"
+        points:
+          learner: 1
+      - text: "Тунис"
+        points:
+          beginner: 1
+      - text: "Тегеран"
+        points:
+          learner: 1
+
+
+  - question: "Назовите столицу государства, которому принадлежит этот флаг."
+    photo: Zyv2Ppna/+C63zqP4yHtN+p+kf2eb4cv3bRWyMjgec+56utOo6vI7vABwQUPdP/jGgo7i7Khd4WYUAITs5JABaR+83tdvFVjC3uWeWl2f8o=
+    options:
+      - text: "Дели"
+        points:
+          genius: 2
+          expert: 1
+      - text: "Ниамей"
+        points:
+          beginner: 1
+      - text: "Дублин"
+        points:
+          learner: 1
+      - text: "Бразилиа"
+        points:
+          beginner: 1

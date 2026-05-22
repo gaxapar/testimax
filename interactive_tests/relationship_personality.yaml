@@ -168,7 +168,7 @@ questions:
           passionate_partner: 1
 
       - text: "Контролирую ситуацию"
-points:
+        points:
           leader_partner: 2
 
   - question: "Как вы проводите время вместе?"

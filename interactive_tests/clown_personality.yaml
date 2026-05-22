@@ -169,7 +169,7 @@ questions:
           casual_funny: 2
       - text: "Шучу и развлекаю"
         points:
-party_clown: 2
+          party_clown: 2
       - text: "Делаю что-то неожиданное"
         points:
           chaos_clown: 2

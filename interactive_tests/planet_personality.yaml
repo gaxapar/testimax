@@ -189,7 +189,7 @@ questions:
           venus_planet: 2
           earth_planet: 1
 
-- text: "Игнорирую"
+      - text: "Игнорирую"
         points:
           uranus_planet: 2
           mars_planet: 1

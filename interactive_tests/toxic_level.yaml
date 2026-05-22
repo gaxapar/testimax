@@ -185,7 +185,7 @@ questions:
       - text: "Злюсь"
         points:
           high_toxic: 2
-extreme_toxic: 1
+          extreme_toxic: 1
 
       - text: "Сравниваю себя постоянно"
         points:

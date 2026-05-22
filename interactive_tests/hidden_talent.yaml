@@ -180,7 +180,7 @@ questions:
 
       - text: "Командно"
         points:
-charismatic_person: 2
+          charismatic_person: 2
           energetic_master: 1
 
   - question: "Как вы выражаете себя?"

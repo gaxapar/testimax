@@ -182,7 +182,7 @@ questions:
         points:
           leader_friend: 2
           smart_friend: 1
-- text: "Следую инструкциям"
+      - text: "Следую инструкциям"
         points:
           calm_friend: 2
           smart_friend: 1

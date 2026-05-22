@@ -180,7 +180,7 @@ questions:
 
       - text: "Сложно"
         points:
-low_trust: 2
+          low_trust: 2
           untrusted: 1
 
   - question: "Как вы относитесь к сплетням?"

@@ -1,0 +1,382 @@
+slug: magic_power
+title: 🪄 Какая у тебя магическая способность?
+photo: Irchl1+YmAmpGuHScvLAMr69zoKas8CF3ulmJhT6knEnTsZWS6vYWFrRRUqUBvS4rbf6bO+JTMRQuv1Fgz+OoAgenZJ/Ckje6Zol1eSdpTs=
+
+description: |
+  <i><b>Какая у тебя магическая сила?</b></i>
+
+  Давай узнаем, какая у тебя магическая сила? В нашем тесте 10 вопросов, которые помогут нам определить, какая у тебя магическая сила.
+
+results:
+  - slug: fire_magic
+    photo: ""
+    description: |
+      <b>🔥 Магия огня</b>
+
+      Ты энергичный, смелый и эмоциональный человек. В тебе много силы, драйва и лидерской энергии.
+
+  - slug: water_magic
+    photo: ""
+    description: |
+      <b>🌊 Магия воды</b>
+
+      Ты спокойный, гибкий и умеешь адаптироваться к любой ситуации. Людям рядом с тобой комфортно.
+
+  - slug: mind_magic
+    photo: ""
+    description: |
+      <b>🧠 Магия разума</b>
+
+      Ты умеешь анализировать, замечать детали и принимать взвешенные решения.
+
+  - slug: light_magic
+    photo: ""
+    description: |
+      <b>✨ Магия света</b>
+
+      Ты добрый, позитивный и умеешь вдохновлять окружающих своим присутствием.
+
+  - slug: shadow_magic
+    photo: ""
+    description: |
+      <b>🌑 Магия тьмы</b>
+
+      Ты загадочный и глубокий человек, который редко раскрывает свои настоящие эмоции.
+
+  - slug: chaos_magic
+    photo: ""
+    description: |
+      <b>⚡ Магия хаоса</b>
+
+      Ты непредсказуемый, креативный и обожаешь нестандартные решения.
+
+questions:
+  - question: "Как вы проводите свободное время?"
+    photo: 5v0slMFj2sWExGyooqdSvpI1sBbLtDx1oH6cq/sF/4l4f759o6cahbFuGJXXfy1uwYbZ7Q8AjFhOWqLA9usP2RooH7B33nqApFZDA5FlwJwsXDuIcr0SLx3b/ohQYIjc
+    options:
+      - text: "Читаю книги"
+        points:
+          mind_magic: 2
+          water_magic: 1
+
+      - text: "Играю в игры"
+        points:
+          chaos_magic: 2
+          shadow_magic: 1
+
+      - text: "Рисую/творю"
+        points:
+          light_magic: 2
+          chaos_magic: 1
+
+      - text: "Спорт"
+        points:
+          fire_magic: 2
+          chaos_magic: 1
+
+      - text: "Смотрю фильмы"
+        points:
+          shadow_magic: 2
+          water_magic: 1
+
+      - text: "Просто отдыхаю"
+        points:
+          water_magic: 2
+          light_magic: 1
+
+  - question: "Как вы реагируете на стресс?"
+    photo: 8MxVC0nw55z4YLjKCj3PNKj182kCdikQ7sFwTKerT9Q8ZstmsYzKNlTqo4h/uJXH1VaHCaGInKmgQXf458Dy0txHgVX6CF5Ets7JWbUwVAc=
+    options:
+      - text: "Сохраняю спокойствие"
+        points:
+          water_magic: 2
+          mind_magic: 1
+
+      - text: "Паникую"
+        points:
+          light_magic: 2
+          water_magic: 1
+
+      - text: "Действую сразу"
+        points:
+          fire_magic: 2
+          chaos_magic: 1
+
+      - text: "Анализирую"
+        points:
+          mind_magic: 2
+          shadow_magic: 1
+
+      - text: "Шучу"
+        points:
+          chaos_magic: 2
+          light_magic: 1
+
+      - text: "Отстраняюсь"
+        points:
+          shadow_magic: 2
+          water_magic: 1
+
+  - question: "Что вам больше нравится делать с друзьями?"
+    photo: R6YDLADQgtuF8gh6G94RQo8K6p2loFHVfxCgBwyF6WHDwfC3d71g32P9EYp4M7h3cbEWNLQBTZo3Qfy5lc74wMC+zSxYmfrkk6luLzkxUHKQOsl7Eeqvrz70h6Ftou4I
+    options:
+      - text: "Придумываю идеи"
+        points:
+          chaos_magic: 2
+          mind_magic: 1
+
+      - text: "Помогаю друзьям"
+        points:
+          light_magic: 2
+          water_magic: 1
+
+      - text: "Веселюсь"
+        points:
+          fire_magic: 2
+          chaos_magic: 1
+
+      - text: "Соревнуюсь"
+        points:
+          fire_magic: 2
+          shadow_magic: 1
+
+      - text: "Спокойно наблюдаю"
+        points:
+          shadow_magic: 2
+          mind_magic: 1
+
+      - text: "Устраиваю квесты"
+        points:
+          chaos_magic: 2
+          fire_magic: 1
+
+  - question: "Как вы решаете сложные задачи?"
+    photo: 3LcGPVg6esjzSVa3G2+9kwVX/s1gKWm6yvH0gIhmCT+GO5SEqN/vUsuAKMDcMh0npBIYLrL/yzVM+O6PiF+Imh+l/vhXxKBCoxT0+3qV4DPNBFnbwyxL0g4dDL2gzlFp
+    options:
+      - text: "Логично решаю"
+        points:
+          mind_magic: 2
+          water_magic: 1
+
+      - text: "Иду на риск"
+        points:
+          fire_magic: 2
+          chaos_magic: 1
+
+      - text: "Творчески"
+        points:
+          chaos_magic: 2
+          light_magic: 1
+
+      - text: "Методично"
+        points:
+          mind_magic: 2
+          shadow_magic: 1
+
+      - text: "Интуитивно"
+        points:
+          water_magic: 2
+          light_magic: 1
+
+      - text: "Смешанно"
+        points:
+          chaos_magic: 2
+          mind_magic: 1
+
+  - question: "Какой элемент вам ближе?"
+    photo: 3uV5xiP+VFdm9sLG3Zfw8qgD9hy1PoDU+O9KWVBtgP4GhBTQX+zoCo6f2FldeaWsgEQACVvN1jt7eoiGxmg62elYpTyDFoOg3a6/y+ljee4=
+    options:
+      - text: "Огонь"
+        points:
+          fire_magic: 2
+          chaos_magic: 1
+
+      - text: "Вода"
+        points:
+          water_magic: 2
+          light_magic: 1
+
+      - text: "Воздух"
+        points:
+          chaos_magic: 2
+          light_magic: 1
+
+      - text: "Земля"
+        points:
+          mind_magic: 2
+          water_magic: 1
+
+      - text: "Свет"
+        points:
+          light_magic: 2
+          water_magic: 1
+
+      - text: "Тьма"
+        points:
+          shadow_magic: 2
+          mind_magic: 1
+
+  - question: "Как вы проявляете эмоции?"
+    photo: wDZ+AFlNY8S6yo5rClYrBwi+Bjx/la3TD9XSF2zwRxEMNergo9GoAgKk1VwOdNarNzl44aEXzNsjEJ2ItxA3hho5PHzYoY+Y/P21DEeNU00=
+    options:
+      - text: "Выражаю через слова"
+        points:
+          light_magic: 2
+          fire_magic: 1
+
+      - text: "Через действия"
+        points:
+          fire_magic: 2
+          chaos_magic: 1
+
+      - text: "Через творчество"
+        points:
+          chaos_magic: 2
+          light_magic: 1
+
+      - text: "Сохраняю в себе"
+        points:
+          shadow_magic: 2
+          mind_magic: 1
+
+      - text: "Через юмор"
+        points:
+          chaos_magic: 2
+          fire_magic: 1
+
+      - text: "Через внимание к другим"
+        points:
+          light_magic: 2
+          water_magic: 1
+
+  - question: "Что вы выбираете в конфликте?"
+    photo: Qs2ATz+bVeTPjIvlUuTjr09bf1DOZAYy8/RlT9+4y8AxreWYacGuTXkr2Z0uqIA6H4XWBscfr61UJNFnJu/xF7Ecoip5HdtlPPOOYgfCl5o9hSEdpqTpQjhHerpmYD8T
+    options:
+      - text: "Даю шанс"
+        points:
+          light_magic: 2
+          water_magic: 1
+
+      - text: "Держусь настороже"
+        points:
+          shadow_magic: 2
+          mind_magic: 1
+
+      - text: "Иду в атаку"
+        points:
+          fire_magic: 2
+          chaos_magic: 1
+
+      - text: "Пытаюсь договориться"
+        points:
+          water_magic: 2
+          light_magic: 1
+
+      - text: "Избегаю"
+        points:
+          shadow_magic: 2
+          water_magic: 1
+
+      - text: "Саркастично реагирую"
+        points:
+          chaos_magic: 2
+          shadow_magic: 1
+
+  - question: "Какой ваш любимый цвет?"
+    photo: GaGjSRlNhsDTMV7OjaYZQAXtTWxQL57wMOSgBJzqYJugoLy7PQykETPXDDKUD+haNbLeGD9YzWQtv4tIR2nlGlbYfMtlBnldGoRp3xdQdMwWsSdZ1mrgTPOw/c//zLBc
+    options:
+      - text: "Красный"
+        points:
+          fire_magic: 2
+          chaos_magic: 1
+
+      - text: "Синий"
+        points:
+          water_magic: 2
+          mind_magic: 1
+
+      - text: "Зелёный"
+        points:
+          light_magic: 2
+          water_magic: 1
+
+      - text: "Фиолетовый"
+        points:
+          mind_magic: 2
+          shadow_magic: 1
+
+      - text: "Жёлтый"
+        points:
+          light_magic: 2
+          chaos_magic: 1
+
+      - text: "Чёрный"
+        points:
+          shadow_magic: 2
+          fire_magic: 1
+
+  - question: "Как вы ведёте себя на вечеринке?"
+    photo: 4DFNzYeJ0HbmhHEKxS2xW74HD5A+HKTT/egDcHhWySOX7oXow7E2jIzM9oNX5rT/VcmVGL0KlwPukU3SzoWhWEjAqjwVBszjlxph2LgMxvY=
+    options:
+      - text: "Активно знакомлюсь"
+        points:
+          fire_magic: 2
+          light_magic: 1
+
+      - text: "Наблюдаю"
+        points:
+          shadow_magic: 2
+          mind_magic: 1
+
+      - text: "Шучу и веселюсь"
+        points:
+          chaos_magic: 2
+          fire_magic: 1
+
+      - text: "Спокойно общаюсь"
+        points:
+          water_magic: 2
+          light_magic: 1
+
+      - text: "Подключаюсь постепенно"
+        points:
+          water_magic: 2
+          shadow_magic: 1
+
+      - text: "Веду беседу"
+        points:
+          mind_magic: 2
+          light_magic: 1
+
+  - question: "Какую силу вы бы хотели иметь?"
+    photo: 3ZDL4MFFXLyaF5CTwvSA70QTB6x75TwjtigtOaGf9MSjn2pbrJTc19DuLlqMRmDbRwmfE3N2pb8GKIpl9Sh3zpj7SdalGwkEMJa4ZeXrIME=
+    options:
+      - text: "Телепортация"
+        points:
+          chaos_magic: 2
+          shadow_magic: 1
+
+      - text: "Манипуляция огнём"
+        points:
+          fire_magic: 2
+          chaos_magic: 1
+
+      - text: "Чтение мыслей"
+        points:
+          mind_magic: 2
+          shadow_magic: 1
+
+      - text: "Исцеление"
+        points:
+          light_magic: 2
+          water_magic: 1
+
+      - text: "Невидимость"
+        points:
+          shadow_magic: 2
+          chaos_magic: 1
+
+      - text: "Контроль времени"
+        points:
+          mind_magic: 2
+          water_magic: 1
