@@ -1,0 +1,411 @@
+slug: planet_personality
+title: 🪐 Какая ты планета?
+photo: LBmeuoE4mbuXopEytEP0rgjiXO2O1ALYNV3w2zUu2XOpix2zpyAp75u1Q/EameJvTkEr9rtjzk79wuAIQfOT6e0wzmxWN55jK47CtIxWd2g=
+
+description: |
+  <i><b>Какая ты планета?</b></i>
+
+  Давай узнаем, какая ты планета? В нашем тесте 8 вопросов, которые помогут нам определить, какая ты планета.
+
+results:
+  - slug: mars_planet
+    photo: ""
+    description: |
+      <b>🔴 Марс</b>
+
+      Ты энергичный, смелый и любишь движение. В тебе много драйва и лидерской энергии.
+
+  - slug: venus_planet
+    photo: ""
+    description: |
+      <b>🌸 Венера</b>
+
+      Ты мягкий, добрый и эмоциональный человек. Людям рядом с тобой спокойно и тепло.
+
+  - slug: saturn_planet
+    photo: ""
+    description: |
+      <b>🪐 Сатурн</b>
+
+      Ты спокойный, глубокий и любишь размышлять. В тебе есть загадочность и мудрость.
+
+  - slug: mercury_planet
+    photo: ""
+    description: |
+      <b>⚡ Меркурий</b>
+
+      Ты быстрый, общительный и легко адаптируешься к любым ситуациям.
+
+  - slug: neptune_planet
+    photo: ""
+    description: |
+      <b>🌊 Нептун</b>
+
+      Ты мечтательный, творческий и очень чувствительный к атмосфере вокруг.
+
+  - slug: jupiter_planet
+    photo: ""
+    description: |
+      <b>✨ Юпитер</b>
+
+      Ты яркий, уверенный и умеешь вдохновлять окружающих своей энергией.
+
+  - slug: uranus_planet
+    photo: ""
+    description: |
+      <b>🌀 Уран</b>
+
+      Ты необычный, свободолюбивый и всегда выбираешь свой собственный путь.
+
+  - slug: earth_planet
+    photo: ""
+    description: |
+      <b>🌍 Земля</b>
+
+      Ты надёжный, стабильный и умеешь сохранять баланс даже в сложных ситуациях.
+
+questions:
+  - question: "Как вы проводите свободное время?"
+    photo: H+v2xn09/cDe0yD3ABj1TFOtcD+dtiZcKUrNyxSaXdBkBkABX9eQqFfUKApM9mlrczb2ve4G+tL2Ffp9poupq4OZS2HCKmTYSb7wGi02kyg=
+    options:
+      - text: "Один/одна в тишине"
+        points:
+          saturn_planet: 2
+          neptune_planet: 1
+
+      - text: "С близкими"
+        points:
+          venus_planet: 2
+          earth_planet: 1
+
+      - text: "С друзьями"
+        points:
+          mercury_planet: 2
+          jupiter_planet: 1
+
+      - text: "В центре внимания"
+        points:
+          jupiter_planet: 2
+          mars_planet: 1
+
+      - text: "Творю что-то"
+        points:
+          neptune_planet: 2
+          uranus_planet: 1
+
+      - text: "Активно двигаюсь"
+        points:
+          mars_planet: 2
+          mercury_planet: 1
+
+      - text: "Учусь новому"
+        points:
+          mercury_planet: 2
+          saturn_planet: 1
+
+      - text: "Просто отдыхаю"
+        points:
+          earth_planet: 2
+          venus_planet: 1
+
+  - question: "Как вы ведёте себя в компании?"
+    photo: aByBgpB04VxVR7k1CwRvcHEpi8n39MnDOC4ciQJXA4HWbcSyTq4eCFHm9fAvxf7fpQG8pRzdPZ50KZobqVnZpeC+34d6rdZpY+OlKzFPuaQ=
+    options:
+      - text: "Наблюдаю"
+        points:
+          saturn_planet: 2
+          earth_planet: 1
+
+      - text: "Общаюсь со всеми"
+        points:
+          mercury_planet: 2
+          jupiter_planet: 1
+
+      - text: "Шучу"
+        points:
+          jupiter_planet: 2
+          mars_planet: 1
+
+      - text: "Веду за собой"
+        points:
+          mars_planet: 2
+          jupiter_planet: 1
+
+      - text: "Держусь отдельно"
+        points:
+          saturn_planet: 2
+          uranus_planet: 1
+
+      - text: "Подключаюсь постепенно"
+        points:
+          earth_planet: 2
+          venus_planet: 1
+
+      - text: "Анализирую"
+        points:
+          mercury_planet: 2
+          saturn_planet: 1
+
+      - text: "Создаю атмосферу"
+        points:
+          venus_planet: 2
+          neptune_planet: 1
+
+  - question: "Как вы реагируете на стресс?"
+    photo: h8Jf39Czh3KC/fXbyabzBHbuIln8PaPo8mZTUyRNUHfLKeOnXuYUdKDG8VlddoJVp6UxminaKe/Nzt7zwfa2TVHLWV15sHwx/lZeEYhzFMg=
+    options:
+      - text: "Сохраняю спокойствие"
+        points:
+          earth_planet: 2
+          saturn_planet: 1
+
+      - text: "Паникую"
+        points:
+          venus_planet: 2
+          neptune_planet: 1
+
+      - text: "Действую сразу"
+        points:
+          mars_planet: 2
+          jupiter_planet: 1
+
+      - text: "Анализирую"
+        points:
+          mercury_planet: 2
+          saturn_planet: 1
+
+      - text: "Шучу"
+        points:
+          jupiter_planet: 2
+          mercury_planet: 1
+
+      - text: "Ухожу в себя"
+        points:
+          neptune_planet: 2
+          saturn_planet: 1
+
+      - text: "Прошу помощи"
+        points:
+          venus_planet: 2
+          earth_planet: 1
+
+- text: "Игнорирую"
+        points:
+          uranus_planet: 2
+          mars_planet: 1
+
+  - question: "Что вам ближе?"
+    photo: E2t5G/XM/1S7Gb4YonLesowb3SiGt93TotuRQ4fkaGKkzxvL6ZH0bXeucgjsWY0u2nk1Rf8fowuHyI5FHg4WDs6wucRzoHsJT6fMDF/YN7A=
+    options:
+      - text: "Комфорт"
+        points:
+          earth_planet: 2
+          venus_planet: 1
+
+      - text: "Приключения"
+        points:
+          mars_planet: 2
+          uranus_planet: 1
+
+      - text: "Саморазвитие"
+        points:
+          mercury_planet: 2
+          saturn_planet: 1
+
+      - text: "Веселье"
+        points:
+          jupiter_planet: 2
+          mercury_planet: 1
+
+      - text: "Тишина"
+        points:
+          saturn_planet: 2
+          neptune_planet: 1
+
+      - text: "Контроль"
+        points:
+          earth_planet: 2
+          saturn_planet: 1
+
+      - text: "Свобода"
+        points:
+          uranus_planet: 2
+          mars_planet: 1
+
+      - text: "Эмоции"
+        points:
+          neptune_planet: 2
+          venus_planet: 1
+
+  - question: "Какой у вас характер?"
+    photo: E2t5G/XM/1S7Gb4YonLesowb3SiGt93TotuRQ4fkaGKkzxvL6ZH0bXeucgjsWY0u2nk1Rf8fowuHyI5FHg4WDs6wucRzoHsJT6fMDF/YN7A=
+    options:
+      - text: "Добрый"
+        points:
+          venus_planet: 2
+          earth_planet: 1
+
+      - text: "Спокойный"
+        points:
+          earth_planet: 2
+          saturn_planet: 1
+
+      - text: "Импульсивный"
+        points:
+          mars_planet: 2
+          jupiter_planet: 1
+
+      - text: "Умный"
+        points:
+          mercury_planet: 2
+          saturn_planet: 1
+
+      - text: "Загадочный"
+        points:
+          saturn_planet: 2
+          neptune_planet: 1
+
+      - text: "Весёлый"
+        points:
+          jupiter_planet: 2
+          mercury_planet: 1
+
+      - text: "Целеустремлённый"
+        points:
+          mars_planet: 2
+          earth_planet: 1
+
+      - text: "Мягкий"
+        points:
+          venus_planet: 2
+          neptune_planet: 1
+
+  - question: "Какой темп жизни вам ближе?"
+    photo: fekpo1RGte6D4r26HhrcIs5C2BbJC6qsmVzHEQgHV7A7Kid/kSsAd/kTkbGYNLdjo5yOf9DR/bkLFQ1I+DTiOTlv46Yrkgb7b9KLAaYnYGs=
+    options:
+      - text: "Медленный"
+        points:
+          saturn_planet: 2
+          earth_planet: 1
+
+      - text: "Стабильный"
+        points:
+          earth_planet: 2
+          venus_planet: 1
+
+      - text: "Быстрый"
+        points:
+          mercury_planet: 2
+          mars_planet: 1
+
+      - text: "Хаотичный"
+        points:
+          uranus_planet: 2
+          chaos_magic: 1
+
+      - text: "Ритмичный"
+        points:
+          jupiter_planet: 2
+          mercury_planet: 1
+
+      - text: "Спокойный"
+        points:
+          venus_planet: 2
+          saturn_planet: 1
+
+      - text: "Переменчивый"
+        points:
+          neptune_planet: 2
+          uranus_planet: 1
+
+      - text: "Активный"
+        points:
+          mars_planet: 2
+          jupiter_planet: 1
+
+  - question: "Что для вас важнее?"
+    photo: kr4x/R+DQRKoCMBGHBscsjtgDv2EqbpDc9risDRLnMOdh9eNAs/uReQkc7oHt9vRnv7da0U6x5vtq7v8v5shzJjxGFPEWb03UOy2V18V1cF3VzlPb1iaNfdiO/bJuemr
+    options:
+      - text: "Друзья"
+        points:
+          venus_planet: 2
+          jupiter_planet: 1
+
+      - text: "Цели"
+        points:
+          mars_planet: 2
+          earth_planet: 1
+
+      - text: "Эмоции"
+        points:
+          neptune_planet: 2
+          venus_planet: 1
+
+      - text: "Развитие"
+        points:
+          mercury_planet: 2
+          saturn_planet: 1
+
+      - text: "Свобода"
+        points:
+          uranus_planet: 2
+          mars_planet: 1
+
+      - text: "Комфорт"
+        points:
+          earth_planet: 2
+          venus_planet: 1
+
+      - text: "Контроль"
+        points:
+          saturn_planet: 2
+          mercury_planet: 1
+
+      - text: "Впечатления"
+        points:
+          jupiter_planet: 2
+          uranus_planet: 1
+
+  - question: "Какой вайб вам ближе?"
+    photo: kr+qFwLgcN4JyCYGXKLwj/yH8oood8zZ4Rl+wP5YdJxa8fbYplVSUaO3jBQNHZkSU542k9IF2u/myd1qlzrki9CsZ5to6lxJEVwIQocL1B0=
+    options:
+      - text: "Чилл"
+        points:
+          earth_planet: 2
+          venus_planet: 1
+
+      - text: "Энергия"
+        points:
+          mars_planet: 2
+          jupiter_planet: 1
+
+      - text: "Загадка"
+        points:
+          saturn_planet: 2
+          neptune_planet: 1
+
+      - text: "Веселье"
+        points:
+          jupiter_planet: 2
+          mercury_planet: 1
+
+      - text: "Спокойствие"
+        points:
+          venus_planet: 2
+          earth_planet: 1
+
+      - text: "Драйв"
+        points:
+          mars_planet: 2
+          uranus_planet: 1
+
+      - text: "Глубина"
+        points:
+          neptune_planet: 2
+          saturn_planet: 1
+
+      - text: "Лёгкость"
+        points:
+          mercury_planet: 2
+          jupiter_planet: 1
+

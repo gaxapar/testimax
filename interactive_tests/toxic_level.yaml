@@ -1,0 +1,218 @@
+slug: toxic_level
+title: 💢 Насколько ты токсик?
+photo: 5Jru9kW2xL2RsZr4hprw0B3IWa2qr036Kg0uwDYBILy7L24STv5/q7TSfRyA5pRQEZeWGjnQTc2HYjGABLPjZ0Vq/BbNP7jRUot0mT00D/k=
+
+description: |
+  <i><b>💢 Насколько ты токсик?</b></i>
+
+  Давай узнаем, насколько ты токсик! В нашем тесте 6 вопросов, которые помогут определить твой уровень токсичности в общении.
+
+results:
+  - slug: non_toxic
+    photo: ""
+    description: |
+      <b>🌿 Абсолютно не токсик</b>
+
+      Ты спокойный, доброжелательный и умеешь решать конфликты без агрессии. С тобой легко и комфортно общаться.
+
+  - slug: low_toxic
+    photo: ""
+    description: |
+      <b>🙂 Слабая токсичность</b>
+
+      Иногда ты можешь обидеться или ответить резко, но в целом стараешься сохранять баланс и не вредить другим.
+
+  - slug: medium_toxic
+    photo: ""
+    description: |
+      <b>😏 Умеренный токсик</b>
+
+      Ты часто реагируешь эмоциями и можешь быть саркастичным или обидчивым в споре.
+
+  - slug: high_toxic
+    photo: ""
+    description: |
+      <b>🔥 Сильный токсик</b>
+
+      Ты легко включаешься в конфликт, можешь давить на людей и не всегда контролируешь эмоции.
+
+  - slug: extreme_toxic
+    photo: ""
+    description: |
+      <b>☠️ Максимальный токсик</b>
+
+      Ты часто провоцируешь конфликты, используешь сарказм и давление. Общение с тобой бывает непростым.
+
+questions:
+  - question: "Как вы реагируете, если кто-то вас игнорирует?"
+    photo: B7cEtu3Gb2YiKDsYKzl+1f9F52AkQi8iDHNqUmXlTDMYQTN7a8U/Aar3PFymyLFnFSJyuKneVBd9XwV05TmmhjyhX/nMawJGuHKF37tZEDM=
+    options:
+      - text: "Игнорирую в ответ"
+        points:
+          medium_toxic: 2
+          high_toxic: 1
+
+      - text: "Спокойно жду"
+        points:
+          non_toxic: 2
+          low_toxic: 1
+
+      - text: "Начинаю писать ещё больше"
+        points:
+          high_toxic: 2
+          extreme_toxic: 2
+
+      - text: "Обижаюсь"
+        points:
+          medium_toxic: 2
+          low_toxic: 1
+
+      - text: "Делаю вид что всё ок"
+        points:
+          low_toxic: 2
+          non_toxic: 1
+
+  - question: "Что вы делаете во время спора?"
+    photo: ZpdX766MXbfe3MJBAeldpJ77tbxHE4g10RH3uplWSzQu63UQpAZ8UH9UmQa0CUWHIcQYzzlo8t6TmxHDxqnxBtRbGgYBxwrMogiBEN2ENnbRl43KhYjRD9+g5+SEayLq
+    options:
+      - text: "Стараюсь договориться"
+        points:
+          non_toxic: 2
+          low_toxic: 1
+
+      - text: "Давлю аргументами"
+        points:
+          medium_toxic: 2
+          high_toxic: 1
+
+      - text: "Перехожу на эмоции"
+        points:
+          high_toxic: 2
+          extreme_toxic: 1
+
+      - text: "Игнорирую"
+        points:
+          low_toxic: 2
+          non_toxic: 1
+
+      - text: "Саркастично отвечаю"
+        points:
+          medium_toxic: 2
+          high_toxic: 2
+
+      - text: "Начинаю конфликт"
+        points:
+          extreme_toxic: 2
+          high_toxic: 2
+
+  - question: "Если друг сделал что-то не так?"
+    photo: Q31ZZsmk1fLK2xVP5iJ5ADdFEpBF2ilxlyVOdpprvKP2NN1GGnx73n/MUtgyOGClFgrxEiH2DmsV2ykfKaMiqKhc6Yfdp4metl5YALrpEQeKQ4wvQB9LEpB4c+C5yKHe
+    options:
+      - text: "Поддерживаю"
+        points:
+          non_toxic: 2
+          low_toxic: 1
+
+      - text: "Спокойно говорю"
+        points:
+          low_toxic: 2
+          non_toxic: 1
+
+      - text: "Осуждаю"
+        points:
+          medium_toxic: 2
+          high_toxic: 1
+
+      - text: "Игнорирую"
+        points:
+          high_toxic: 1
+          extreme_toxic: 2
+
+      - text: "Подшучиваю"
+        points:
+          medium_toxic: 1
+          low_toxic: 1
+
+      - text: "Злюсь"
+        points:
+          extreme_toxic: 2
+          high_toxic: 2
+
+  - question: "Как вы ведёте себя в переписке?"
+    photo: 4YR5PzaoOI0fNucZzJ5WStsp5byE9FgZpsUHEiec7fQaxvsbFrvpdUSz+XqLmdsgc22o6Dw7nHkV34kJdkdzWH5RQxJXPDD+1uA2GKAlZCE=
+    options:
+      - text: "Отвечаю спокойно и вовремя"
+        points:
+          non_toxic: 2
+          low_toxic: 1
+
+      - text: "Могу игнорировать сообщения"
+        points:
+          low_toxic: 2
+          medium_toxic: 1
+
+      - text: "Пишу резко"
+        points:
+          high_toxic: 2
+          extreme_toxic: 1
+
+      - text: "Использую сарказм"
+        points:
+          medium_toxic: 2
+          high_toxic: 1
+
+      - text: "Пишу много подряд"
+        points:
+          extreme_toxic: 2
+          high_toxic: 2
+
+  - question: "Что вы чувствуете, когда кто-то лучше вас?"
+    photo: 589vyggtqL5cq/XTwGIH+GaqqgHEI3yUN770LGya/4bIw2PZczv4tatr11zptGZuE3FkLfUmPfuKYqOXItJ3bpt8ZzGgdjd/O291TIn/wCJzeQ90omGJDVbSM3XcIHb3
+    options:
+      - text: "Радуюсь за него"
+        points:
+          non_toxic: 2
+
+      - text: "Мотивируюсь"
+        points:
+          low_toxic: 2
+          non_toxic: 1
+
+      - text: "Немного завидую"
+        points:
+          medium_toxic: 2
+
+      - text: "Злюсь"
+        points:
+          high_toxic: 2
+extreme_toxic: 1
+
+      - text: "Сравниваю себя постоянно"
+        points:
+          high_toxic: 2
+
+  - question: "Как вы реагируете на критику?"
+    photo: 3pQ2RrIVFEzq1WPn4EHP7WiVl2WBovjhuMiOARyukOVw1w33WJPpyw9x1m6HJmRF3sDd1MWOBFRIPFgrxBipts+ax0uEuwD+Fx2JvZoaI2M=
+
+    options:
+      - text: "Принимаю спокойно"
+        points:
+          non_toxic: 2
+          low_toxic: 1
+
+      - text: "Стараюсь понять"
+        points:
+          low_toxic: 2
+          non_toxic: 1
+
+      - text: "Обижаюсь"
+        points:
+          medium_toxic: 2
+
+      - text: "Спорю в ответ"
+        points:
+          high_toxic: 2
+
+      - text: "Игнорирую критику"
+        points:
+          extreme_toxic: 2

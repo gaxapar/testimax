@@ -1,0 +1,178 @@
+slug: clown_personality
+title: 🤡 Насколько ты клоун?
+photo: 8zMRHIrFeIv7stmptTGuy3cg+XFi1L3NKFqSIvE9w2ntvPvBoT7etnx3NXH5ZFQzSwsxQAn+bai3jf74ZrzvYazzErqKy+oSow1BzKUtpuE=
+
+description: |
+  <i><b>🤡 Насколько ты клоун?</b></i>
+
+  Давай узнаем, какой ты клоун! В нашем тесте 7 вопросов, которые помогут определить твой уровень «клоунады».
+
+results:
+  - slug: serious_human
+    photo: ""
+    description: |
+      <b>😐 Серьёзный человек</b>
+
+      Ты редко «клоуничешь». Предпочитаешь спокойствие, контроль и сдержанность.
+
+  - slug: casual_funny
+    photo: ""
+    description: |
+      <b>🙂 Лёгкий юморист</b>
+
+      Ты умеешь шутить, но не перегибаешь. Баланс между серьёзностью и весельем.
+
+  - slug: party_clown
+    photo: ""
+    description: |
+      <b>🎉 Клоун вечеринки</b>
+
+      Ты душа компании. Любишь внимание, юмор и всегда поднимаешь настроение.
+
+  - slug: chaos_clown
+    photo: ""
+    description: |
+      <b>🔥 Хаос-клоун</b>
+
+      Ты непредсказуемый, шумный и очень смешной. С тобой никогда не скучно.
+
+  - slug: professional_clown
+    photo: ""
+    description: |
+      <b>🎭 Профессиональный клоун</b>
+
+      Ты живёшь юмором. Твои шутки, мемы и поведение — это отдельное шоу.
+
+questions:
+  - question: "Как вы ведёте себя на вечеринке?"
+    photo: BiL1q8BaEUIICynoefGWwk1injvZ/pq1qPrV65Vl1InRUsSRR5OQASI2cGj2CYGBGeQ/nK4bsdM8U0JMfe6sG6BsTlNIVxOT+0qW2xOkX6U=
+    options:
+      - text: "Спокойно наблюдаю"
+        points:
+          serious_human: 2
+      - text: "Общаюсь с людьми"
+        points:
+          casual_funny: 2
+      - text: "Становлюсь душой компании"
+        points:
+          party_clown: 2
+      - text: "Устраиваю хаос"
+        points:
+          chaos_clown: 2
+      - text: "Постоянно шучу"
+        points:
+          professional_clown: 2
+
+  - question: "Что делаете, когда хочется внимания?"
+    photo: 6o12NYEFnIqO/IfRtsu88OZYxVeO2sxwfhv2xu9Fswvf+yLUOEfzuhUrZLlD/Qo550aE0ISJ4UIpcO6t05wLE/zcjcVnXV0p0cF7EjDmyic=
+    options:
+      - text: "Ничего, жду"
+        points:
+          serious_human: 2
+      - text: "Шучу с друзьями"
+        points:
+          casual_funny: 2
+      - text: "Привлекаю внимание шутками"
+        points:
+          party_clown: 2
+      - text: "Делаю странные вещи"
+        points:
+          chaos_clown: 2
+      - text: "Запускаю мемы/шутки"
+        points:
+          professional_clown: 2
+
+  - question: "Как реагируете на скучные моменты?"
+    photo: WW9iJ6c9NLYj3RY1Q/qCE693Wto1Y8u3BwIEb7JFuQWWrxUjQ99HHjh+Rx6a/0D3g92xxPAPoxp/7xDwuBQq24gTbKXcOO1t6fE4SN+qS3g=
+    options:
+      - text: "Терплю спокойно"
+        points:
+          serious_human: 2
+      - text: "Ищу чем заняться"
+        points:
+          casual_funny: 2
+      - text: "Разряжаю атмосферу"
+        points:
+          party_clown: 2
+      - text: "Начинаю прикалываться"
+        points:
+          chaos_clown: 2
+      - text: "Делаю мем из ситуации"
+        points:
+          professional_clown: 2
+
+  - question: "Что вы чаще говорите друзьям?"
+    photo: FdElyaLEI/9ypRGPSqLBHVy4NWuELjiRvbFfPZC0+e0ivoOWW6/Me9MvJqKAyRMsoQq9I7VibqlRorCohfovddHRmVIKns2gb3Y5jwuN92s=
+    options:
+      - text: "По делу"
+        points:
+          serious_human: 2
+      - text: "Шутки иногда"
+        points:
+          casual_funny: 2
+      - text: "Постоянно смешные вещи"
+        points:
+          party_clown: 2
+      - text: "Странные/рандомные фразы"
+        points:
+          chaos_clown: 2
+      - text: "Мемы и приколы"
+        points:
+          professional_clown: 2
+
+  - question: "Как шутите?"
+    photo: aqyvL0JIZRl5mMKZ12apk7tL3j7OzwZbdWuwNPiBdrhDOC10WNMa6PSjKXkAGFaB1fUscwP8cvudaOehrTH8RSZNfCSGmYGGqCx7s7XrDrY=
+    options:
+      - text: "Редко"
+        points:
+          serious_human: 2
+      - text: "Лёгкий юмор"
+        points:
+          casual_funny: 2
+      - text: "Часто и громко"
+        points:
+          party_clown: 2
+      - text: "Абсурдно"
+        points:
+          chaos_clown: 2
+      - text: "Как стендап"
+        points:
+          professional_clown: 2
+
+  - question: "Как вы себя ведёте в группе?"
+    photo: Y61wRopj+wloMBa6nBuQkx4M1WfrKj6Pl9qpmOuUNnmziDBxlOs30NFkPZpex99eiPGQQ7uIjMmnDSrHZem8YBdlaAsBa3QyczInWJKbPws=
+    options:
+      - text: "Тихо"
+        points:
+          serious_human: 2
+      - text: "Участвую"
+        points:
+          casual_funny: 2
+      - text: "Активный участник"
+        points:
+          party_clown: 2
+      - text: "Создаю хаос"
+        points:
+          chaos_clown: 2
+      - text: "Главный шутник"
+        points:
+          professional_clown: 2
+
+  - question: "Что делаете, чтобы поднять настроение окружающим?"
+    photo: j/CwNEBarXan57kfqHPmsg53Px8yJZW6FI38xLqpRbxACvr3E4Nz4iFVsBYC1CT97QntgjXfrqYihJ5TneQbFfjnADR0XsdNE+uPMPyHn1I=
+    options:
+      - text: "Ничего особенного"
+        points:
+          serious_human: 2
+      - text: "Поддерживаю разговор"
+        points:
+          casual_funny: 2
+      - text: "Шучу и развлекаю"
+        points:
+party_clown: 2
+      - text: "Делаю что-то неожиданное"
+        points:
+          chaos_clown: 2
+      - text: "Устраиваю шоу"
+        points:
+          professional_clown: 2

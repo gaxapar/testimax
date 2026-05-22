@@ -1,0 +1,150 @@
+slug: npc_or_main_character
+title: 🗿 NPC или главный герой?
+photo: XzSiJHd1u/wv+ce5n6jRqQmpMskaAkFNFYqSVs1VGYkIX9IO7bFMj6LQpmT+YbqGaOzjMyeSBiIZlbx7v6TLezC42zMamJX+1OfzQhgHdEo=
+
+description: |
+  <i><b>🗿 NPC или главный герой?</b></i>
+
+  Давай узнаем, кто ты в жизни — NPC или главный герой!
+
+results:
+  - slug: npc
+    photo: ""
+    description: |
+      <b>🧍 NPC</b>
+
+      Ты спокойный, стабильный и живёшь без лишней драмы.
+
+  - slug: side_character
+    photo: ""
+    description: |
+      <b>🎭 Второстепенный персонаж</b>
+
+      Ты заметный, но не всегда берёшь центр внимания.
+
+  - slug: main_character
+    photo: ""
+    description: |
+      <b>🔥 Главный герой</b>
+
+      Ты яркий, уверенный и часто становишься центром событий.
+
+  - slug: legend
+    photo: ""
+    description: |
+      <b>👑 Легенда</b>
+
+      Ты человек, вокруг которого всегда происходит что-то интересное.
+
+questions:
+  - question: "Как ты ведёшь себя в жизни?"
+    photo: sL5o9A36KvrExU30TMTQNeOC/th6qzMpZNWVdc0+c6akAocV+7O2pUf6Lax/ywHQMYO17JRNDzbUGs2saM0p3l7FGRMbZH+evusc7c7qcdE=
+    options:
+      - text: "Спокойно"
+        points:
+          npc: 2
+      - text: "Иногда выделяюсь"
+        points:
+          side_character: 2
+      - text: "Ярко"
+        points:
+          main_character: 2
+      - text: "Как будто фильм про меня"
+        points:
+          legend: 2
+
+  - question: "Как тебя видят другие?"
+    photo: SbZP3PBSdxyT7xJ9/ZUxWRdTVSALDNNYeuCoFbtbQbSfUOQHsEDjnrljIocFL1YXpqOwgZI0afxX8mcH6pOQPnE4DAVOZ0tqDz1dI77qmDI=
+    options:
+      - text: "Обычный человек"
+        points:
+          npc: 2
+      - text: "Нормальный"
+        points:
+          side_character: 2
+      - text: "Интересный"
+        points:
+          main_character: 2
+      - text: "Легенда"
+        points:
+          legend: 2
+
+  - question: "Как ты в компании?"
+    photo: JbnocZy0QIrGjhrH4efMk6EfInb+jz/rCI+Iol8zV/1LMyfh6AbyqAerLQSD5lskNz850bM3sbErBx/LrVwCSzzGucDAu+iX9XSC68oZZGc=
+    options:
+      - text: "Молчу"
+        points:
+          npc: 2
+      - text: "Общаюсь"
+        points:
+          side_character: 2
+      - text: "В центре внимания"
+        points:
+          main_character: 2
+      - text: "Двигаю атмосферу"
+        points:
+          legend: 2
+
+  - question: "Как ты реагируешь на внимание?"
+    photo: kol697ruXeC0JKP6Tv3j8PR1lzWpnQT3kQ1d98LrzaCoY1akuHm6zFvV1Z6TBTVcu8cquTO4u+tTFfjlNF9hxde2uSmNZ3SUsqzEM/5Ib6o=
+    options:
+      - text: "Избегаю"
+        points:
+          npc: 2
+      - text: "Спокойно"
+        points:
+          side_character: 2
+      - text: "Мне нравится"
+        points:
+          main_character: 2
+      - text: "Я его создаю"
+        points:
+          legend: 2
+
+  - question: "Твой стиль жизни?"
+    photo: kWhsLn2F4m0tFnSMHJfxkGv48vvGITEp13p/45BhUZfgwe9yDeGhWeQ9ZrgElJmqbECV13ZWzqvf6MBuA4MwzbWjtHQDY+rivjeZWqlzlXs=
+    options:
+      - text: "Обычный"
+        points:
+          npc: 2
+      - text: "Разнообразный"
+        points:
+          side_character: 2
+      - text: "Активный"
+        points:
+          main_character: 2
+      - text: "Как приключение"
+        points:
+          legend: 2
+
+  - question: "Что про тебя говорят?"
+    photo: H9OQaHnrBJ9PxCu0ZXrs/kR1YkEjRY7yWOEZiA+zItSwQgYYSKOcZc9Qfth3Mv3W7FbRZJfFaaT9OY7sQMkLnMSAIGV/qVDDM89NYM5XhaI=
+    options:
+      - text: "Спокойный"
+        points:
+          npc: 2
+      - text: "Нормальный"
+        points:
+          side_character: 2
+      - text: "Интересный"
+        points:
+          main_character: 2
+      - text: "Легендарный"
+        points:
+          legend: 2
+
+  - question: "Твой главный вайб?"
+    photo: NN+8p4THFJqXmhScIEbytDRD8soOAoZZRBwHaUn7GQYmCMJ1g71Md0bgHEah+A23sVDtXVT2uWJcXz/ARwyP4JcyrjhdlV1nHHG3jGYR3Ro=
+    options:
+      - text: "Тишина"
+        points:
+          npc: 2
+      - text: "Баланс"
+        points:
+          side_character: 2
+      - text: "Энергия"
+        points:
+          main_character: 2
+      - text: "Хаос и история"
+        points:
+          legend: 2

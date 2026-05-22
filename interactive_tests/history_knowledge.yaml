@@ -1,0 +1,190 @@
+slug: history_knowledge
+title: 📜 Насколько хорошо ты знаешь историю?
+photo: Uv52ck+bT8E7TtJY/BBY6RpX7A87+D0OEe8OaP4K8HfezbCmstJZ9W7YhIIJSMA5GcPXnxpKQ+bWL8+pmyZGPXeqz2esgbgkuHMFx92al6g=
+
+description: |
+  <i><b>📜 Насколько хорошо ты знаешь историю?</b></i>
+
+  Давай узнаем, насколько хорошо ты разбираешься в истории! В нашем тесте 10 вопросов.
+
+results:
+  - slug: beginner
+    photo: ""
+    description: |
+      <b>📖 Новичок</b>
+
+      Ты только начинаешь изучать историю.
+
+  - slug: learner
+    photo: ""
+    description: |
+      <b>📚 Любитель истории</b>
+
+      Ты знаешь многие исторические события, но есть куда расти.
+
+  - slug: expert
+    photo: ""
+    description: |
+      <b>🏛️ Исторический эксперт</b>
+
+      Ты отлично разбираешься в мировой истории.
+
+  - slug: genius
+    photo: ""
+    description: |
+      <b>👑 Гений истории</b>
+
+      Твои знания истории действительно впечатляют.
+
+questions:
+  - question: "Какое событие считается началом Средневековья?"
+    photo: bCh6yKskV86Ujq2/CPtn0dv+gMDyKCvTSwrSuJgYBDtsnchj7gi7wdyI3L4cvLrLH+cNtJ0zKO8Q46e0ZlRFS8XGj2WX4d1Rz+Nxdyqj4ZI=
+    options:
+      - text: "Падение Западной Римской империи"
+        points:
+          genius: 2
+          expert: 1
+      - text: "Открытие Америки"
+        points:
+          learner: 1
+      - text: "Крестовые походы"
+        points:
+          beginner: 1
+      - text: "Французская революция"
+        points:
+          beginner: 1
+
+  - question: "В каком году произошло Крещение Руси?"
+    photo: 8QU9n0FPLAF9YESTPEUH+ABvsuniqkwVV/4oc4Pj5jpGQmZO428L2jTuJKyzgFedrdDaKNAbn6VvM5tSaEvM7t5+iLfitjE2Z8lz1wDqztE=
+    options:
+      - text: "988"
+        points:
+          genius: 2
+          expert: 1
+      - text: "862"
+        points:
+          learner: 1
+      - text: "1240"
+        points:
+          beginner: 1
+      - text: "1812"
+        points:
+          beginner: 1
+
+  - question: "Как назывался план Германии по нападению на СССР?"
+    photo: SJ0i3H0/9qFikJk2j25f7T2vMKuNyWODVHDMdoDGZwHANYpTGe9WbtOCDYb07zyYLYCJV6bCQ0N/GLVu9evnJdxagcULXiFIN+mQLAQz3Oo=
+    options:
+      - text: "Барбаросса"
+        points:
+          genius: 2
+          expert: 1
+      - text: "Оверлорд"
+        points:
+          learner: 1
+      - text: "Цитадель"
+        points:
+          beginner: 1
+      - text: "Блиц"
+        points:
+          beginner: 1
+
+  - question: "Кто был первым президентом США?"
+    photo: dKZ2fKqh9zLpS1eT9OpsRB79CFiZqhP3KpD8nUIe+eB73ux3MR6kLfWBtX2QEJng8/+CR90DxNcRGj2kuzlQb0Cf0EomKXuXM6CYZnkb+B8=
+    options:
+      - text: "Джордж Вашингтон"
+        points:
+          genius: 2
+          expert: 1
+      - text: "Авраам Линкольн"
+        points:
+          learner: 1
+      - text: "Томас Джефферсон"
+        points:
+          beginner: 1
+      - text: "Франклин Рузвельт"
+        points:
+          beginner: 1
+
+  - question: "Какая страна первой запустила человека в космос?"
+    photo: snBW9oNMqf7uQurNxlNmLBajCs/0HRq82vRlgz7zacL/Nc8FzsOeLYauJAU9XeYtl3yhrqgK8CaY7u9Kl3zWASBtHRTQXW1l2h4wfwi7lOY=
+    options:
+      - text: "СССР"
+        points:
+          genius: 2
+          expert: 1
+      - text: "США"
+        points:
+          learner: 1
+      - text: "Китай"
+        points:
+          beginner: 1
+      - text: "Франция"
+        points:
+          beginner: 1
+
+  - question: "Какой правитель России продал Аляску США?"
+    photo: YmZrKgmT3G4UCIXWM2pH5sEnRpEa8OLDbG9cyxUYpoUWxcVy39jD88jydOeWpMKc2hqE8ybAHOxzGibR+ELSEM+0Q/WzZxQeCwnMdP8oklg=
+    options:
+      - text: "Александр II"
+        points:
+          genius: 2
+          expert: 1
+      - text: "Пётр I"
+        points:
+          learner: 1
+      - text: "Николай II"
+        points:
+          beginner: 1
+      - text: "Иван Грозный"
+        points:
+          beginner: 1
+
+  - question: "Какая из этих битв произошла раньше всех?"
+    photo: jsV2TVwbjEkJI6NnHKsFSdGoIDJCAq+f8udzgHPAk0M0Se/Ob1tgk5UJk0mOwxVPBxIBytsvf7Q7OqSh1fcPvJiUeyPlXxvxm/qGUrvZp6c=
+    options:
+      - text: "Куликовская битва"
+        points:
+          genius: 2
+          expert: 1
+      - text: "Бородинская битва"
+        points:
+          learner: 1
+      - text: "Сталинградская битва"
+        points:
+          beginner: 1
+      - text: "Курская битва"
+        points:
+          beginner: 1
+
+  - question: "Кто из этих лидеров НЕ участвовал во Второй мировой войне?"
+    photo: 5nv8hTmski3JTGzZG8Ub8YHTICna0wSZGU2wVVEa40ZbQCYzsZE8TYzx3bW506vXghxgi4x5mXj1sB8smfDrpdqqssqCvbnNozW0KFz1ZIg=
+    options:
+      - text: "Наполеон"
+        points:
+          genius: 2
+          expert: 1
+      - text: "Черчилль"
+        points:
+          learner: 1
+      - text: "Сталин"
+        points:
+          beginner: 1
+      - text: "Рузвельт"
+        points:
+          beginner: 1
+
+  - question: "В каком году была подписана Декларация независимости США?"
+    photo: 803Eu5p18Z8cSWK7RbesyAxyz3+sZSTDhZD0I6JMjZ3SimEioWsNTkzlQv2+UNec6dWFHk62X4Q7UOeje2a/BQ6bWUOr2ocirg5qkUoSYAs=
+    options:
+      - text: "1776"
+        points:
+          genius: 2
+          expert: 1
+      - text: "1492"
+        points:
+          learner: 1
+      - text: "1812"
+        points:
+          beginner: 1
+      - text: "1914"
+        points:

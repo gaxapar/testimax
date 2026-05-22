@@ -1,0 +1,169 @@
+slug: literature_knowledge
+title: 📚 Насколько хорошо ты знаешь литературу?
+photo: 5vA0fVY3CNfmuiI6LF49IyxoLO5lbRi8TeSRRn8daMKCmqf/MW2/QaMyccPjDfnOIvWXUNZj3X6qPC+6z7KjMyMiUA0ofAzNSUGO1nxwzpo=
+
+description: |
+  <i><b>📚 Насколько хорошо ты знаешь литературу?</b></i>
+
+  Давай узнаем, насколько ты знаешь литературу! В нашем тесте 6 вопросов, которые помогут нам определить твой уровень знаний в классической литературе.
+
+results:
+  - slug: literature_newbie
+    photo: ""
+    description: |
+      <b>📖 Литературный новичок</b>
+
+      Ты только начинаешь знакомство с классикой. Это нормально — главное, что впереди много интересных книг!
+
+  - slug: literature_reader
+    photo: ""
+    description: |
+      <b>📚 Внимательный читатель</b>
+
+      Ты знаешь основные произведения и героев, но иногда путаешь детали. Хороший уверенный уровень!
+
+  - slug: literature_lover
+    photo: ""
+    description: |
+      <b>✨ Любитель литературы</b>
+
+      Ты хорошо ориентируешься в классике и уверенно отвечаешь на большинство вопросов.
+
+  - slug: literature_expert
+    photo: ""
+    description: |
+      <b>🎓 Литературный эксперт</b>
+
+      Ты отлично знаешь русскую литературу, её авторов и произведения. У тебя глубокие знания!
+
+  - slug: literature_genius
+    photo: ""
+    description: |
+      <b>🏆 Литературный гений</b>
+
+      Ты настоящий знаток классики! Возможно, преподаватели литературы гордились бы тобой.
+
+questions:
+  - question: "Кто написал «Евгений Онегин»?"
+    photo: t7jnuaWNTzZ3lbqbDupF5RxZ04iJSvHRMWYhZb42EQwqMbZ36BGcqi23rkDh77hhqYHVwiBphikSCD3gf2Z7swzffHuJ/OTrP/TaK5zmMSQ=
+    options:
+      - text: "Александр Пушкин"
+        points:
+          literature_expert: 2
+          literature_genius: 2
+
+      - text: "Михаил Лермонтов"
+        points:
+          literature_reader: 1
+
+      - text: "Николай Гоголь"
+        points:
+          literature_lover: 1
+
+      - text: "Фёдор Достоевский"
+        points:
+          literature_newbie: 1
+
+  - question: "Главный герой романа «Преступление и наказание»?"
+    photo: DNs3ISZX6lqBPPakNDSgcw4s2NV1eiNH0xLJkz+I8TAH8LF7wMHmfv1xjKPwKT5aRtNE7RnURIOWVTbojB4tVapBJTWPNhGx6T94clRDYv4=
+    options:
+      - text: "Родион Раскольников"
+        points:
+          literature_expert: 2
+          literature_genius: 2
+
+      - text: "Евгений Онегин"
+        points:
+          literature_newbie: 1
+
+      - text: "Пьер Безухов"
+        points:
+          literature_reader: 1
+
+      - text: "Иван Тургенев"
+        points:
+          literature_newbie: 1
+
+      - text: "Андрей Болконский"
+        points:
+          literature_lover: 1
+
+  - question: "Кто автор «Мёртвых душ»?"
+    photo: yj8DeMmqmOxzwXKE6WYoV4SCj/S+gytChWIfH8m+miszI3dw/0h3EL55SQjdlhOOVk0NhtlRWGsalW9seDm9T6CBjYJQ9NfqyjTNBlTnW8U=
+    options:
+      - text: "Николай Гоголь"
+        points:
+          literature_expert: 2
+          literature_genius: 2
+
+      - text: "Лев Толстой"
+        points:
+          literature_reader: 1
+
+      - text: "Антон Чехов"
+        points:
+          literature_lover: 1
+
+      - text: "Фёдор Достоевский"
+        points:
+          literature_newbie: 1
+
+  - question: "Кто написал «Герой нашего времени»?"
+    photo: 3eW0uMZHeWeIn2LREKqYrjjaWDOEgK2HH5LlQRiAmkou1HKr4ilJs2NZ/ehEW6o5aRznmgD6rZklMcpF8vi7mXsch5eq1tszqYVUAkLZ/+U=
+    options:
+      - text: "Михаил Лермонтов"
+        points:
+          literature_expert: 2
+          literature_genius: 2
+
+      - text: "Александр Пушкин"
+        points:
+          literature_reader: 1
+
+      - text: "Иван Тургенев"
+        points:
+          literature_lover: 1
+
+      - text: "Лев Толстой"
+        points:
+          literature_newbie: 1
+
+  - question: "Как звали возлюбленную Онегина?"
+    photo: OU1Yk76zqlPr4j6n7p9N65ay/tSfxYq2tqm6dSLIxQiJi75F4L+3bVid5+zVVivDzDof3Owwoaa+qMGT9rPd0wdWDVjDE++ADSvxMFnSfHY=
+    options:
+      - text: "Татьяна"
+        points:
+          literature_expert: 2
+          literature_genius: 2
+
+      - text: "Ольга"
+        points:
+          literature_reader: 1
+
+      - text: "Анна"
+        points:
+          literature_lover: 1
+
+      - text: "Соня"
+        points:
+          literature_newbie: 1
+
+  - question: "Кто написал «Война и мир»?"
+    photo: UzCmFizHHxt+E22OgbyAs3tLuFiZhQs9egE11Tdkcx8q8SEmlhs0+r8mAZMYKqD49X3KO9ibuKBWBz6bWZlGL6yM17dFWSovcMP3MuzRIxo=
+    options:
+      - text: "Лев Толстой"
+        points:
+          literature_expert: 2
+          literature_genius: 2
+
+      - text: "Фёдор Достоевский"
+        points:
+          literature_reader: 1
+
+      - text: "Иван Тургенев"
+        points:
+          literature_lover: 1
+
+      - text: "Антон Чехов"
+        points:
+          literature_newbie: 1

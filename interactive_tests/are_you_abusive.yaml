@@ -1,0 +1,150 @@
+slug: are_you_abusive
+title: ⚠️ Являешься ли ты абьюзером?
+photo: kWbXuqf72rm2yD85SlI2eyAdbm4HIvJJOfPsz9XCwKQmH7XRHOmF/zrBCK0MACO0Gh7f2RWWtocPXvE+KecFy87DqqUe+TWaRxH8ihA7NCM=
+
+description: |
+  <i><b>⚠️ Являешься ли ты абьюзером?</b></i>
+
+  Этот тест поможет понять твой стиль поведения в отношениях и общении.
+
+results:
+  - slug: healthy
+    photo: ""
+    description: |
+      <b>🟢 Здоровое поведение</b>
+
+      Ты уважительный, спокойный и заботливый человек.
+
+  - slug: mild_red_flags
+    photo: ""
+    description: |
+      <b>🟡 Небольшие тревожные сигналы</b>
+
+      Иногда ты можешь быть резким или эмоциональным, но в целом контролируешь себя.
+
+  - slug: toxic_tendencies
+    photo: ""
+    description: |
+      <b>🟠 Токсичные тенденции</b>
+
+      У тебя бывают моменты давления, ревности или эмоциональных перегрузок.
+
+  - slug: abusive_risk
+    photo: ""
+    description: |
+      <b>🔴 Риск абьюзивного поведения</b>
+
+      Тебе стоит обратить внимание на своё поведение в конфликтных ситуациях.
+
+questions:
+  - question: "Как ты реагируешь в конфликте?"
+    photo: 0poxY/zklUan6tCmzyUbYb2m+2xt0DHDscTYvpYwQCNdZ3z3qqrIpIr4DXRtagJ6LW5wKlTQIZMzRoGjP7WJsN4CtPhcWGxIe9xUkszVScE=
+    options:
+      - text: "Спокойно обсуждаю"
+        points:
+          healthy: 2
+      - text: "Эмоционально"
+        points:
+          mild_red_flags: 2
+      - text: "Давлю"
+        points:
+          toxic_tendencies: 2
+      - text: "Контролирую и требую"
+        points:
+          abusive_risk: 2
+
+  - question: "Как ты ведёшь себя с партнёром?"
+    photo: 0zZ8RB2GZXq5zN59QgMF26328gBiU0B5sxY9yWMrsy1mPDcKIo7L7TDedCsd2HXrOgXqK9TVPKK3I8HbccA/cXbL4swoIlxOWRMo8YMZhSc=
+    options:
+      - text: "Уважаю границы"
+        points:
+          healthy: 2
+      - text: "Иногда ревную"
+        points:
+          mild_red_flags: 2
+      - text: "Контролирую"
+        points:
+          toxic_tendencies: 2
+      - text: "Доминирую"
+        points:
+          abusive_risk: 2
+
+  - question: "Как ты реагируешь на критику?"
+    photo: 57vP+F0RDRHzDmEdj6U3DW7lyD/xpYjcfJDaiYa0Y5j3QKqOW+Nv48bQpq09jDPi2m0kZVvGnzgfPOidD/KmRML9+eiQvv0BUgDkiBKvSPA=
+    options:
+      - text: "Принимаю"
+        points:
+          healthy: 2
+      - text: "Обижаюсь"
+        points:
+          mild_red_flags: 2
+      - text: "Спорю"
+        points:
+          toxic_tendencies: 2
+      - text: "Агрессивно"
+        points:
+          abusive_risk: 2
+
+  - question: "Как ты проявляешь эмоции?"
+    photo: Th73nbEMToyi+QCSJ2GQffb35D3cY8qft4604wg2iFwtfKlD2wvAbE7zYVPNL7jvVt5q+/qS9ZXAqFBicXIj+hDyTimQK+N2q7iFCoH1mPE=
+    options:
+      - text: "Спокойно"
+        points:
+          healthy: 2
+      - text: "Иногда резко"
+        points:
+          mild_red_flags: 2
+      - text: "Часто эмоционально"
+        points:
+          toxic_tendencies: 2
+      - text: "Взрывно"
+        points:
+          abusive_risk: 2
+
+  - question: "Как ты решаешь конфликты?"
+    photo: z3zqTOhRL1vcZd0DjgcuDByuC18o0/R8sBeQklhV6/GpydyILVS52fsnnFqGZwtpt4F6W3zSFW6kB1ct9BwsYbA0pq1/d2rZq7LlfL7Xg8k=
+    options:
+      - text: "Диалог"
+        points:
+          healthy: 2
+      - text: "Спор"
+        points:
+          mild_red_flags: 2
+      - text: "Давление"
+        points:
+          toxic_tendencies: 2
+      - text: "Контроль"
+        points:
+          abusive_risk: 2
+
+  - question: "Как ты относишься к партнёру?"
+    photo: 4BzmFPZtBISzfDaozzhHFsRPtGMHL0Kgy6yPhxmXpYN+/k1at7Z0jce437Hy56XkNXWIam8oPeNBOV7sEGBEEj6mIg21SbfdPuhVz5mf40o=
+    options:
+      - text: "С уважением"
+        points:
+          healthy: 2
+      - text: "С ревностью"
+        points:
+          mild_red_flags: 2
+      - text: "С требовательностью"
+        points:
+          toxic_tendencies: 2
+      - text: "С контролем"
+        points:
+          abusive_risk: 2
+
+  - question: "Твой стиль общения?"
+    photo: o0OvAx7puoKCD9FvHCK2d64PB1fhl+fJ7TeCUOCCXJM+0Z0LEd0pj2JdFOX8WBZiNu0SrQu28WDhEiuJigHeeFHdBG2z6z8OteFegXLTiH4=
+    options:
+      - text: "Спокойный"
+        points:
+          healthy: 2
+      - text: "Резкий"
+        points:
+          mild_red_flags: 2
+      - text: "Давящий"
+        points:
+          toxic_tendencies: 2
+      - text: "Жёсткий"
+        points:
+          abusive_risk: 2

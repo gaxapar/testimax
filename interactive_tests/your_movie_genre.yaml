@@ -1,0 +1,185 @@
+slug: your_movie_genre
+title: 🎥 Твой жанр кино?
+photo: 9LEVNMh1xgGBJYe1DM0z9tRxajeu6ds/G1kWgl6L5qohx2vB+EHKo/KX05mNqySph7b21cFuRi9L8hZmqvPZk/X5LI05cBb/aXnB3SclfNs=
+
+description: |
+  <i><b>🎥 Твой жанр кино?</b></i>
+
+  Давай узнаем, какой ты любишь жанр кино! В нашем тесте 6 вопросов, которые помогут определить твои предпочтения в фильмах.
+
+results:
+  - slug: action_genre
+    photo: ""
+    description: |
+      <b>💥 Боевик</b>
+
+      Ты любишь динамику, драйв и сильные эмоции. Тебе нравятся фильмы, где всё постоянно меняется и происходит.
+
+  - slug: romance_genre
+    photo: ""
+    description: |
+      <b>💕 Романтика</b>
+
+      Ты ценишь чувства, отношения и красивые истории любви. Для тебя важны эмоции и атмосфера.
+
+  - slug: comedy_genre
+    photo: ""
+    description: |
+      <b>😂 Комедия</b>
+
+      Ты позитивный и любишь лёгкие, весёлые истории. Тебе важно хорошее настроение.
+
+  - slug: drama_genre
+    photo: ""
+    description: |
+      <b>🎭 Драма</b>
+
+      Ты глубоко чувствуешь и любишь серьёзные истории с сильным смыслом и эмоциями.
+
+  - slug: thriller_genre
+    photo: ""
+    description: |
+      <b>🖤 Триллер</b>
+
+      Ты любишь напряжение, загадки и неожиданные повороты сюжета.
+
+  - slug: fantasy_genre
+    photo: ""
+    description: |
+      <b>🧙‍♂️ Фэнтези</b>
+
+      Ты любишь воображение, магию и миры, где возможно всё.
+
+questions:
+  - question: "Какой фильм вы выберете для вечера?"
+    photo: Q0gd4DXLi1n44iVX2WMZxTHUlV+pqe6f9AFsAE5SxzBuuJqW8e1PRBtGEJ0uFjHNdVUbMXPxVasEO0TV7Y5Uws6xb4VPBqRkbW/neDeM5cs=
+    options:
+      - text: "Динамичный с экшеном"
+        points:
+          action_genre: 2
+          thriller_genre: 1
+
+      - text: "Романтический"
+        points:
+          romance_genre: 2
+          drama_genre: 1
+
+      - text: "Лёгкую комедию"
+        points:
+          comedy_genre: 2
+          romance_genre: 1
+
+      - text: "Сюжет с загадками"
+        points:
+          thriller_genre: 2
+          drama_genre: 1
+
+  - question: "Что вам ближе по настроению?"
+    photo: Cob2pMuSiXWHvTc86W8mjoPxKEXUHCqrMfAut+aHBV1+S9Hnw1csQ7Oi0VvSg9KIC3gPRTEtitvmGfNM1pQZ6lW1M22jVH3zvDle84egTLU=
+    options:
+      - text: "Адреналин"
+        points:
+          action_genre: 2
+          thriller_genre: 1
+
+      - text: "Тепло и эмоции"
+        points:
+          romance_genre: 2
+          drama_genre: 1
+
+      - text: "Радость и смех"
+        points:
+          comedy_genre: 2
+          romance_genre: 1
+
+      - text: "Глубина"
+        points:
+          drama_genre: 2
+          fantasy_genre: 1
+
+  - question: "Какой сюжет вам нравится?"
+    photo: 0vDSRtUmFpEnUT0WedRyu3jMgSxBrq6ybQMjQjxdVhmPdhS/c9Kfw73TAfPwn/o78V0eeKSZUZfaaAkR2gblABVuwsgveV3K6jsibCvLTrI=
+    options:
+      - text: "Быстрый и напряжённый"
+        points:
+          action_genre: 2
+          thriller_genre: 1
+
+      - text: "История любви"
+        points:
+          romance_genre: 2
+          drama_genre: 1
+
+      - text: "Смешные ситуации"
+        points:
+          comedy_genre: 2
+
+      - text: "Мир с магией"
+        points:
+          fantasy_genre: 2
+          thriller_genre: 1
+
+  - question: "Какие эмоции вы хотите испытать?"
+    photo: 7fVKpSxO+MbCkZpZQ6cbqPD4R+PrW0j6BeD/mGwDIyzVVcPmJDBycoODAX8QxSsOGFSg+Re3K4UeQZ/+dj8rdzUUzUngDNtUz2NEzqS4USk=
+    options:
+      - text: "Адреналин"
+        points:
+          action_genre: 2
+          thriller_genre: 1
+
+      - text: "Счастье"
+        points:
+          romance_genre: 2
+          comedy_genre: 1
+
+      - text: "Смех"
+        points:
+          comedy_genre: 2
+
+      - text: "Волнение"
+        points:
+          thriller_genre: 2
+          drama_genre: 1
+
+  - question: "Какой главный герой вам нравится?"
+    photo: aTbf56JYvABL9Ziku1vlDkbPVId+oKpRY6IhoOnUdRCBMh4LPDUPvNoHr5LkL2UUOBXjSjQHZrQvkUCxW8RnLrSqHbZSL8pKMGP5mdfafjw=
+    options:
+      - text: "Сильный и смелый"
+        points:
+          action_genre: 2
+          thriller_genre: 1
+
+      - text: "Романтичный"
+        points:
+          romance_genre: 2
+          drama_genre: 1
+
+      - text: "Забавный"
+        points:
+          comedy_genre: 2
+
+      - text: "Загадочный"
+        points:
+          thriller_genre: 2
+          fantasy_genre: 1
+
+  - question: "Что важно в фильме?"
+    photo: w9bs6KIdDBMSU7iOWgPFfzmWbsJILsLUY16vtg8yZTKMnuxFuePFjXGjJkSsxvuRnF6gXgOXbjkQlxzl1KjliFbzPKiqFa3bLmLynU5+Xks=
+    options:
+      - text: "Действие"
+        points:
+          action_genre: 2
+
+      - text: "Эмоции"
+        points:
+          romance_genre: 2
+          drama_genre: 1
+
+      - text: "Юмор"
+        points:
+          comedy_genre: 2
+
+      - text: "Сюжет"
+        points:
+          thriller_genre: 2
+          fantasy_genre: 1

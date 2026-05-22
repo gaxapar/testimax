@@ -1,0 +1,178 @@
+slug: your_type_of_people
+title: 🧲 Твой тип людей
+photo: Vnju5rkt3besudm03pJVU3XRwzCdI9fTwZGQ7n4xZFSbW9FZ7hgq1PO6rvA/w2H22KuTlRRLMTzhG8PJGJrdyNADRQOan0hpMGyaT7NfaN4=
+
+description: |
+  <i><b>🧲 Твой тип людей</b></i>
+
+  Давай узнаем, какие люди тебе ближе!
+
+results:
+  - slug: calm_people
+    photo: ""
+    description: |
+      <b>🌿 Спокойные люди</b>
+
+      Тебе нравятся стабильные, мягкие и надёжные люди.
+
+  - slug: energetic_people
+    photo: ""
+    description: |
+      <b>⚡ Энергичные люди</b>
+
+      Ты тянешься к активным и ярким людям.
+
+  - slug: mysterious_people
+    photo: ""
+    description: |
+      <b>🌑 Загадочные люди</b>
+
+      Тебе нравятся глубокие и непредсказуемые личности.
+
+  - slug: funny_people
+    photo: ""
+    description: |
+      <b>😂 Весёлые люди</b>
+
+      Ты любишь тех, кто умеет поднимать настроение.
+
+  - slug: strong_people
+    photo: ""
+    description: |
+      <b>🦁 Сильные люди</b>
+
+      Тебя привлекают уверенные и лидерские личности.
+
+questions:
+  - question: "Кто тебе ближе?"
+    photo: viDVO04HHHbMpaaunIuvf0lsJZK1CdU8gO+Iwq3jRieUyu1gh88L+DtqUC2npvW0Z84J3XJfm+hl8RlBSHLtxFLQ+8bwYtfYttEAg2savXg=
+    options:
+      - text: "Спокойные"
+        points:
+          calm_people: 2
+      - text: "Энергичные"
+        points:
+          energetic_people: 2
+      - text: "Загадочные"
+        points:
+          mysterious_people: 2
+      - text: "Весёлые"
+        points:
+          funny_people: 2
+      - text: "Сильные"
+        points:
+          strong_people: 2
+
+  - question: "Что тебе нравится в людях?"
+    photo: zs+5V3kmJM0vXQGTAm/DJ6lmucr63qO452dkIDIIcV+Ttx0pJAfh5KaEKdOpBz/orvIZ7cj4LiDLfo8rCgTZeDd4zi2chhT4yVT5C87KEac=
+    options:
+      - text: "Стабильность"
+        points:
+          calm_people: 2
+      - text: "Драйв"
+        points:
+          energetic_people: 2
+      - text: "Глубина"
+        points:
+          mysterious_people: 2
+      - text: "Юмор"
+        points:
+          funny_people: 2
+      - text: "Уверенность"
+        points:
+          strong_people: 2
+
+  - question: "С каким человеком ты не ладишь?"
+    photo: TUe7AMK4LCCfyic7ItPnWa4zMViXoT0qd26xr+m5cOqfcTdq4eZBeipEnlGPkqofdSkbjwaqmn6U+e3q/IOCBUK5wjuEBm6r8f5ZhKxavVI=
+    options:
+      - text: "Суетливый"
+        points:
+          calm_people: 2
+      - text: "Слишком спокойный"
+        points:
+          energetic_people: 1
+      - text: "Слишком открытый"
+        points:
+          mysterious_people: 2
+      - text: "Скучный"
+        points:
+          funny_people: 2
+      - text: "Слабый"
+        points:
+          strong_people: 2
+
+  - question: "С кем ты дружишь?"
+    photo: tARWMPQSir+MbEebGZnNml1dfXpOQyJEDAti251ogyNGf+gJRB5m/g+BG/N7mxph6gzWGSlV3QVZj7T4mKepA5Ia0h27mjoh7tBZvCucc6o=
+    options:
+      - text: "Спокойными"
+        points:
+          calm_people: 2
+      - text: "Активными"
+        points:
+          energetic_people: 2
+      - text: "Загадочными"
+        points:
+          mysterious_people: 2
+      - text: "Весёлыми"
+        points:
+          funny_people: 2
+      - text: "Сильными"
+        points:
+          strong_people: 2
+
+  - question: "Какой вайб тебе ближе?"
+    photo: UoGRFy4CWbc2qNELQZZGDvp367X22wOwIyVKEyGpQA+gmsibY6VFoigvz2o2C1sQ6mk4IImdoFEbR69jULxHHkiC5ed7C5ioJ57xMDD+mA4=
+    options:
+      - text: "Покой"
+        points:
+          calm_people: 2
+      - text: "Движение"
+        points:
+          energetic_people: 2
+      - text: "Тайна"
+        points:
+          mysterious_people: 2
+      - text: "Смех"
+        points:
+          funny_people: 2
+      - text: "Сила"
+        points:
+          strong_people: 2
+
+  - question: "Как ты проводишь время?"
+    photo: /GC0Eh0fle2YEpuKDM5mEzdTbnnP/lDTGyPv8cVjSnlJ5E8g2BCWyltDBd6VuWBUbfswUPFjCw4FNZrTswaiyDFa9vojFoKCc98okm/Wl1w=
+    options:
+      - text: "Спокойно"
+        points:
+          calm_people: 2
+      - text: "Активно"
+        points:
+          energetic_people: 2
+      - text: "В одиночестве"
+        points:
+          mysterious_people: 2
+      - text: "С друзьями"
+        points:
+          funny_people: 2
+      - text: "С пользой"
+        points:
+          strong_people: 2
+
+  - question: "Что для тебя важно?"
+    photo: MBiAWEbYyFs/24LhKs/baXYmYvGXDwbHlqmWM4OzdvfnArODVsf6rwiMzzYmX25fjyOnrj/HyaqcqROHVdzPHVy7WEKIahdpSofc138Mpi4=
+    options:
+      - text: "Стабильность"
+        points:
+          calm_people: 2
+      - text: "Энергия"
+        points:
+          energetic_people: 2
+      - text: "Глубина"
+        points:
+          mysterious_people: 2
+      - text: "Радость"
+        points:
+          funny_people: 2
+      - text: "Результат"
+        points:
+          strong_people: 2

@@ -1,0 +1,134 @@
+slug: red_flags_level
+title: 🚩 Сколько у тебя ред флагов?
+photo: 1gXuGnywq5ZtlOAR8nZBSYkIyJkG/iq6AtxCIbxkBTiK95iqD4CsL+wHjG0pRxmhES3yT/UgQ5ESPiG9UEaFtZbBlJ8D3SaSL8YYo2h/jh8=
+
+description: |
+  <i><b>🚩 Сколько у тебя ред флагов?</b></i>
+
+  Давай узнаем, сколько у тебя red flags! В нашем тесте 7 вопросов.
+
+results:
+  - slug: no_red_flags
+    photo: ""
+    description: |
+      <b>🟢 Идеальный человек</b>
+
+      У тебя почти нет ред флагов, ты комфортный и стабильный человек.
+
+  - slug: few_red_flags
+    photo: ""
+    description: |
+      <b>🟡 Несколько ред флагов</b>
+
+      У тебя есть мелкие особенности, но в целом ты нормальный человек.
+
+  - slug: medium_red_flags
+    photo: ""
+    description: |
+      <b>🟠 Средний уровень ред флагов</b>
+
+      У тебя есть заметные особенности характера.
+
+  - slug: many_red_flags
+    photo: ""
+    description: |
+      <b>🔴 Много ред флагов</b>
+
+      Ты сложный человек, с тобой бывает непросто.
+
+questions:
+  - question: "Как ты реагируешь на игнор?"
+    photo: wJtNPdntyrnYAO/VuCfm2q5TeAVfwLGRijAtet44/NmCC+/QP2cmzezQHE7FXILpKTw+l8MMePGx+5e9QfAbLohbdaQQie0l48necDzEqrc=
+    options:
+      - text: "Спокойно"
+        points:
+          no_red_flags: 2
+      - text: "Обдумываю"
+        points:
+          few_red_flags: 2
+      - text: "Злюсь"
+        points:
+          medium_red_flags: 2
+      - text: "Игнорирую в ответ"
+        points:
+          many_red_flags: 2
+
+  - question: "Как ты ведёшь себя в конфликте?"
+    photo: 3BUEleBS/9XF6o0yrxYwF+Gh83ac5yvh+r1Zf17q7nuMUNItrAKeJl9GqzrGMV9ZwSmjaRIpeWn9P1iFWqN8G8/JavY9oEpx+bSGPxT00LI=
+    options:
+      - text: "Спокойно"
+        points:
+          no_red_flags: 2
+      - text: "Обсуждаю"
+        points:
+          few_red_flags: 2
+      - text: "Эмоции"
+        points:
+          medium_red_flags: 2
+      - text: "Давлю"
+        points:
+          many_red_flags: 2
+
+  - question: "Как ты относишься к критике?"
+    photo: QNxdyQE+qQecoh6F8vK/CBiIwgdWDr2ag95AgqLrH+WDKDnv3EZFuRukE/bHmli+wjRGJXYeb9U67u92mn2DsiO7w492fswn6Ze5EbC2Px0=
+    options:
+      - text: "Принимаю"
+        points:
+          no_red_flags: 2
+      - text: "Слушаю"
+        points:
+          few_red_flags: 2
+      - text: "Обижаюсь"
+        points:
+          medium_red_flags: 2
+      - text: "Спорю"
+        points:
+          many_red_flags: 2
+
+  - question: "Как ты в отношениях?"
+    photo: oTpIdR0yfG0G6qC6oJDLM64ri7iIRG8iQfk6hrMobYo5IbvWlEo4TK2vC+yTrE7OQ5xAHDDTCkhmcXfWTZeudMr6Q4V0PJkmAo/GjnucscI=
+    options:
+      - text: "Спокойный"
+        points:
+          no_red_flags: 2
+      - text: "Стабильный"
+        points:
+          few_red_flags: 2
+      - text: "Эмоциональный"
+        points:
+          medium_red_flags: 2
+      - text: "Ревнивый"
+        points:
+          many_red_flags: 2
+
+  - question: "Как ты реагируешь на ошибки?"
+    photo: d5m6NdliisvoPvv9+/C+R5OhnMcRh8NBfuGFNEbA5hRJISx6uvG8Bp6nHvEQ+GuTmogVfS+vKyd+oKHVXZ48P9Q2L77DWSKHO1aoDpR5lf8=
+    options:
+      - text: "Понимаю"
+        points:
+          no_red_flags: 2
+      - text: "Анализирую"
+        points:
+          few_red_flags: 2
+      - text: "Злюсь"
+        points:
+          medium_red_flags: 2
+      - text: "Конфликтую"
+        points:
+          many_red_flags: 2
+
+  - question: "Твой характер?"
+    photo: DcxzQNDffwJjuHQFJa3tw93NYll8DzlId/sHiBTynuIdcm7srF6DesiSbTzIp8mThT+id37KzQgQh4bQiPAUFf812/MelKl0Dn2pVY/2xFk=
+    options:
+      - text: "Спокойный"
+        points:
+          no_red_flags: 2
+      - text: "Сбалансированный"
+        points:
+          few_red_flags: 2
+      - text: "Эмоциональный"
+        points:
+          medium_red_flags: 2
+      - text: "Жёсткий"
+        points:
+          many_red_flags: 2

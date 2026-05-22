@@ -1,0 +1,283 @@
+slug: hidden_talent
+title: 🌟 Твой скрытый талант
+photo: 2fHQzdTCIfUndxW4PEKqj1VSlYR8rPefJ7rihbtVlcVWaIfFsOihSeF0A+m7x5wrSkv0sSAJ0fkCCI/h9TMqdNp6CddfNbEcRMbXHRQnh5U=
+
+description: |
+  <i><b>Какой у тебя скрытый талант?</b></i>
+
+  Давай узнаем, какой у тебя скрытый талант? В нашем тесте 7 вопросов, которые помогут нам определить, какой у тебя скрытый талант.
+
+results:
+  - slug: creative_genius
+    photo: ""
+    description: |
+      <b>🎨 Творческий талант</b>
+
+      Ты умеешь создавать красоту, вдохновлять других и выражать себя через творчество.
+
+  - slug: intellectual_mind
+    photo: ""
+    description: |
+      <b>🧠 Аналитический талант</b>
+
+      Ты отлично анализируешь, быстро учишься и умеешь находить решения даже в сложных ситуациях.
+
+  - slug: charismatic_person
+    photo: ""
+    description: |
+      <b>✨ Харизматичный талант</b>
+
+      Ты умеешь общаться, вдохновлять людей и заряжать окружающих своей энергией.
+
+  - slug: inventor_spirit
+    photo: ""
+    description: |
+      <b>⚙️ Талант изобретателя</b>
+
+      Ты любишь придумывать новое, экспериментировать и смотреть на мир нестандартно.
+
+  - slug: emotional_artist
+    photo: ""
+    description: |
+      <b>🌙 Эмоциональный талант</b>
+
+      Ты тонко чувствуешь эмоции, атмосферу и умеешь замечать то, что скрыто от других.
+
+  - slug: energetic_master
+    photo: ""
+    description: |
+      <b>🔥 Энергичный талант</b>
+
+      Ты активный, целеустремлённый и легко заряжаешь окружающих движением и мотивацией.
+
+questions:
+  - question: "Что вам нравится делать в свободное время?"
+    photo: 1JsE4Rbxa3OX2KG9C1hkytblswjU1wuIOnLTDmrXGanwI7V1r7ruarLBGlfPhNYARieBwe7g6pKKE22AM7D4e37AL3Jza9cPLrN4NnNgu+I=
+    options:
+      - text: "Рисовать"
+        points:
+          creative_genius: 2
+          emotional_artist: 1
+
+      - text: "Петь"
+        points:
+          charismatic_person: 2
+          creative_genius: 1
+
+      - text: "Писать"
+        points:
+          emotional_artist: 2
+          intellectual_mind: 1
+
+      - text: "Изобретать"
+        points:
+          inventor_spirit: 2
+          intellectual_mind: 1
+
+      - text: "Наблюдать"
+        points:
+          emotional_artist: 2
+          intellectual_mind: 1
+
+      - text: "Спорт"
+        points:
+          energetic_master: 2
+          charismatic_person: 1
+
+  - question: "Что чаще всего делают ваши друзья?"
+    photo: PMjsaJAtNGztLztqAOIjl2InNo5erBjaNqBfrgu7m/TvRYs+wiZMMiGDGhluLlhEoWLr1LDPXMyLFAZWlRw6laeqXVX9f9w8k7Xl0N3hG1o=
+    options:
+      - text: "Творят"
+        points:
+          creative_genius: 2
+          emotional_artist: 1
+
+      - text: "Шутят"
+        points:
+          charismatic_person: 2
+          energetic_master: 1
+
+      - text: "Придумывают"
+        points:
+          inventor_spirit: 2
+          creative_genius: 1
+
+      - text: "Решают задачи"
+        points:
+          intellectual_mind: 2
+          inventor_spirit: 1
+
+      - text: "Анализируют"
+        points:
+          intellectual_mind: 2
+          emotional_artist: 1
+
+      - text: "Экспериментируют"
+        points:
+          inventor_spirit: 2
+          energetic_master: 1
+
+  - question: "Что вас легко вдохновляет?"
+    photo: 0AFsV1XdSqbRjiG+RP4Ao83XRFO4kkPzmUr9DYu84GoP35G37xLnVJ/VukDatBv2tw62+mWeJMQPQqyBk9/pqFDKNkLIyN64tQTyHpBvbWo=
+    options:
+      - text: "Музыка"
+        points:
+          emotional_artist: 2
+          creative_genius: 1
+
+      - text: "Искусство"
+        points:
+          creative_genius: 2
+          emotional_artist: 1
+
+      - text: "Истории"
+        points:
+          emotional_artist: 2
+          charismatic_person: 1
+
+      - text: "Наука"
+        points:
+          intellectual_mind: 2
+          inventor_spirit: 1
+
+      - text: "Природа"
+        points:
+          emotional_artist: 2
+          energetic_master: 1
+
+      - text: "Игры"
+        points:
+          energetic_master: 2
+          charismatic_person: 1
+
+  - question: "Как вы решаете сложные задачи?"
+    photo: xPJAPbopK3jCnngeilLYY++OF+UZbqcqq7PoXKyS+KzwR7dJB6kKr5XvGNm4M4yK+pagJ6Mw4f0XSzMqEUOUQVzi1RSlwNGAWebS1xRNoBw=
+    options:
+      - text: "Логично"
+        points:
+          intellectual_mind: 2
+          inventor_spirit: 1
+
+      - text: "Креативно"
+        points:
+          creative_genius: 2
+          inventor_spirit: 1
+
+      - text: "Спонтанно"
+        points:
+          energetic_master: 2
+          charismatic_person: 1
+
+      - text: "Методично"
+        points:
+          intellectual_mind: 2
+          calm_friend: 1
+
+      - text: "Интуитивно"
+        points:
+          emotional_artist: 2
+          creative_genius: 1
+
+      - text: "Командно"
+        points:
+charismatic_person: 2
+          energetic_master: 1
+
+  - question: "Как вы выражаете себя?"
+    photo: 47KON8V+jNOaI/65hgU/9L9kYRGRt6+0sio77Z5gsFiiCiUnPyMeAW/g6giNHbwJS0jhLyQWU9lhlOusHmhWnFM/92+2Apt4XgxnzvfIJIE=
+    options:
+      - text: "Через творчество"
+        points:
+          creative_genius: 2
+          emotional_artist: 1
+
+      - text: "Через движение"
+        points:
+          energetic_master: 2
+          charismatic_person: 1
+
+      - text: "Через слова"
+        points:
+          charismatic_person: 2
+          emotional_artist: 1
+
+      - text: "Через идеи"
+        points:
+          inventor_spirit: 2
+          intellectual_mind: 1
+
+      - text: "Через анализ"
+        points:
+          intellectual_mind: 2
+          inventor_spirit: 1
+
+      - text: "Через эмоции"
+        points:
+          emotional_artist: 2
+          creative_genius: 1
+
+  - question: "Что вам легко даётся?"
+    photo: lRF7NL0wzrF71fIBeDw7Vt0tvnUKI3WBmBm9gkW5FYnAfG7NKuJD7CeY2R5kcafkVC2ZXil6Ex1xSfAUfOp9x+B7n4JGyQDSiVJc4AygzJ8=
+    options:
+      - text: "Легко придумывать идеи"
+        points:
+          inventor_spirit: 2
+          creative_genius: 1
+
+      - text: "Легко создавать что-то руками"
+        points:
+          creative_genius: 2
+          emotional_artist: 1
+
+      - text: "Легко учиться"
+        points:
+          intellectual_mind: 2
+          inventor_spirit: 1
+
+      - text: "Легко общаться"
+        points:
+          charismatic_person: 2
+          energetic_master: 1
+
+      - text: "Легко планировать"
+        points:
+          intellectual_mind: 2
+          charismatic_person: 1
+
+      - text: "Легко развлекать"
+        points:
+          charismatic_person: 2
+          energetic_master: 1
+
+  - question: "Что вам больше всего нравится смотреть/читать?"
+    photo: fn5l9/2YI8t9l5ww2rQiqqpElwZdwjp/1VxF/R+BxRgIOAtMbwh664T3/5tJQYNskyullGidfdL7T3m0qHJmI9z3mKlYNKHKm78JjpSwzJk=
+    options:
+      - text: "Аниме/мультфильмы"
+        points:
+          creative_genius: 2
+          emotional_artist: 1
+
+      - text: "Фильмы"
+        points:
+          charismatic_person: 2
+          emotional_artist: 1
+
+      - text: "Книги"
+        points:
+          intellectual_mind: 2
+          emotional_artist: 1
+
+      - text: "Наука"
+        points:
+          inventor_spirit: 2
+          intellectual_mind: 1
+
+      - text: "Искусство"
+        points:
+          creative_genius: 2
+          emotional_artist: 1
+
+      - text: "Спорт"
+        points:
+          energetic_master: 2
+          charismatic_person: 1

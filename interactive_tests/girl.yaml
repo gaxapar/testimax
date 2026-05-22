@@ -1,0 +1,198 @@
+slug: girl
+title: 👩‍🎨 Твой типаж девушки из мультиков
+photo: IqEhs6bWOMd5UT/yuDUlJuglbggGORgCA98pzJC4hVQ3gbPPxJDumAlRGpb1cG4TmKCNiB0KfckvumRGFYcYz2tCqVe8m9Rn9nr/dPNSTJ0=
+description: |
+  <i><b>Твой типаж девушки по персонажам из мультиков</b></i>
+
+Выбирай любимых персонажей из разных мультиков, и мы определим, какой у тебя типаж! Просто следуй своим предпочтениям ✨
+
+results:
+  - slug: sweet_girl
+    photo: IqEhs6bWOMd5UT/yuDUlJuglbggGORgCA98pzJC4hVQ3gbPPxJDumAlRGpb1cG4TmKCNiB0KfckvumRGFYcYz2tCqVe8m9Rn9nr/dPNSTJ0=
+    description: |
+      <b>🌸 Милая и добрая героиня</b>
+
+      Ты очень тёплый и заботливый человек. Людям рядом с тобой спокойно и уютно.
+
+  - slug: cool_girl
+    photo: ""
+    description: |
+      <b>✨ Спокойная и уверенная героиня</b>
+
+      Ты умеешь держать себя в руках, вызываешь уважение и всегда знаешь, чего хочешь.
+
+  - slug: energetic_girl
+    photo: ""
+    description: |
+      <b>🔥 Энергичная и яркая героиня</b>
+
+      Ты любишь движение, эмоции и приключения. С тобой никогда не бывает скучно.
+
+  - slug: smart_girl
+    photo: ""
+    description: |
+      <b>🧠 Умная и рассудительная героиня</b>
+
+      Ты ценишь знания, умеешь анализировать ситуацию и принимать взвешенные решения.
+
+questions:
+  - question: "Какой у вас характер?"
+    photo: 9GdXAXKpdlT05jexE8P8hmRsnMD+hrhDLf1Y73HqWYLAwHuDt/lCYedSbncnU8+dpZOCPr32BN9afyO47eyvos4yYt+5VsjOK/NCWzB+Vlz7LA6JjEyA1g5rzA/fBUMm
+    options:
+      - text: "Добрый и мягкий"
+        points:
+          sweet_girl: 2
+          cool_girl: 1
+
+      - text: "Уверенный и спокойный"
+        points:
+          cool_girl: 2
+          smart_girl: 1
+
+      - text: "Энергичный и импульсивный"
+        points:
+          energetic_girl: 2
+          cool_girl: 1
+
+      - text: "Умный и рассудительный"
+        points:
+          smart_girl: 2
+          cool_girl: 1
+
+  - question: "Что вам больше нравится?"
+    photo: FOcMYzeS6yXMEfnjhVICTOT2xyoINqcqVD32xN6V2BWiOUuKuY27djlGI1J/1QAQrNZbi/Ha0T1XcptSApWA4ATK7/gszSOpsUdzy0iD800=
+    options:
+      - text: "Романтика и уют"
+        points:
+          sweet_girl: 2
+          cool_girl: 1
+
+      - text: "Достигать целей"
+        points:
+          cool_girl: 2
+          energetic_girl: 1
+
+      - text: "Приключения и драйв"
+        points:
+          energetic_girl: 2
+          sweet_girl: 1
+
+      - text: "Учёба и развитие"
+        points:
+          smart_girl: 2
+          cool_girl: 1
+
+  - question: "Как вы ведёте себя в сложной ситуации?"
+    photo: T6lnMDosCsyuM02bFfqLCBjfhq2W8UpWZ1B6bak3N0O/UHea2qCObONZjCQ4Pldfoq+bue1OlwIlZC4p01Sg3KAtXXV3Q3bE3fWQXkvXulI=
+    options:
+      - text: "Прошу помощи"
+        points:
+          sweet_girl: 2
+          smart_girl: 1
+
+      - text: "Спокойно решаю"
+        points:
+          cool_girl: 2
+          smart_girl: 1
+
+      - text: "Иду напролом"
+        points:
+          energetic_girl: 2
+          cool_girl: 1
+
+      - text: "Сначала анализирую"
+        points:
+          smart_girl: 2
+          cool_girl: 1
+
+  - question: "Какой стиль вам ближе?"
+    photo: HXHWEG1KBba1tW5cT4dXFzJZlp3ZSPSNk89KUfDP84mhi4R1lmVW+d3gQZzcfuCELyTBgC2+OAwmmk3RLBqwfa4mWLUvvAU3iGPZoeaYNJE=
+    options:
+      - text: "Милый и нежный"
+        points:
+          sweet_girl: 2
+          cool_girl: 1
+
+      - text: "Стильный и аккуратный"
+        points:
+          cool_girl: 2
+          smart_girl: 1
+
+      - text: "Свободный и спортивный"
+        points:
+          energetic_girl: 2
+          cool_girl: 1
+
+      - text: "Практичный и удобный"
+        points:
+          smart_girl: 2
+          sweet_girl: 1
+
+  - question: "Как вы проводите выходной?"
+    photo: 26/TceULWSeHeuLPrAdQUzR/Wcp3T1tJAn8dG6fnx03TykCq0z0/UBkk1Lszj/3kqoH+r13DHCxv//vfZOHdBwiW3AO1Fkb3KojF9v9GY38=
+    options:
+      - text: "Дома в уюте"
+        points:
+          sweet_girl: 2
+          smart_girl: 1
+
+      - text: "Спокойная прогулка"
+        points:
+          cool_girl: 2
+          sweet_girl: 1
+
+      - text: "Активный отдых"
+        points:
+          energetic_girl: 2
+          cool_girl: 1
+
+      - text: "Саморазвитие"
+        points:
+          smart_girl: 2
+          cool_girl: 1
+
+  - question: "Что вас больше всего привлекает в людях?"
+    photo: jL5an8l8Z1Mbqh3WQbfrQHLOsAXlxOQUn7pC5FgUhFZZgGkQ4SmUQ/kBpgQv9y2pm+wy1PSXXuaBVG4FMMVgBT4nQzRHOlTsOl8W9IMbR3g=
+    options:
+      - text: "Доброта"
+        points:
+          sweet_girl: 2
+          cool_girl: 1
+
+      - text: "Надёжность"
+        points:
+          cool_girl: 2
+          sweet_girl: 1
+
+      - text: "Смелость"
+        points:
+          energetic_girl: 2
+          cool_girl: 1
+
+      - text: "Ум"
+        points:
+          smart_girl: 2
+          cool_girl: 1
+
+  - question: "Ваша сильная сторона?"
+    photo: A/FLAB6vzf3hKLUWZhS3Uy77EpHgXw74J7B8zXMCsZXned1oE1yrQ8mDjADZLkqt8cDuJph7LRQU6cpSbZD+6gVLTVcLYyihX9Ul4AhhnBE=
+    options:
+      - text: "Забота"
+        points:
+          sweet_girl: 2
+          cool_girl: 1
+
+      - text: "Самообладание"
+        points:
+          cool_girl: 2
+          smart_girl: 1
+
+      - text: "Решительность"
+        points:
+          energetic_girl: 2
+          cool_girl: 1
+
+      - text: "Интеллект"
+        points:
+          smart_girl: 2
+          cool_girl: 1

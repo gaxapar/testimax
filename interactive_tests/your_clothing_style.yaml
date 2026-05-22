@@ -1,0 +1,182 @@
+slug: your_clothing_style
+title: 👕 Твой стиль одежды?
+photo: b4bNTNEHf8WRzitk8sFnLXjFNTKQ8FNC/J7d3wwHsdEgchik63fvlJI7m9/URQyf9W+cOc7y2TnJ8i7SDeLYRgJGDdx0P/do6lAH0MsviEU=
+
+description: |
+  <i><b>👕 Твой стиль одежды?</b></i>
+
+  Давай узнаем, какой у тебя стиль одежды! В нашем тесте 7 вопросов, которые помогут определить твой модный образ.
+
+results:
+  - slug: casual_style
+    photo: ""
+    description: |
+      <b>👟 Кэжуал</b>
+
+      Ты ценишь комфорт и простоту. Твой стиль — удобство и лёгкость.
+
+  - slug: street_style
+    photo: ""
+    description: |
+      <b>🧢 Стритстайл</b>
+
+      Ты яркий и современный человек, любишь тренды и свободу.
+
+  - slug: classic_style
+    photo: ""
+    description: |
+      <b>🕶 Классика</b>
+
+      Ты элегантный и сдержанный, предпочитаешь аккуратность и стиль.
+
+  - slug: sporty_style
+    photo: ""
+    description: |
+      <b>🏃 Спорт</b>
+
+      Ты активный и энергичный, для тебя важна свобода движений.
+
+  - slug: aesthetic_style
+    photo: ""
+    description: |
+      <b>🌙 Эстетик</b>
+
+      Ты творческий и визуально чувствительный человек, любишь атмосферу.
+
+questions:
+  - question: "Что ты носишь чаще всего?"
+    photo: B2L6ug84AMuI3QlhBCKq98UoCuZ4I+vQCuDkhZQtdofoXupSHUIuDo4bVzQDNhPW/JK7EYfQPR+MYoXDem/ptgfbSgbbFSWLFd4AfNkM4x0=
+    options:
+      - text: "Удобную одежду"
+        points:
+          casual_style: 2
+      - text: "Модные вещи"
+        points:
+          street_style: 2
+      - text: "Классические образы"
+        points:
+          classic_style: 2
+      - text: "Спортивную одежду"
+        points:
+          sporty_style: 2
+      - text: "По цвету"
+        points:
+          aesthetic_style: 2
+      - text: "Смешанный стиль"
+        points:
+          casual_style: 1
+          street_style: 1
+
+  - question: "Что для тебя важно в одежде?"
+    photo: p70N1/WS/R1QnaDN6vfM0xusLmH6tiyqMOWJvGjI/YnK9dUQ4Ses6tAGZijiPnE1VDMQMnlc3w85Yx+3DNGiyt8wlN9qIdIrdJ1bxWNvpU4=
+    options:
+      - text: "Комфорт"
+        points:
+          casual_style: 2
+      - text: "Стиль"
+        points:
+          street_style: 2
+      - text: "Элегантность"
+        points:
+          classic_style: 2
+      - text: "Удобство"
+        points:
+          sporty_style: 2
+      - text: "Эстетика"
+        points:
+          aesthetic_style: 2
+
+  - question: "Как ты выбираешь одежду?"
+    photo: Y3mLAuH8PmgrJTYhbwtB0lQc7dlrbiVJye4XHme9GMZmkz0aPCNWoIE0Yu1M953spgQhrE0e+qG2J3mGqvZr2KSy36FY13+qvG5EB+sWodM=
+    options:
+      - text: "Быстро"
+        points:
+          casual_style: 2
+      - text: "По трендам"
+        points:
+          street_style: 2
+      - text: "Долго и аккуратно"
+        points:
+          classic_style: 2
+      - text: "Практично"
+        points:
+          sporty_style: 2
+      - text: "По настроению"
+        points:
+          aesthetic_style: 2
+
+  - question: "Твой идеальный образ?"
+    photo: jm/c8yZ99luuea8f73Hf3O8oSpb2f+7iadSv/HSSOU9vlpESMrPjvrdoA51YezCv40Y9/SEkvQbtgatI6SqxzJqJpDKnvFx7+LSf5m3B2GI=
+    options:
+      - text: "Простой"
+        points:
+          casual_style: 2
+      - text: "Яркий"
+        points:
+          street_style: 2
+      - text: "Строгий"
+        points:
+          classic_style: 2
+      - text: "Спортивный"
+        points:
+          sporty_style: 2
+      - text: "Творческий"
+        points:
+          aesthetic_style: 2
+
+  - question: "Что тебе ближе?"
+    photo: f3tpOiOY0m2xW+cJohNIQa9biVeXyZ9HrbAo4wmGOxq8gHwBdYXYs1+FPRKQxnO46jepkeq6MW214BivwLV4IrrC5o8t0p/Jfcxe2dGUn40=
+    options:
+      - text: "Свобода"
+        points:
+          casual_style: 2
+      - text: "Тренды"
+        points:
+          street_style: 2
+      - text: "Классика"
+        points:
+          classic_style: 2
+      - text: "Движение"
+        points:
+          sporty_style: 2
+      - text: "Красота"
+        points:
+          aesthetic_style: 2
+
+  - question: "Как тебя описывают?"
+    photo: xqdFdgGSyx8G6pLKt49/X/ZRyUprlR02LH8Qb27yXBPfFecj9H4Ev+lVCDt9y/uRyPiVciUEnurRdEy3RpOg2x4sGX1AcTaT+osoE2PRPws=
+    options:
+      - text: "Простой"
+        points:
+          casual_style: 2
+      - text: "Стильный"
+        points:
+          street_style: 2
+      - text: "Элегантный"
+        points:
+          classic_style: 2
+      - text: "Активный"
+        points:
+          sporty_style: 2
+      - text: "Атмосферный"
+        points:
+          aesthetic_style: 2
+
+  - question: "Твой подход к моде?"
+    photo: xe643wPwWIIN0MbXDc2CE5NPj6frb1KJBHmQF2Lb1uhInLaU4qIBUj4E9YazEnWx8x8KnoNXJakEfxioWeLrQwplebyKKueVh4/NyqF6K60=
+    options:
+      - text: "Минимализм"
+        points:
+          casual_style: 2
+      - text: "Эксперименты"
+        points:
+          street_style: 2
+      - text: "Стабильность"
+        points:
+          classic_style: 2
+      - text: "Функциональность"
+        points:
+          sporty_style: 2
+      - text: "Самовыражение"
+        points:
+          aesthetic_style: 2

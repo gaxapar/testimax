@@ -1,0 +1,238 @@
+slug: relationship_personality
+title: 💕 Какой ты в отношениях?
+photo: tbcdMo/d81zpXelxNfUBkaLzFSPQSeph4RNNPbM4zb3IM2Lsx6jIvtyKrhiV7Pui6TY0QeEecvfRI9d/ZST87dfPnumCJmaeBUH7BcHbd5E=
+
+description: |
+  <i><b>💕 Какой ты в отношениях?</b></i>
+
+  Давай узнаем, какой ты в отношениях! В нашем тесте 8 вопросов, которые помогут определить твой стиль поведения в любви и паре.
+
+results:
+  - slug: romantic_partner
+    photo: ""
+    description: |
+      <b>💖 Романтичный партнёр</b>
+
+      Ты нежный, внимательный и заботливый человек. Для тебя важны чувства, эмоции и близость.
+
+  - slug: loyal_partner
+    photo: ""
+    description: |
+      <b>🤍 Верный партнёр</b>
+
+      Ты стабильный, надёжный и преданный человек. На тебя можно положиться в любых ситуациях.
+
+  - slug: passionate_partner
+    photo: ""
+    description: |
+      <b>🔥 Страстный партнёр</b>
+
+      Ты эмоциональный, яркий и глубоко вовлечённый в отношения человек. У тебя сильные чувства и энергия.
+
+  - slug: independent_partner
+    photo: ""
+    description: |
+      <b>🌙 Независимый партнёр</b>
+
+      Ты ценишь личное пространство и свободу, но при этом умеешь быть в отношениях без потери себя.
+
+  - slug: balanced_partner
+    photo: ""
+    description: |
+      <b>🌿 Гармоничный партнёр</b>
+
+      Ты умеешь сохранять баланс между чувствами, разумом и личным пространством. С тобой спокойно и комфортно.
+
+  - slug: jealous_partner
+    photo: ""
+    description: |
+      <b>💔 Ревнивый партнёр</b>
+
+      Ты эмоционально реагируешь и иногда склонен к ревности, потому что сильно привязываешься к людям.
+
+  - slug: leader_partner
+    photo: ""
+    description: |
+      <b>👑 Доминирующий партнёр</b>
+
+      Ты берёшь инициативу в отношениях и часто принимаешь решения за двоих.
+
+questions:
+  - question: "Как вы проявляете симпатию?"
+    photo: ViP2BJTICmiaAp5zCjf15Zb20v3/M7WFLa+hG45OTiiW05f6uRJEAqsBvrQJ/Fibk5cdVv4J1XCG5b6y3Xj3mz8m7YDtfqV9AZEnIztSDeQ=
+    options:
+      - text: "Забочусь и уделяю внимание"
+        points:
+          romantic_partner: 2
+          loyal_partner: 1
+
+      - text: "Дарю подарки и эмоции"
+        points:
+          romantic_partner: 2
+          passionate_partner: 1
+
+      - text: "Держусь спокойно"
+        points:
+          independent_partner: 2
+          balanced_partner: 1
+
+      - text: "Берусь за инициативу"
+        points:
+          leader_partner: 2
+          passionate_partner: 1
+
+  - question: "Что для вас важно в отношениях?"
+    photo: Exh4CbWr0N10H0SxIIKi/IfUDvL/1uymT2VzEnpMcEOC92WrXLuKLawmuV55TMN6zIXl2lZIsAZr4f0rqnpdvVC24+rkao7Zgc/KEEDrP+g=
+    options:
+      - text: "Любовь и чувства"
+        points:
+          romantic_partner: 2
+          passionate_partner: 1
+
+      - text: "Стабильность"
+        points:
+          loyal_partner: 2
+          balanced_partner: 1
+
+      - text: "Свобода"
+        points:
+          independent_partner: 2
+          leader_partner: 1
+
+      - text: "Эмоции"
+        points:
+          passionate_partner: 2
+          romantic_partner: 1
+
+  - question: "Как вы реагируете на ссоры?"
+    photo: uu+vLKt3or2mKgmcMHLodt5lHefWtA8ylaIakFsz/6c2uqe7Ug6Zuwenv1MNtTEGfgLPaoSkLfqelY+JujXWap5jg1eGeC5Ppv4Y62wDVE4=
+    options:
+      - text: "Ищу примирение"
+        points:
+          romantic_partner: 2
+          loyal_partner: 1
+
+      - text: "Спокойно обсуждаю"
+        points:
+          balanced_partner: 2
+          independent_partner: 1
+
+      - text: "Эмоционально реагирую"
+        points:
+          passionate_partner: 2
+          jealous_partner: 1
+
+      - text: "Наступаю в ответ"
+        points:
+          leader_partner: 2
+          jealous_partner: 1
+
+  - question: "Как вы ведёте себя с партнёром?"
+    photo: L9OzstKBksWcNJoH+w/n4Q5QuSOp60xmJvjqdgcy0RxXxN8AWTVBKXESa7BzLqyJVNtic2qAJ9ndx7m1FFFyCHwj/1W78oXbXTzmzP87cnQ=
+    options:
+      - text: "Заботливо"
+        points:
+          romantic_partner: 2
+          loyal_partner: 1
+
+      - text: "С уважением к границам"
+        points:
+          independent_partner: 2
+          balanced_partner: 1
+
+      - text: "Страстно и ярко"
+        points:
+          passionate_partner: 2
+          romantic_partner: 1
+
+      - text: "Руководя"
+        points:
+          leader_partner: 2
+
+  - question: "Как вы относитесь к ревности?"
+    photo: lVv3iVNgU0tYp0kyQ3xKKiA8miRfcVF8wqLxaPN+GMMUMiE1vHKBqW6BuXvmQiZk9te7iu8YTevvANYfyxCEbrp9OFswxNphYSoRe1uI35o=
+    options:
+      - text: "Не ревную"
+        points:
+          balanced_partner: 2
+          independent_partner: 1
+
+      - text: "Иногда ревную"
+        points:
+          jealous_partner: 2
+          romantic_partner: 1
+
+      - text: "Сильно ревную"
+        points:
+          jealous_partner: 2
+          passionate_partner: 1
+
+      - text: "Контролирую ситуацию"
+points:
+          leader_partner: 2
+
+  - question: "Как вы проводите время вместе?"
+    photo: q1im1Fw+UmfH919GoTxLvQTVfiMsctEQEp7nadwnQ0Rv+c3sPnH4i390amWqHoN9pZ7z1hbOZkVIliqv2960ZhvEiEKjlGadd7X0m12J2yY=
+    options:
+      - text: "Романтично"
+        points:
+          romantic_partner: 2
+          passionate_partner: 1
+
+      - text: "Спокойно и уютно"
+        points:
+          loyal_partner: 2
+          balanced_partner: 1
+
+      - text: "Активно и ярко"
+        points:
+          passionate_partner: 2
+          leader_partner: 1
+
+      - text: "Каждый сам по себе, но вместе"
+        points:
+          independent_partner: 2
+
+  - question: "Что вы делаете, если партнёр расстроен?"
+    photo: jgO7d74Z9J1Ww8ct5DNBazC2+j7WB7KYzLOrYBS2ud/bavfCt6OWXLpY3zGuSLstqMvqJhc7MYCy71lE9upEOTtWdPf7c74aJsw1/bwYtsw=
+    options:
+      - text: "Утешаю"
+        points:
+          romantic_partner: 2
+          loyal_partner: 1
+
+      - text: "Слушаю и поддерживаю"
+        points:
+          balanced_partner: 2
+          independent_partner: 1
+
+      - text: "Эмоционально вовлекаюсь"
+        points:
+          passionate_partner: 2
+          jealous_partner: 1
+
+      - text: "Решаю проблему"
+        points:
+          leader_partner: 2
+
+  - question: "Как вы принимаете решения в паре?"
+    photo: ZfCOrNfuG9NU2mQ87aH3GymcQR3aSkywPDDA97pTDhJ0fPk7ybmPO7Ts0BoBdt5e4qIByR0diE75v8jiCWO2nyKpWpD9HUyQ0NqGpN4crkw=
+    options:
+      - text: "Совместно"
+        points:
+          balanced_partner: 2
+          loyal_partner: 1
+
+      - text: "Слушаю партнёра"
+        points:
+          romantic_partner: 2
+
+      - text: "Решаю сам(а)"
+        points:
+          leader_partner: 2
+          independent_partner: 1
+
+      - text: "По ситуации"
+        points:
+          passionate_partner: 2
+          jealous_partner: 1

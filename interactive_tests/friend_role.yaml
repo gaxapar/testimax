@@ -1,0 +1,221 @@
+slug: friend_role
+title: 🧩 Кто ты в компании друзей?
+photo: ebA9fAzHHwqsCEj6bo8Jj+AhORhVdG6pXG4GlvyYhtb735L31b9fdMd3mcqEzCK6cgZyrOZehXeZDu9K5owu6Ddu/oP0KeVDpwSKIqHGJKo=
+
+description: |
+  <i><b>Кто ты в компании друзей?</b></i>
+
+  Давай узнаем, кто ты в компании друзей? В нашем тесте 8 вопросов, которые помогут нам определить, кто ты в компании друзей.
+
+results:
+  - slug: leader_friend
+    photo: ""
+    description: |
+      <b>👑 Лидер компании</b>
+
+      Ты умеешь брать инициативу на себя, вести за собой друзей и задавать атмосферу всей компании.
+
+  - slug: funny_friend
+    photo: ""
+    description: |
+      <b>😂 Душа компании</b>
+
+      Ты создаёшь настроение, шутишь и делаешь любую встречу веселее.
+
+  - slug: calm_friend
+    photo: ""
+    description: |
+      <b>🌿 Спокойный друг</b>
+
+      Ты надёжный, рассудительный и умеешь поддержать друзей в любой ситуации.
+
+  - slug: smart_friend
+    photo: ""
+    description: |
+      <b>🧠 Организатор и стратег</b>
+
+      Ты любишь порядок, умеешь всё продумывать и часто помогаешь друзьям принимать правильные решения.
+
+questions:
+  - question: "Как вы ведёте себя на вечеринке?"
+    photo: KlV5VndI/9RJuiCYVI1BMwjA118a5VJB5hCPmJC8DUKTrh1Tlo8KxIF2oMnEsUjiMCzk3z5a8hqoe/UtpP5SmMDNzix1tQq5L2LE3+cmGLI=
+    options:
+      - text: "В центре внимания"
+        points:
+          leader_friend: 2
+          funny_friend: 1
+
+      - text: "Спокойно наблюдаю"
+        points:
+          calm_friend: 2
+          smart_friend: 1
+
+      - text: "Шучу и веселюсь"
+        points:
+          funny_friend: 2
+          calm_friend: 1
+
+      - text: "Задаю направление"
+        points:
+          leader_friend: 2
+          smart_friend: 1
+
+  - question: "Как реагируете на спор?"
+    photo: 6wsUk09KMQn8cdWE+2T4zMszLYg8pKJVC4mgbL7H+3a4hmWQT+2UWuCUcFYHoXrGbJvU+qsDwts/LM59Xm+tTytqRJeIn0UrRJr3WYuVMzg=
+    options:
+      - text: "Сохраняю спокойствие"
+        points:
+          calm_friend: 2
+          smart_friend: 1
+
+      - text: "Защищаю свою точку зрения"
+        points:
+          leader_friend: 2
+          calm_friend: 1
+
+      - text: "Саркастично реагирую"
+        points:
+          funny_friend: 2
+          leader_friend: 1
+
+      - text: "Помогаю найти компромисс"
+        points:
+          smart_friend: 2
+          calm_friend: 1
+
+  - question: "Кого вы чаще поддерживаете?"
+    photo: irkh7vUfpwtwmNpPRrJswma+SUVtjrCmgh7xjMjJHs5dCLLImbMtJoU0jP5uQcC3nYZI9hOz8ugykUMDdcji9LeMJCp1bOMa/mPlyy7cNww=
+    options:
+      - text: "Тихих и скромных"
+        points:
+          calm_friend: 2
+          funny_friend: 1
+
+      - text: "Активных и энергичных"
+        points:
+          leader_friend: 2
+          funny_friend: 1
+
+      - text: "Всех поровну"
+        points:
+          smart_friend: 2
+          calm_friend: 1
+
+      - text: "Лидеров"
+        points:
+          leader_friend: 2
+          smart_friend: 1
+
+  - question: "Что предпочитаете планировать?"
+    photo: XMgZ5pAIT7IXgwZvi9Fp3XKIsZiMDr+nL8aSt1N3ClVVv98immL9FDMZzpFjE4pD/a+lHGOm6GR2p0qztiNJmceKJM0m3pJPvv8SPBckiL8=
+    options:
+      - text: "События"
+        points:
+          leader_friend: 2
+          funny_friend: 1
+
+      - text: "Путешествия"
+        points:
+          calm_friend: 2
+          leader_friend: 1
+
+      - text: "Проекты"
+        points:
+          smart_friend: 2
+          leader_friend: 1
+
+      - text: "Ничего, импровизирую"
+        points:
+          funny_friend: 2
+          calm_friend: 1
+
+  - question: "Как вы проводите свободное время с друзьями?"
+    photo: vblqOYul73kAJ543f5GR0int3fXbfZ/BdLSntUpnlcTTx2jQtlm1NkQXPf/mDJdDYS0fkPxCLjFNqoGdoRZj9eNFJNqMRoVPTbLHhTox1bg=
+    options:
+      - text: "Играем в игры"
+        points:
+          funny_friend: 2
+          calm_friend: 1
+
+      - text: "Смотрим фильмы"
+        points:
+          calm_friend: 2
+          funny_friend: 1
+
+      - text: "Просто общаемся"
+        points:
+          calm_friend: 2
+          smart_friend: 1
+
+      - text: "Придумываем идеи"
+        points:
+          smart_friend: 2
+          leader_friend: 1
+
+  - question: "Как вы помогаете друзьям?"
+    photo: 8Pdg9xAXDqII2jfGfmuuC3VqTXs4OR98Mci4Fw7G12bjg3FfHAf8Q6TwZH6Gk0wPFD9PUtAeM4xZkYK958ufOCQuvgzm9iUsXDpPCLURSls=
+    options:
+      - text: "Даю совет"
+        points:
+          smart_friend: 2
+          calm_friend: 1
+
+      - text: "Поддерживаю морально"
+        points:
+          calm_friend: 2
+          funny_friend: 1
+
+      - text: "Делаю практическую помощь"
+        points:
+          smart_friend: 2
+          leader_friend: 1
+
+      - text: "Подталкиваю действовать"
+        points:
+          leader_friend: 2
+          funny_friend: 1
+
+  - question: "Что делаете в команде при проекте?"
+    photo: Ef/VpT9xbGy0BSi8SBvAv1QbXhN0TdfFS55IvUnQqs7r3T6JTFsxmyO/3FV3b5jkHl9a6AjfHVVaVh8E0ryEkQi9Urtd0B+1S6XYhwz+sjU=
+    options:
+      - text: "Берёте на себя идеи"
+        points:
+          leader_friend: 2
+          smart_friend: 1
+- text: "Следую инструкциям"
+        points:
+          calm_friend: 2
+          smart_friend: 1
+
+      - text: "Помогаю с деталями"
+        points:
+          smart_friend: 2
+          calm_friend: 1
+
+      - text: "Контролирую процесс"
+        points:
+          leader_friend: 2
+          smart_friend: 1
+
+  - question: "Как вы себя ведёте в новой компании?"
+    photo: dVjcxJUy8Hkov3EVTUuPHoGayKTIfsJgpKDN24j3poYRHr4dW4xzbBpUL4vgHc6BU6MaLjF+aOYwhPBUDvW5f75tCTYlHbYTQVgKEnDQhYU=
+    options:
+      - text: "Активно знакомлюсь"
+        points:
+          leader_friend: 2
+          funny_friend: 1
+
+      - text: "Наблюдаю"
+        points:
+          calm_friend: 2
+          smart_friend: 1
+
+      - text: "Подключаюсь постепенно"
+        points:
+          calm_friend: 2
+          funny_friend: 1
+
+      - text: "Веду беседу"
+        points:
+          smart_friend: 2
+          leader_friend: 1

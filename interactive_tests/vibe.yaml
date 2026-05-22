@@ -1,0 +1,199 @@
+slug: vibe
+title: ✨ Какой у тебя вайб?
+photo: mdtZ6FOv0ttcE3LGQEZaGQpHD5Fh24MsgRMlOl4+016Zebz05sYFgqwwy1pJUDx8dnMohPUVPTojpfDoaAbCGCUMdFpgwDRjrXIsLEDPudY=
+
+description: |
+  <i><b>Какой у тебя вайб?</b></i>
+
+  Давай узнаем, какой у тебя вайб? В нашем тесте 7 вопросов, которые помогут нам определить, какой у тебя вайб.
+
+results:
+  - slug: soft_vibe
+    photo: ""
+    description: |
+      <b>🌸 Soft vibe</b>
+
+      Ты создаёшь атмосферу уюта и спокойствия. С тобой тепло, комфортно и легко.
+
+  - slug: dark_vibe
+    photo: ""
+    description: |
+      <b>🖤 Dark vibe</b>
+
+      Ты загадочный, спокойный и уверенный в себе человек с сильной энергетикой.
+
+  - slug: chaos_vibe
+    photo: ""
+    description: |
+      <b>⚡ Chaos vibe</b>
+
+      Ты живёшь эмоциями, драйвом и неожиданностями. С тобой никогда не скучно.
+
+  - slug: chill_vibe
+    photo: ""
+    description: |
+      <b>☕ Chill vibe</b>
+
+      Ты расслабленный и рассудительный человек, который любит комфорт и стабильность.
+
+questions:
+  - question: "Как вы проводите утро?"
+    photo: 0kzWV4Cko+R+qir0rYiI1WtH01sG5yAw9Up9ti9rmjeepx5oSQ80VUo3JN6AlAbuyqzHRIttJNuBDtOiXywfFUCmZAcGk30Y3dWa6/e/un0=
+    options:
+      - text: "Сразу активен/настроен"
+        points:
+          chaos_vibe: 2
+          chill_vibe: 1
+
+      - text: "Медленно просыпаюсь"
+        points:
+          soft_vibe: 2
+          chill_vibe: 1
+
+      - text: "Кофе и сон"
+        points:
+          dark_vibe: 2
+          chill_vibe: 1
+
+      - text: "Спонтанно решаю"
+        points:
+          chaos_vibe: 2
+          dark_vibe: 1
+
+  - question: "Какой у вас любимый цвет?"
+    photo: 3MLmsYczK9nkBhJhonxqyVNtN/nyVWRGNj1jbkwfYUC/jk4dpD8zHnFGiTFmFl9zsZYXCifnkL1u40zT1OY2/aoigdr5bPONNuWB3oaNNDM=
+    options:
+      - text: "Розовый"
+        points:
+          soft_vibe: 2
+          chaos_vibe: 1
+
+      - text: "Чёрный"
+        points:
+          dark_vibe: 2
+          chill_vibe: 1
+
+      - text: "Неоновый"
+        points:
+          chaos_vibe: 2
+          dark_vibe: 1
+
+      - text: "Нейтральные цвета"
+        points:
+          chill_vibe: 2
+          soft_vibe: 1
+
+  - question: "Какой напиток вам ближе?"
+    photo: NJRut/xdftIgNBOISBIhUPo+w7YtMawk5GjDPe9NA3w4uuXI6GEjqeeoScLmnbwOsYy+1MWMhSC78EYHDxYmZ98FuGr9jDHOVEHiKJgasHI=
+    options:
+      - text: "Кофе"
+        points:
+          dark_vibe: 2
+          chill_vibe: 1
+
+      - text: "Сок"
+        points:
+          soft_vibe: 2
+          chaos_vibe: 1
+
+      - text: "Энергетик"
+        points:
+          chaos_vibe: 2
+          dark_vibe: 1
+
+      - text: "Чай"
+        points:
+          chill_vibe: 2
+          soft_vibe: 1
+
+  - question: "Как вы реагируете на неожиданности?"
+    photo: 3yqV8ixQ8yxEgzSE3AsBg1PcWrAEsMcjp/i/x490RJgTVa9+SpZfjnmf9MOo+z6mytWOpkPxqyEJmDXa6FXdBS8oRxr6qSHQnjFpeTXpwI8=
+    options:
+      - text: "Сохраняю спокойствие"
+        points:
+          chill_vibe: 2
+          dark_vibe: 1
+
+      - text: "Иду напролом"
+        points:
+          chaos_vibe: 2
+          dark_vibe: 1
+
+      - text: "Сарказм"
+        points:
+          dark_vibe: 2
+          chaos_vibe: 1
+
+      - text: "Сразу паникую"
+        points:
+          soft_vibe: 2
+          chill_vibe: 1
+
+  - question: "Какой ваш плейлист сегодня?"
+    photo: hbhcXN7e6WDsFaO5Of54EoHhFiZXmygbHDHyHR0NgQFGlTA7z/XOlGEI93lLn/bDieWUVTNGlnRHAgLJ+uh27lFeyBViVkqeEbY67oLEnyQ=
+    options:
+      - text: "Поп"
+        points:
+          soft_vibe: 2
+          chaos_vibe: 1
+
+      - text: "Рок"
+        points:
+          dark_vibe: 2
+          chaos_vibe: 1
+
+      - text: "Хип-хоп"
+        points:
+          chaos_vibe: 2
+          dark_vibe: 1
+
+      - text: "Электро"
+        points:
+          chill_vibe: 2
+          chaos_vibe: 1
+
+  - question: "Какой стиль одежды вам нравится?"
+    photo: JYWZeIDl3dRUJxV8yUzDBlcAiDfd9YcKjroNz5jDeM9fMeqan3aLDycgvh11GHRX38kGspnRGjIflsEcdPnfZpTk94S7sDk6Os3h+9EgGaI=
+    options:
+      - text: "Уютно и мило"
+        points:
+          soft_vibe: 2
+          chill_vibe: 1
+
+      - text: "Ярко и дерзко"
+        points:
+          chaos_vibe: 2
+          dark_vibe: 1
+
+      - text: "Спортивно"
+        points:
+          chill_vibe: 2
+          chaos_vibe: 1
+
+      - text: "Классика"
+        points:
+          dark_vibe: 2
+          chill_vibe: 1
+
+  - question: "Как вы ведете себя в соцсетях?"
+    photo: KWRAtl0KoRXkVnPSLgvetRJstwLGuhPVVbRDEjCCHO9Sc84mnnmVnj8EcKy6vWLv46L1baa1l+DgQSJKZi+I47t7GF+NhM5g7jegAWo7r88=
+    options:
+      - text: "Активный постинг"
+        points:
+          chaos_vibe: 2
+          soft_vibe: 1
+
+      - text: "Лайкаю молча"
+        points:
+          dark_vibe: 2
+          chill_vibe: 1
+
+      - text: "Мемлю"
+        points:
+          chaos_vibe: 2
+          dark_vibe: 1
+
+      - text: "Подписан/на подписках в теме"
+        points:
+          chill_vibe: 2
+          smart_vibe: 1

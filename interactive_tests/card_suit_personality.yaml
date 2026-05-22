@@ -1,0 +1,191 @@
+slug: card_suit_personality
+title: 🃏 Какая ты масть карты?
+photo: rPf9IgfJJcl3giRyszVRRM5KD3ezm1jSTD3CIGsdw9Rg6ZsVkwCZcPL7IujiV2QZxIy7Rk2M24RVA8O7uL2Ic+I97W8ve2TF5//LNbfFJ2Y=
+
+description: |
+  <i><b>🃏 Какая ты масть карты?</b></i>
+
+  Давай узнаем, какая ты масть в колоде карт! В нашем тесте 7 вопросов, которые помогут определить твою карточную сущность.
+
+results:
+  - slug: hearts_suit
+    photo: ""
+    description: |
+      <b>♥️ Черви</b>
+
+      Ты эмоциональный, добрый и открытый человек. Ты живёшь чувствами и ценишь любовь и близость.
+
+  - slug: diamonds_suit
+    photo: ""
+    description: |
+      <b>♦️ Бубны</b>
+
+      Ты амбициозный, уверенный и целеустремлённый человек. Для тебя важны успех и результат.
+
+  - slug: clubs_suit
+    photo: ""
+    description: |
+      <b>♣️ Трефы</b>
+
+      Ты энергичный, активный и прямолинейный человек. Ты любишь движение и действие.
+
+  - slug: spades_suit
+    photo: ""
+    description: |
+      <b>♠️ Пики</b>
+
+      Ты глубокий, загадочный и стратегический человек. Ты умеешь думать на несколько шагов вперёд.
+
+questions:
+  - question: "Как ты принимаешь решения?"
+    photo: P/tPA0/Jnjn0nY9ufhl/QKv7WxxnbyLyExXOXuGXDdVi8gkdQ2b2hF7QdKnXZ0fc7/GwSMn3YBn29eAhkeJjBFXOtRsgx//rjSQ9uwXxY6ZNye3hoKKErw+zoXDfIO0s
+    options:
+      - text: "Слушаю сердце"
+        points:
+          hearts_suit: 2
+          clubs_suit: 1
+
+      - text: "Считаю выгоду"
+        points:
+          diamonds_suit: 2
+          spades_suit: 1
+
+      - text: "Быстро и импульсивно"
+        points:
+          clubs_suit: 2
+          hearts_suit: 1
+
+      - text: "Долго анализирую"
+        points:
+          spades_suit: 2
+          diamonds_suit: 1
+
+  - question: "Что для тебя важнее всего?"
+    photo: oFHCoeEb1UFPTVXMNPloktDkSek+ktflJLtblo0vdrgu9dRuWsOXcBW0wm1vChZCyM+QvzLTVWHz6R5IArlMiHUebJ3uYD+PvdBhzLLwrEfE/ZthDo9AEhkvAY9nC/ch
+    options:
+      - text: "Любовь и отношения"
+        points:
+          hearts_suit: 2
+          diamonds_suit: 1
+
+      - text: "Успех и деньги"
+        points:
+          diamonds_suit: 2
+          spades_suit: 1
+
+      - text: "Свобода действий"
+        points:
+          clubs_suit: 2
+          hearts_suit: 1
+
+      - text: "Знания и контроль"
+        points:
+          spades_suit: 2
+
+  - question: "Как ты ведёшь себя в компании?"
+    photo: koqPRvZFU3YWIH3eVhMD92ZshtvgLfuuujh3sW7gxxCOaIqISJeMR0FsJYTD1M+vBPC6Jbtyrcr6FxCog4JqaMQr1EAKM5j7/0Ux+Sg/lOIl45ZmLFnCYgj4hIYZt2d+
+    options:
+      - text: "Забочусь о всех"
+        points:
+          hearts_suit: 2
+          clubs_suit: 1
+
+      - text: "Руководю процессом"
+        points:
+          diamonds_suit: 2
+          spades_suit: 1
+
+      - text: "Заряжаю энергией"
+        points:
+          clubs_suit: 2
+          hearts_suit: 1
+
+      - text: "Наблюдаю со стороны"
+        points:
+          spades_suit: 2
+
+  - question: "Как ты реагируешь на стресс?"
+    photo: 5m9eUVuw3VZdKwnKWx68SNEtXHNhkllgKV1WDbFoWo7Lgl63u19XCiowIyREVrhGrGpSPwXre41P39hzuox6RjcJt66cutuCS1jxBcOIcThF/f57svX2jVhVhlJYWXK4
+    options:
+      - text: "Ищу поддержку"
+        points:
+          hearts_suit: 2
+          clubs_suit: 1
+
+      - text: "Берусь за контроль"
+        points:
+          diamonds_suit: 2
+          spades_suit: 1
+
+      - text: "Действую сразу"
+        points:
+          clubs_suit: 2
+          diamonds_suit: 1
+
+      - text: "Ухожу в себя и думаю"
+        points:
+          spades_suit: 2
+          hearts_suit: 1
+
+  - question: "Твоя идеальная роль в команде?"
+    photo: AycHRzMvAWZMz6oH4AWeIpQZveZWXXBV7t74nJARpQYVcAzmnBJ2rUXOClJH8l2L3qtR2MhAthCjS+3xb2myona3UBMU31Z0FMnxA8GB0Umi5M5Rt4FaAasxI3eUzCUn
+    options:
+      - text: "Мотиватор"
+        points:
+          hearts_suit: 2
+          clubs_suit: 1
+
+      - text: "Лидер"
+        points:
+          diamonds_suit: 2
+          spades_suit: 1
+
+      - text: "Исполнитель"
+        points:
+          clubs_suit: 2
+
+      - text: "Стратег"
+        points:
+          spades_suit: 2
+          diamonds_suit: 1
+
+  - question: "Как ты проводишь свободное время?"
+    photo: +qeNH+8j1GCJFyvoWVHy7Cf6BVHfazXC+sJWGYhWV5aNgoMddGYX+g+w/In47SAuPTOlIrvMbF8gYfr8wp+oFS0+9PkTjX4qI+J3NmesNs0wZcHc/HQWuS9ufTKZI2rK
+    options:
+      - text: "С близкими"
+        points:
+          hearts_suit: 2
+          clubs_suit: 1
+
+      - text: "Работаю над целями"
+        points:
+          diamonds_suit: 2
+          spades_suit: 1
+
+      - text: "В движении"
+        points:
+          clubs_suit: 2
+          hearts_suit: 1
+
+      - text: "В одиночестве"
+        points:
+          spades_suit: 2
+
+  - question: "Какой твой главный талант?"
+    photo: SZfyYWqd+WiX1aN2nZnEcojBIIkeYWaNyYQSkarzBQWRunGKGpNhfFX4k89r7OXODF4dZcn0ZGdLhtjReqo4c9H7DuWh9vMOK39GMfnIASUPD4ViG+/D3tQ1KeSVbPE9
+    options:
+      - text: "Эмпатия"
+        points:
+          hearts_suit: 2
+
+      - text: "Амбиции"
+        points:
+          diamonds_suit: 2
+
+      - text: "Энергия"
+        points:
+          clubs_suit: 2
+
+      - text: "Интеллект"
+        points:
+          spades_suit: 2

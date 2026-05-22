@@ -1,0 +1,348 @@
+slug: school_type
+title: 🎒 Какой ты тип школьника?
+photo: e0sA8VA/t7hYVBTGFvvZirmHxVwsVBmDVVQhqxWz2YipuCZcKZfYUZKlYX/wlRyA5EqeDCV71nE6g68wxhDch8N9Y7/kDFd19ybUOurXr+M=
+
+description: |
+  <i><b>Какой ты школьник?</b></i>
+
+  Давай узнаем, какой ты школьник? В нашем тесте 9 вопросов, которые помогут нам определить, какой ты школьник.
+
+results:
+  - slug: smart_student
+    photo: ""
+    description: |
+      <b>📚 Отличник</b>
+
+      Ты ответственный, внимательный и умеешь добиваться своих целей. Учёба для тебя — важная часть жизни.
+
+  - slug: chill_student
+    photo: ""
+    description: |
+      <b>😌 Спокойный школьник</b>
+
+      Ты не любишь лишнюю суету и предпочитаешь двигаться в своём темпе.
+
+  - slug: funny_student
+    photo: ""
+    description: |
+      <b>😂 Душа класса</b>
+
+      Ты умеешь поднять настроение и сделать даже скучный день веселее.
+
+  - slug: creative_student
+    photo: ""
+    description: |
+      <b>🎨 Творческий школьник</b>
+
+      Ты креативный, необычный и всегда находишь способ выразить себя.
+
+  - slug: social_student
+    photo: ""
+    description: |
+      <b>🗣️ Общительный школьник</b>
+
+      Ты легко находишь общий язык с людьми и всегда находишься в центре общения.
+
+  - slug: lazy_student
+    photo: ""
+    description: |
+      <b>🛌 Мастер прокрастинации</b>
+
+      Ты умеешь отдыхать как никто другой и часто откладываешь дела на потом.
+
+questions:
+  - question: "Как вы готовитесь к контрольной?"
+    photo: wLbXr8t+IYEt7gmuPaaBOdQcQwpACR0v3JvZYSKtUGuLYVavqHSXApRAkY4j0bQTs3ZrD2C2TXgBnQYKDJJFJyw3oLxrGk2Hai4s78Fwg+s=
+    options:
+      - text: "Сразу учу всё тщательно"
+        points:
+          smart_student: 2
+          chill_student: 1
+
+      - text: "Оставляю на последний момент"
+        points:
+          lazy_student: 2
+          funny_student: 1
+
+      - text: "Спрашиваю друзей"
+        points:
+          social_student: 2
+          lazy_student: 1
+
+      - text: "Просто стараюсь"
+        points:
+          chill_student: 2
+          smart_student: 1
+
+      - text: "Не готовлюсь"
+        points:
+          lazy_student: 2
+          funny_student: 1
+
+      - text: "Решаю по мере необходимости"
+        points:
+          chill_student: 2
+          social_student: 1
+
+  - question: "Как вы проводите перемену?"
+    photo: AjwbHYxnlzhTOVeCLpzJLH6idZtlYjXN5BxEJeRSQX2WqhvKrX6qwcxyRSSSLH/H646vbUfDvqxhCUEOypmh1HH5pwxPlUlE/2Zmqs/pRRw=
+    options:
+      - text: "Играю с друзьями"
+        points:
+          funny_student: 2
+          social_student: 1
+
+      - text: "Читаю/рисую"
+        points:
+          creative_student: 2
+          smart_student: 1
+
+      - text: "Общаюсь с одноклассниками"
+        points:
+          social_student: 2
+          funny_student: 1
+
+      - text: "Спокойно сижу"
+        points:
+          chill_student: 2
+          smart_student: 1
+
+      - text: "Смотрю телефон"
+        points:
+          lazy_student: 2
+          chill_student: 1
+
+      - text: "Помогаю другим"
+        points:
+          smart_student: 2
+          social_student: 1
+
+  - question: "Какой предмет вам нравится больше всего?"
+    photo: fMm6nWyBfiP7poAhUT2etbiVu9XTnkzbfdpcT/wdOW6IbgNIyTifHaX4HmskctWVQ2Vm2WsWaMjx+ZG3m3ykfBjzlj/KGNrO+aLAii/MGLs=
+    options:
+      - text: "Математика"
+        points:
+          smart_student: 2
+          chill_student: 1
+
+      - text: "Литература"
+        points:
+          creative_student: 2
+          smart_student: 1
+
+      - text: "Физкультура"
+        points:
+          funny_student: 2
+          social_student: 1
+
+      - text: "ИЗО/творчество"
+        points:
+          creative_student: 2
+          funny_student: 1
+
+      - text: "История"
+        points:
+          smart_student: 2
+          creative_student: 1
+
+      - text: "Наука/Тех"
+        points:
+          smart_student: 2
+          creative_student: 1
+
+  - question: "Как вы участвуете в школьных мероприятиях?"
+    photo: BAhAP285wTd3h3htH8h7pxKl3MpkPV1iSBQJK2xiu0BPL5iPbMeW6+Q91m2DI3Gv+g+Tvwn0XUHrx3jZtduQMp50sRvT/w9jJCERCBwJoUA=
+    options:
+      - text: "Активно участвую"
+        points:
+          social_student: 2
+          funny_student: 1
+
+      - text: "Слежу за всем"
+        points:
+          smart_student: 2
+          chill_student: 1
+
+      - text: "Помогаю организовать"
+        points:
+          smart_student: 2
+          social_student: 1
+
+      - text: "Не участвую"
+        points:
+          lazy_student: 2
+          chill_student: 1
+
+      - text: "Шучу и веселюсь"
+        points:
+          funny_student: 2
+          social_student: 1
+
+      - text: "Наблюдаю"
+        points:
+          chill_student: 2
+          creative_student: 1
+- question: "Как вы относитесь к домашке?"
+    photo: 2lE6xE6hQ42TTvPre/zceMaTjNpfC2OwX+YLIt+IKDOYRcGEXA1cJKKLfze66qgJKZWHk997FwbxRUX164SBuW4fjwjbjydcfedBZlgOVKE=
+    options:
+      - text: "Делаю сразу"
+        points:
+          smart_student: 2
+          chill_student: 1
+
+      - text: "Откладываю"
+        points:
+          lazy_student: 2
+          funny_student: 1
+
+      - text: "Не делаю"
+        points:
+          lazy_student: 2
+          funny_student: 1
+
+      - text: "Делаю с друзьями"
+        points:
+          social_student: 2
+          funny_student: 1
+
+      - text: "Делаю частично"
+        points:
+          chill_student: 2
+          lazy_student: 1
+
+      - text: "Делаю по настроению"
+        points:
+          creative_student: 2
+          lazy_student: 1
+
+  - question: "Как ведёте себя на уроке?"
+    photo: yAHEVwOuiprU/uTCOzPQ24ffV4FNanTY+gKD9ntivLAZ2ngfHtt0639KSTMmrWOSm3/YiX/A2NVF7XPnVFChwC36T7xGsO5JnaXWqIzGOfI=
+    options:
+      - text: "Слушаю учителя"
+        points:
+          smart_student: 2
+          chill_student: 1
+
+      - text: "Шучу"
+        points:
+          funny_student: 2
+          social_student: 1
+
+      - text: "Веду себя активно"
+        points:
+          social_student: 2
+          funny_student: 1
+
+      - text: "Спокойно сижу"
+        points:
+          chill_student: 2
+          smart_student: 1
+
+      - text: "Подсказываю друзьям"
+        points:
+          social_student: 2
+          smart_student: 1
+
+      - text: "Веду заметки"
+        points:
+          smart_student: 2
+          creative_student: 1
+
+  - question: "Как вы общаетесь с друзьями?"
+    photo: Zw6YdL02goZbu2fNzoK6y8G2UNTkFOIv3s4MW2e6SRQ2CPOHpwb7MRkcrohnWnDmzriNTH+UbVMN5OT+Q3dk1umW71kB8B+PeScip+jbKEI=
+    options:
+      - text: "Весело общаюсь"
+        points:
+          funny_student: 2
+          social_student: 1
+
+      - text: "Помогаю друзьям"
+        points:
+          smart_student: 2
+          social_student: 1
+
+      - text: "Саркастично общаюсь"
+        points:
+          funny_student: 2
+          creative_student: 1
+
+      - text: "Наблюдаю"
+        points:
+          chill_student: 2
+          smart_student: 1
+
+      - text: "Много молчу"
+        points:
+          chill_student: 2
+          lazy_student: 1
+
+      - text: "Общаюсь активно"
+        points:
+          social_student: 2
+          funny_student: 1
+
+  - question: "Какой стиль одежды у вас в школе?"
+    photo: Zea+dFwWquYduLkQXSvLLZAvCbj5RLoiysORtkKQ2lGRhM6H6aAYo+JgHyrM4L3Oo2Kd4JV5TEj5YhvYQEkfYaOeEF/fPbHX5qcELEt5hy0=
+    options:
+      - text: "Спортивный стиль"
+        points:
+          funny_student: 2
+          social_student: 1
+
+      - text: "Классика"
+        points:
+          smart_student: 2
+          chill_student: 1
+
+      - text: "Яркий и необычный"
+        points:
+          creative_student: 2
+          funny_student: 1
+
+      - text: "Уютный и мягкий"
+        points:
+          chill_student: 2
+          lazy_student: 1
+
+      - text: "Темные цвета"
+        points:
+          creative_student: 2
+          chill_student: 1
+
+      - text: "Аккуратный и простой"
+        points:
+          smart_student: 2
+          social_student: 1
+
+  - question: "Как вы планируете учебу?"
+    photo: GMtyGjuSFReCwUzqINPRneKFHpGBxZWxm3G3kW6m5rpsM7QF2ViXp2rHTTcVf7bfEGgQ63uaftE/YWy0818JrwDGHkewbcgtpeeKry9/9/g=
+    options:
+      - text: "Планирую заранее"
+        points:
+          smart_student: 2
+          chill_student: 1
+
+      - text: "Сделаю в последний момент"
+        points:
+          lazy_student: 2
+          funny_student: 1
+
+      - text: "Распределяю по дням"
+        points:
+          smart_student: 2
+          chill_student: 1
+
+      - text: "Делаю по настроению"
+        points:
+          creative_student: 2
+          lazy_student: 1
+
+      - text: "Делюсь с друзьями"
+        points:
+          social_student: 2
+          funny_student: 1
+
+      - text: "Постепенно осваиваю"
+        points:
+          chill_student: 2
+          smart_student: 1

@@ -1,0 +1,119 @@
+slug: relationship_compatibility
+title: 💞 Насколько вы совместимы?
+photo: rUNIL9RJZ4DIwxmxcuSZ173+kx2kAatMqoNKTG3E9y6yLYcsxvDLb4ywM7nhVMnPQW59umEbOWySaKGNmbPQGqZMOYCKUdgKmU2RCs4lh8A=
+
+description: |
+  <i><b>💞 Насколько вы совместимы?</b></i>
+
+  Давай узнаем, насколько вы подходите друг другу! В нашем тесте 5 вопросов.
+
+results:
+  - slug: low
+    photo: ""
+    description: |
+      <b>💔 Слабая совместимость</b>
+
+      У вас разные взгляды и темпераменты. Но при желании всё можно улучшить.
+
+  - slug: medium
+    photo: ""
+    description: |
+      <b>💛 Неплохая совместимость</b>
+
+      У вас есть общие точки соприкосновения, но иногда возникают сложности.
+
+  - slug: strong
+    photo: ""
+    description: |
+      <b>❤️ Хорошая совместимость</b>
+
+      Вы отлично понимаете друг друга и умеете поддерживать отношения.
+
+  - slug: perfect
+    photo: ""
+    description: |
+      <b>💞 Идеальная совместимость</b>
+
+      Между вами сильная связь, доверие и взаимопонимание.
+
+questions:
+  - question: "Как вы проводите свободное время вместе?"
+    photo: GBsfRrz5ld5I7pt+wgA/Z0x9Vu68TuB9Zr6k/VF+zOcOnez0B7jv6mBSjo7G4/0IDcCQbcHsAV6XFoe6KqF+e6P9lFojNAyhxLJ72ZhKzhc=
+    options:
+      - text: "Каждый отдельно"
+        points:
+          low: 2
+      - text: "Иногда вместе"
+        points:
+          medium: 2
+      - text: "Часто вместе"
+        points:
+          strong: 2
+      - text: "Почти всегда рядом"
+        points:
+          perfect: 2
+
+  - question: "Как вы решаете конфликты?"
+    photo: repsqQ2kG2LHX13WNX5qKEMgHSnb0KOttIhZebF0GGzfjAuf8impffLxVKYdsCbAEemQrt+wzhX83sNmTafwztm7t/KUPfDW4UJHcIVdGYE=
+    options:
+      - text: "Игнорируем"
+        points:
+          low: 2
+      - text: "Ссоримся"
+        points:
+          medium: 2
+      - text: "Обсуждаем"
+        points:
+          strong: 2
+      - text: "Всегда находим компромисс"
+        points:
+          perfect: 2
+
+  - question: "Насколько вы похожи по темпераменту?"
+    photo: s6XFKdaScEPzwn4/IGd3u/RvPAzwhRsD4I1rdzD6VUfa2PDrCJ+/qZJB5SSYN9rFo/SUMM4CmOy32HfU+BZWYKXwE0Zqsh9jcz4zwf+uaQg=
+
+    options:
+      - text: "Совсем разные"
+        points:
+          low: 2
+      - text: "Иногда похожи"
+        points:
+          medium: 2
+      - text: "Во многом похожи"
+        points:
+          strong: 2
+      - text: "Практически одинаковые"
+        points:
+          perfect: 2
+
+  - question: "Как вы относитесь к личному пространству друг друга?"
+    photo: cFXCTN3PXl4XtJLHdYLJoJiqJ3QcBzGBGVhjllJTaAuUbBJCxj1dzWyVV5Y9cowu4rTmdZLGPn1IYLqZobapVMOiQ9lEo6I+BK/hfHpx920=
+    options:
+      - text: "Не понимаем границы"
+        points:
+          low: 2
+      - text: "Иногда возникают проблемы"
+        points:
+          medium: 2
+      - text: "Уважаем личное пространство"
+        points:
+          strong: 2
+      - text: "Полностью доверяем друг другу"
+        points:
+          perfect: 2
+
+  - question: "Как вы относитесь к будущему ваших отношений?"
+    photo: lX1lg18V2i/xGbG+VqCVluThwkWxNCXBzAL3FOEhfL9IDXaWYZSNdX73YW+/NgWvLdpZItIvM0DdTYII/dUzd0I/PoGigroAPFr+EBK+dqI=
+    options:
+      - text: "Не задумываемся"
+        points:
+          low: 2
+      - text: "Иногда обсуждаем"
+        points:
+          medium: 2
+      - text: "Строим планы"
+        points:
+          strong: 2
+      - text: "Видим общее будущее"
+        points:
+          perfect: 2

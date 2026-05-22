@@ -1,0 +1,176 @@
+slug: aura_color
+title: 🔮 Какого цвета твоя аура?
+photo: m+VvHxVJOOphRJOtV3H+bdA+CwngW1v8N6g0XiBRdSSVK4SXN6dRLrLiEho+bNTujfOapDIzX4pq2H+8o6CSBvWzgHASWtN4WqyKRvLOPhA=
+
+description: |
+  <i><b>🔮 Какого цвета твоя аура?</b></i>
+
+  Давай узнаем цвет твоей ауры! В нашем тесте 7 вопросов, которые помогут определить твою энергетику.
+
+results:
+  - slug: blue_aura
+    photo: ""
+    description: |
+      <b>💙 Синяя аура</b>
+
+      Ты спокойный, уравновешенный и мудрый человек. Твоя энергия — это гармония и стабильность.
+
+  - slug: red_aura
+    photo: ""
+    description: |
+      <b>❤️ Красная аура</b>
+
+      Ты страстный, сильный и энергичный человек. Ты живёшь эмоциями и действием.
+
+  - slug: green_aura
+    photo: ""
+    description: |
+      <b>💚 Зелёная аура</b>
+
+      Ты добрый, заботливый и гармоничный человек. Твоя энергия лечит и успокаивает других.
+
+  - slug: purple_aura
+    photo: ""
+    description: |
+      <b>💜 Фиолетовая аура</b>
+
+      Ты загадочный, глубокий и интуитивный человек с сильной внутренней энергией.
+
+  - slug: yellow_aura
+    photo: ""
+    description: |
+      <b>💛 Жёлтая аура</b>
+
+      Ты позитивный, весёлый и светлый человек, который заряжает других радостью.
+
+questions:
+  - question: "Как ты реагируешь на стресс?"
+    photo: M3/B53V0Ny2vh1RspdXNGDGbYmZVnDM+uTq+/vA1jAYWt/0ZDMgqJ93BQTrRg5yTsmpHjZ9m2MWmjFUzgje9GyroQbNPKdnKKsXcvkzkcBU=
+    options:
+      - text: "Спокойно"
+        points:
+          blue_aura: 2
+          green_aura: 1
+      - text: "Действую"
+        points:
+          red_aura: 2
+      - text: "Ухожу в себя"
+        points:
+          purple_aura: 2
+      - text: "Шучу"
+        points:
+          yellow_aura: 2
+
+  - question: "Как ты начинаешь свой день?"
+    photo: m+VvHxVJOOphRJOtV3H+bdA+CwngW1v8N6g0XiBRdSSVK4SXN6dRLrLiEho+bNTujfOapDIzX4pq2H+8o6CSBvWzgHASWtN4WqyKRvLOPhA=
+    options:
+      - text: "Медитацией"
+        points:
+          blue_aura: 2
+      - text: "Занятиями спортом"
+        points:
+          green_aura: 2
+      - text: "Чтением нововстей"
+        points:
+          red_aura: 2
+      - text: "Просмотром социальных сетей"
+        points:
+          purple_aura: 2
+      - text: "Весело"
+        points:
+          yellow_aura: 2
+
+  - question: "Что тебе ближе?"
+    photo: P2IsWUF7UgK3azTHo/enaJ+pYn4b907Vr9kbTL32sfIDsIKKhv/YCeFbzIvMgv2oplMaGb4XINbC3PUBl1AfC9FAF1PnA8DWdlusmN7LiVrYpGr/Q/qkv1/PA/8ZBwcB
+    options:
+      - text: "Покой"
+        points:
+          blue_aura: 2
+      - text: "Любовь"
+        points:
+          green_aura: 2
+      - text: "Сила"
+        points:
+          red_aura: 2
+      - text: "Тайна"
+        points:
+          purple_aura: 2
+      - text: "Радость"
+        points:
+          yellow_aura: 2
+
+  - question: "Какой вид отдыха тебе нравится?"
+    photo: nzGNQE/El5qfxkPY4wevA3ugTJvFDhPGcd9vLciZVGLWF7D1Fi6Oqefd+eco579NEu6rguwHfuzXyTFiw7ttIinfnultcpysWqir2XMEbXo=
+    options:
+      - text: "Чтение книги"
+        points:
+          blue_aura: 2
+      - text: "Встречи с друзьями"
+        points:
+          green_aura: 2
+      - text: "Творческие занятия"
+        points:
+          red_aura: 2
+      - text: "Приключения на природе"
+        points:
+          purple_aura: 2
+      - text: "Прогулка по парку"
+        points:
+          yellow_aura: 2
+
+  - question: "Как ты принимаешь решения?"
+    photo: Cob2pMuSiXWHvTc86W8mjoPxKEXUHCqrMfAut+aHBV1+S9Hnw1csQ7Oi0VvSg9KIC3gPRTEtitvmGfNM1pQZ6lW1M22jVH3zvDle84egTLU=
+    options:
+      - text: "Обдуманно"
+        points:
+          blue_aura: 2
+      - text: "Сердцем"
+        points:
+          green_aura: 2
+      - text: "Быстро"
+        points:
+          red_aura: 2
+      - text: "Интуитивно"
+        points:
+          purple_aura: 2
+      - text: "По настроению"
+        points:
+          yellow_aura: 2
+
+  - question: "Твой идеальный день?"
+    photo: l1vnPTe8jbWuAhrCU6kc20wxmi1t15s8zkaneEUhhlecoxAqdKuMscYo2AmrnzDM1xXqZw/0uQOs+DstAdINlO4Gqjj+mCMdgJFNo++HBEE=
+    options:
+      - text: "Спокойствие"
+        points:
+          blue_aura: 2
+      - text: "Помогать людям"
+        points:
+          green_aura: 2
+      - text: "Действие"
+        points:
+          red_aura: 2
+      - text: "Одиночество"
+        points:
+          purple_aura: 2
+      - text: "Веселье"
+        points:
+          yellow_aura: 2
+
+  - question: "Какой твой вайб?"
+    photo: kWhsLn2F4m0tFnSMHJfxkGv48vvGITEp13p/45BhUZfgwe9yDeGhWeQ9ZrgElJmqbECV13ZWzqvf6MBuA4MwzbWjtHQDY+rivjeZWqlzlXs=
+    options:
+      - text: "Гармония"
+        points:
+          blue_aura: 2
+      - text: "Добро"
+        points:
+          green_aura: 2
+      - text: "Огонь"
+        points:
+          red_aura: 2
+      - text: "Мистика"
+        points:
+          purple_aura: 2
+      - text: "Солнце"
+        points:
+          yellow_aura: 2

@@ -1,0 +1,217 @@
+slug: flower_personality
+title: 🌸 Какой ты цветок?
+photo: Yu/fWzkIB6fLe24k5LSDRyVL5F2AaUuNAIG0JPZJp+lS45AW7UqT0Gscoqo4LiGelU63eg1oB5Rogpvjz6xQNr1eQ7XbGUjMzNzx3SujD3c=
+
+description: |
+  <i><b>Какой ты цветок?</b></i>
+
+  Давай узнаем, какой ты цветок? В нашем тесте 7 вопросов, которые помогут нам определить, какой ты цветок.
+
+results:
+  - slug: rose_flower
+    photo: ""
+    description: |
+      <b>🌹 Роза</b>
+
+      Ты яркий, харизматичный и эмоциональный человек. Тебя сложно не заметить.
+
+  - slug: lily_flower
+    photo: ""
+    description: |
+      <b>🤍 Лилия</b>
+
+      Ты спокойный, гармоничный и очень добрый человек. Рядом с тобой легко и спокойно.
+
+  - slug: sunflower_flower
+    photo: ""
+    description: |
+      <b>🌻 Подсолнух</b>
+
+      Ты позитивный, энергичный и умеешь заряжать других хорошим настроением.
+
+  - slug: orchid_flower
+    photo: ""
+    description: |
+      <b>🖤 Орхидея</b>
+
+      Ты загадочный, глубокий и необычный человек с сильной внутренней энергетикой.
+
+  - slug: lavender_flower
+    photo: ""
+    description: |
+      <b>💜 Лаванда</b>
+
+      Ты мягкий, романтичный и творческий человек, который ценит уют и атмосферу.
+
+  - slug: peony_flower
+    photo: ""
+    description: |
+      <b>🌺 Пион</b>
+
+      Ты уверенный, сильный и эмоциональный человек, который умеет добиваться своего.
+
+questions:
+  - question: "Какой у вас характер?"
+    photo: LFkmlG3pVKnKK/swbjVbNEKrJGErSeSss3C446e3q/Qp82+w4aLMnaYL7ghK3Oe7k1Zf6YE9EYT3FrVzb9nWI+fINyG8MfPRtRmRZpIw7yLmmgK5/LxRojAb1xJ9gG/Z
+    options:
+      - text: "Нежный"
+        points:
+          lavender_flower: 2
+          lily_flower: 1
+
+      - text: "Спокойный"
+        points:
+          lily_flower: 2
+          orchid_flower: 1
+
+      - text: "Яркий"
+        points:
+          rose_flower: 2
+          sunflower_flower: 1
+
+      - text: "Загадочный"
+        points:
+          orchid_flower: 2
+          lavender_flower: 1
+
+      - text: "Весёлый"
+        points:
+          sunflower_flower: 2
+          rose_flower: 1
+
+      - text: "Сильный"
+        points:
+          peony_flower: 2
+          rose_flower: 1
+
+  - question: "Как вы проводите свободное время?"
+    photo: bQbpEWPhgM1ARz0/cBnp9nkXZthdsY+iGrwbWKzCwg8GnyfgZtuGrmuycpxQs3b8Qd5r/A8Hb9ILOGHTJZei8GRdL7geMIJM+zaT+uVVMys6of9y/NYk7UwDQqvba92d
+    options:
+      - text: "Дома в уюте"
+        points:
+          lavender_flower: 2
+          lily_flower: 1
+
+      - text: "На природе"
+        points:
+          lily_flower: 2
+          sunflower_flower: 1
+
+      - text: "С друзьями"
+        points:
+          sunflower_flower: 2
+          rose_flower: 1
+
+      - text: "В одиночестве"
+        points:
+          orchid_flower: 2
+          lavender_flower: 1
+
+      - text: "Активно"
+        points:
+          peony_flower: 2
+          sunflower_flower: 1
+
+      - text: "Творчески"
+        points:
+          lavender_flower: 2
+          orchid_flower: 1
+
+  - question: "Что вам ближе?"
+    photo: fAVk0PKbJTBGkTqfnRZHMVjM7usjPxn6zWTp5a976Mgtcrw2sEZy/Eep2ixjbw+vlCuUOE6fqToqTFy5tPYkr2FO/TpTYrpkBHX6MIEnwMlXKaKV9jLGuI7m/RUp3hJ7
+    options:
+      - text: "Романтика"
+        points:
+          rose_flower: 2
+          lavender_flower: 1
+
+      - text: "Свобода"
+        points:
+          orchid_flower: 2
+          sunflower_flower: 1
+
+      - text: "Энергия"
+        points:
+          sunflower_flower: 2
+          peony_flower: 1
+
+      - text: "Глубина"
+        points:
+          orchid_flower: 2
+          lily_flower: 1
+
+      - text: "Лёгкость"
+        points:
+          lavender_flower: 2
+          sunflower_flower: 1
+
+      - text: "Стабильность"
+        points:
+          lily_flower: 2
+          peony_flower: 1
+
+  - question: "Как вы ведёте себя в компании?"
+    photo: 4HHl5wzRa4otDL7xL40dJFFtyJLu2EBJb8zUm2G45LnpHcJEh270GR0ynwZxmme3J9/2dVvYt8Q6rhdCCbkg9fBgUtneb2zoOIfHkkltLLm7tXF6VCNvb8DXYyXaCLmb
+    options:
+      - text: "Тихо наблюдаю"
+        points:
+          orchid_flower: 2
+          lily_flower: 1
+
+      - text: "Общаюсь"
+        points:
+          rose_flower: 2
+          sunflower_flower: 1
+
+      - text: "Веселюсь"
+        points:
+          sunflower_flower: 2
+          rose_flower: 1
+
+      - text: "Держусь отдельно"
+        points:
+          orchid_flower: 2
+          lavender_flower: 1
+
+      - text: "Заряжаю атмосферу"
+        points:
+          peony_flower: 2
+          sunflower_flower: 1
+
+      - text: "Контролирую"
+        points:
+          peony_flower: 2
+          orchid_flower: 1
+
+  - question: "Какой у вас вайб?"
+    photo: HNzRMSnJIaVfdJhgSnFsCXWq725vrZEqy7G896lWIlA9yCIYyytFHBqmK6uwgt/Y6Irm9fyJknRLSyn73Z70Qb2uAR1BUIXp6ysVR8Y5Qkp/uN84o/vlbC9Vet7A9kvP
+    options:
+      - text: "Чилл"
+        points:
+          lily_flower: 2
+          lavender_flower: 1
+
+      - text: "Гармония"
+        points:
+          lily_flower: 2
+rose_flower: 1
+
+      - text: "Драйв"
+        points:
+          peony_flower: 2
+          sunflower_flower: 1
+
+      - text: "Мистика"
+        points:
+          orchid_flower: 2
+          lavender_flower: 1
+
+      - text: "Позитив"
+        points:
+          sunflower_flower: 2
+          rose_flower: 1
+
+      - text: "Сила"
+        points:
+          peony_flower: 2
+          orchid_flower: 1

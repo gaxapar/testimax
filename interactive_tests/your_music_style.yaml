@@ -1,0 +1,178 @@
+slug: your_music_style
+title: 🎧 Твой стиль музыки?
+photo: 89LZiTyXS5YeT6H0UhJSiqNuX5LzWHaVuKTjCKWXzSa5xQ+tWwet3v3CmZ52/6kXV4/lPd0FG1dxKIzi6hXM4ADMkNOT7rRSMQcz86MPLcM=
+
+description: |
+  <i><b>🎧 Твой стиль музыки?</b></i>
+
+  Давай узнаем, какая музыка тебе ближе! В нашем тесте 7 вопросов.
+
+results:
+  - slug: pop_music
+    photo: ""
+    description: |
+      <b>🎤 Поп</b>
+
+      Ты любишь лёгкую, современную и популярную музыку.
+
+  - slug: rap_music
+    photo: ""
+    description: |
+      <b>🔥 Рэп</b>
+
+      Ты уверенный, прямой и ценишь смысл и ритм.
+
+  - slug: rock_music
+    photo: ""
+    description: |
+      <b>🎸 Рок</b>
+
+      Ты эмоциональный, сильный и любишь энергию.
+
+  - slug: phonk_music
+    photo: ""
+    description: |
+      <b>🌑 Фонк</b>
+
+      Ты тёмный, уверенный и любишь атмосферу ночи.
+
+  - slug: lofi_music
+    photo: ""
+    description: |
+      <b>🌙 Лоу-фай</b>
+
+      Ты спокойный, мечтательный и расслабленный.
+
+questions:
+  - question: "Что ты слушаешь чаще всего?"
+    photo: 75g61bqrmVGOYl5iTDmyzHM6uXZAHBqUJbZlh9c7HUdE49Lj9wXxM6A0U2MsAvVUFnDS7YeTTd39ofbRwCzfQooULJxITh6fbZpX/2vQ46E=
+    options:
+      - text: "Поп"
+        points:
+          pop_music: 2
+      - text: "Рэп"
+        points:
+          rap_music: 2
+      - text: "Рок"
+        points:
+          rock_music: 2
+      - text: "Фонк"
+        points:
+          phonk_music: 2
+      - text: "Лоу-фай"
+        points:
+          lofi_music: 2
+
+  - question: "Какой у тебя вайб?"
+    photo: Ydx111NNoAHaBPjQciDbCDI9aJH8FFV1+0wJUibN8aqZHhXvNwUipHBLWaOvJyHGQ0NFBdAZcqNA8GgB7djgGZr6WPrApQTjxYBDPiicxAk=
+    options:
+      - text: "Лёгкий"
+        points:
+          pop_music: 2
+      - text: "Уверенный"
+        points:
+          rap_music: 2
+      - text: "Энергичный"
+        points:
+          rock_music: 2
+      - text: "Тёмный"
+        points:
+          phonk_music: 2
+      - text: "Спокойный"
+        points:
+          lofi_music: 2
+
+  - question: "Какие эмоции любишь в музыке?"
+    photo: E7GskUrT9VSBbZob0fTeZC1uoRRBNBiP+Yne4Ng+dEE3p144G5eK5BRquvT+QY5dFoNZjRv8soltBypcTtq4q2g1fKzNUayORC/xTYm5mTs=
+    options:
+      - text: "Радость"
+        points:
+          pop_music: 2
+      - text: "Сила"
+        points:
+          rap_music: 2
+      - text: "Драйв"
+        points:
+          rock_music: 2
+      - text: "Мистика"
+        points:
+          phonk_music: 2
+      - text: "Спокойствие"
+        points:
+          lofi_music: 2
+
+  - question: "Где слушаешь музыку?"
+    photo: SZfyYWqd+WjsfKirgB7bNDsf51eeRjYOTMnIEMwVJT9+v54BjbO0aJv5vjpOCwPbNNNLZDFBkeecHPRwvR/OicM2CWcso43ySop2UBP+9is=
+    options:
+      - text: "Везде"
+        points:
+          pop_music: 2
+      - text: "На улице"
+        points:
+          rap_music: 2
+      - text: "В наушниках громко"
+        points:
+          rock_music: 2
+      - text: "Ночью"
+        points:
+          phonk_music: 2
+      - text: "Дома"
+        points:
+          lofi_music: 2
+
+  - question: "Что важнее?"
+    photo: jgr5LNlLgntBD+V4nAWowmEum5onHMnvR9jkcMF08pVHNES0Ggn6p6oKKrJfyiGQ2Ebu0c153YLF1UDPDLq9GOvslEov6In2/seV0HRNSLE=
+    options:
+      - text: "Мелодия"
+        points:
+          pop_music: 2
+      - text: "Текст"
+        points:
+          rap_music: 2
+      - text: "Энергия"
+        points:
+          rock_music: 2
+      - text: "Атмосфера"
+        points:
+          phonk_music: 2
+      - text: "Спокойствие"
+        points:
+          lofi_music: 2
+
+  - question: "Какой ритм тебе ближе?"
+    photo: +IwV89+0+v3yZdYIWtOhDLJaYx8hSL27KvUJ7kJwDoQTPHtKV+IIqaThIGFyLZD2jaBM0SVF7qA6v+DSkx2EhAczzTwtKcCGQgBsUWq2fS8=
+    options:
+      - text: "Лёгкий"
+        points:
+          pop_music: 2
+      - text: "Чёткий"
+        points:
+          rap_music: 2
+      - text: "Быстрый"
+        points:
+          rock_music: 2
+      - text: "Медленный тёмный"
+        points:
+          phonk_music: 2
+      - text: "Плавный"
+        points:
+          lofi_music: 2
+
+  - question: "Что ты чувствуешь в музыке?"
+    photo: 1T/syPNxtr+9Ju93X7eOn16ErryGxkplal5AUJth4e3tUYZAv6tfdYDPQ6tVMxIFVssyD90jktWAqXlljaUVtfSJqxT7sYRMIyHeU2jR9Kw=
+    options:
+      - text: "Счастье"
+        points:
+          pop_music: 2
+      - text: "Уверенность"
+        points:
+          rap_music: 2
+      - text: "Адреналин"
+        points:
+          rock_music: 2
+      - text: "Тьму"
+        points:
+          phonk_music: 2
+      - text: "Покой"
+        points:
+          lofi_music: 2

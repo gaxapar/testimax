@@ -1,0 +1,118 @@
+slug: color_type
+title: 🎨 Какой у тебя цветотип?
+photo: LCORlwfFLX0zlOG16NST4EHjbFM1QSqy4qyY5R/4bFxrxUr3mfqcI6zpKqV1SBUdISYEp4DLTKL/lREkxB+2qshc3q+gwYjms5/HS2RXHT8=
+
+description: |
+  <i><b>🎨 Какой у тебя цветотип?</b></i>
+
+  Давай узнаем, какой цветотип тебе подходит! В нашем тесте 5 вопросов.
+
+results:
+  - slug: spring
+    photo: ""
+    description: |
+      <b>🌸 Весна</b>
+
+      Тебе подходят тёплые, светлые и нежные оттенки. Ты выглядишь ярко и свежо.
+
+  - slug: summer
+    photo: ""
+    description: |
+      <b>🌊 Лето</b>
+
+      Твой цветотип — мягкие и холодные оттенки. Ты выглядишь спокойно и гармонично.
+
+  - slug: autumn
+    photo: ""
+    description: |
+      <b>🍂 Осень</b>
+
+      Тебе идут тёплые и глубокие цвета. У тебя уютная и сильная энергетика.
+
+  - slug: winter
+    photo: ""
+    description: |
+      <b>❄️ Зима</b>
+
+      Тебе подходят контрастные и яркие оттенки. Ты выглядишь эффектно и уверенно.
+
+questions:
+  - question: "Какой у вас цвет кожи?"
+    photo: ykxjIO7hp7JQV+5neY3lYQVa2AQ6sVXi/6qrX8YyzWfJr5zKEinZJBx0YBiykGZazfGo3YmOfvAcoy+2AT0eMqWrB+pYLBz4wGZaYlGDB1Y=
+    options:
+      - text: "Светлая с тёплым подтоном"
+        points:
+          spring: 2
+      - text: "Светлая с холодным подтоном"
+        points:
+          summer: 2
+      - text: "Тёплая или смуглая"
+        points:
+          autumn: 2
+      - text: "Очень светлая или контрастная"
+        points:
+          winter: 2
+
+  - question: "Какой у вас естественный цвет волос?"
+    photo: kJTbyKk6NRGMlmuUXOtItXfCS/M5uCDdhGPd3l8O8F+u8Yit3VmbhJ+SU5ffN8Led/oE+mr6kCB6KrPTXzVngcXvtFQdrxCrYIHPNxWjC/M=
+    options:
+      - text: "Светло-русый"
+        points:
+          spring: 2
+      - text: "Пепельный"
+        points:
+          summer: 2
+      - text: "Рыжий или каштановый"
+        points:
+          autumn: 2
+      - text: "Тёмный"
+        points:
+          winter: 2
+
+  - question: "Какой у вас цвет глаз?"
+    photo: j7H1hNW3ega3vdpzsXBSlW/kzTV3pidXBn6ry1J/ufKqleLiqgBOu+l9j+YXUHWaOVnr/MXcEtKbPxCqXmOEQB/gFjQWN0lRJjFCVfY3sg4=
+    options:
+      - text: "Голубые или зелёные"
+        points:
+          spring: 2
+      - text: "Серо-голубые"
+        points:
+          summer: 2
+      - text: "Карие или янтарные"
+        points:
+          autumn: 2
+      - text: "Тёмные или ярко-голубые"
+        points:
+          winter: 2
+
+  - question: "Как ваша кожа загорает?"
+    photo: JXa2TFxNeYFdcNJ8cRkmSyk+W7LLJYFr/BxKmtUYD1BEsHB/ddIJ9cxvP5Qr3cxU0HYy5slS/ZZTvE75X88LKYEh/XDv1D3dbcJ7olIO7yA=
+    options:
+      - text: "Быстро и легко"
+        points:
+          spring: 2
+      - text: "Медленно"
+        points:
+          summer: 2
+      - text: "Становится золотистой"
+        points:
+          autumn: 2
+      - text: "Либо сгорает, либо сильно темнеет"
+        points:
+          winter: 2
+
+  - question: "Какие цвета одежды вам больше идут?"
+    photo: 3lg6ZziiW6X0oBJ9d6YTgT7kabaSRoq9Xm5LkrRqNGpZ9GgpYhBQOVhWg8Qgo5Ib5Frj8DznaNZ/yj1ZLMlyTOtFFgD8hcORcMfeoXMfJzA=
+    options:
+      - text: "Персиковый и бежевый"
+        points:
+          spring: 2
+      - text: "Пастельные и холодные"
+        points:
+          summer: 2
+      - text: "Тёплые и природные"
+        points:
+          autumn: 2
+      - text: "Чёрный и яркие контрасты"
+        points:
+          winter: 2

@@ -1,0 +1,178 @@
+slug: what_fruit_are_you
+title: 🍏 Какой ты фрукт?
+photo: VVWk/BxdG00IE3E3fmKu4jhVo3xYo8VHE86Z0rqpktlFRMwEB+RMA952mL7r+XS8lZ810BG1e+fcYCcQF5lgLpfa4W1SzQfnyJPBI9Oln1I=
+
+description: |
+  <i><b>🍏 Какой ты фрукт?</b></i>
+
+  Давай узнаем, какой ты фрукт! В нашем тесте 7 вопросов.
+
+results:
+  - slug: apple
+    photo: ""
+    description: |
+      <b>🍎 Яблоко</b>
+
+      Ты классический, надёжный и универсальный человек.
+
+  - slug: banana
+    photo: ""
+    description: |
+      <b>🍌 Банан</b>
+
+      Ты весёлый, лёгкий и дружелюбный человек.
+
+  - slug: grape
+    photo: ""
+    description: |
+      <b>🍇 Виноград</b>
+
+      Ты компанейский и любишь людей.
+
+  - slug: lemon
+    photo: ""
+    description: |
+      <b>🍋 Лимон</b>
+
+      Ты резкий, честный и прямолинейный.
+
+  - slug: strawberry
+    photo: ""
+    description: |
+      <b>🍓 Клубника</b>
+
+      Ты романтичный и эмоциональный человек.
+
+questions:
+  - question: "Как тебя видят люди?"
+    photo: Q+k0VcjB9MnOw5ZU/5TvjJZH4Q4AWJV+brerYf9QLGrFRkogh93I9snvwi7FEJ7l2U/WHCMfyApT09QTDM51xwyplplNbLd+Si1uFcHK9Dk=
+    options:
+      - text: "Надёжный"
+        points:
+          apple: 2
+      - text: "Весёлый"
+        points:
+          banana: 2
+      - text: "Общительный"
+        points:
+          grape: 2
+      - text: "Честный"
+        points:
+          lemon: 2
+      - text: "Нежный"
+        points:
+          strawberry: 2
+
+  - question: "Как ты ведёшь себя в компании?"
+    photo: 4ibkTYLSg9lqudntPDQL9ynrL9deLjw2ZwSfc5BMBjGnRZNX5A3Yyw8ejOD+F4ArCbeY6b2yH8i9iS6ioiV5IEbWrE6e4WwiTGG8e7hRzqg=
+    options:
+      - text: "Спокойно"
+        points:
+          apple: 2
+      - text: "Шучу"
+        points:
+          banana: 2
+      - text: "Общаюсь"
+        points:
+          grape: 2
+      - text: "Говорю прямо"
+        points:
+          lemon: 2
+      - text: "Романтично"
+        points:
+          strawberry: 2
+
+  - question: "Что тебе ближе?"
+    photo: yIOmGlGffuTvhvnjZvUNdIh5OyKvIjbSGcKw4X9oAj5SIlNR+IKHM5iQKPMKRkIO0VsDMuXFO+cusjrnv62zYUGg/Aex95M5nLJ+pnaF+7Q=
+    options:
+      - text: "Стабильность"
+        points:
+          apple: 2
+      - text: "Веселье"
+        points:
+          banana: 2
+      - text: "Люди"
+        points:
+          grape: 2
+      - text: "Правда"
+        points:
+          lemon: 2
+      - text: "Любовь"
+        points:
+          strawberry: 2
+
+  - question: "Как ты реагируешь на стресс?"
+    photo: PXkWaVlO36aafIN93gwTGDLGqG/0H/6PWpiL2NpE9I4T+CRwt1yOuq6N8EZgf4Rr/W6WwNtao3XMu33BTLZ8yXa199c7qM01Xu9d5zjobe8=
+    options:
+      - text: "Спокойно"
+        points:
+          apple: 2
+      - text: "Смеюсь"
+        points:
+          banana: 2
+      - text: "Ищу поддержку"
+        points:
+          grape: 2
+      - text: "Резко"
+        points:
+          lemon: 2
+      - text: "Эмоционально"
+        points:
+          strawberry: 2
+
+  - question: "Твой характер?"
+    photo: SjAJZmsIUU8f1wp4bJkctvVjpBYef2VLtKTlif6DPNi9aS0/5S2QoE8dviaG4YCd5T8g2GuBOMoebRtCQDyl2juIRdrDpRcpIcyrR/u/XwU=
+    options:
+      - text: "Стабильный"
+        points:
+          apple: 2
+      - text: "Лёгкий"
+        points:
+          banana: 2
+      - text: "Социальный"
+        points:
+          grape: 2
+      - text: "Прямой"
+        points:
+          lemon: 2
+      - text: "Чувствительный"
+        points:
+          strawberry: 2
+
+  - question: "Как ты решаешь проблемы?"
+    photo: zQPOX/HhR3a7u6yigCG3smHf4k6OZ3nWiFa+nb/8Nvss8vxSXU/lthq7UJNhYipbU6KfnyyeirxXfYcdXOBYJHjTQndxWHZ238I+u14KXIw=
+    options:
+      - text: "Спокойно"
+        points:
+          apple: 2
+      - text: "С юмором"
+        points:
+          banana: 2
+      - text: "С друзьями"
+        points:
+          grape: 2
+      - text: "Жёстко"
+        points:
+          lemon: 2
+      - text: "Через эмоции"
+        points:
+          strawberry: 2
+
+  - question: "Твой вайб?"
+    photo: 95zxExMv/heTWntiVvvxOyypUDRMMJL5oyw/v9D3ZcBmO8QLyfLeFbmfIxbRU5EgkA2pi+WMWYgBpQfPQ0QcsssivpfaFZ5V6HoukmObW5k=
+    options:
+      - text: "Стабильность"
+        points:
+          apple: 2
+      - text: "Радость"
+        points:
+          banana: 2
+      - text: "Общение"
+        points:
+          grape: 2
+      - text: "Честность"
+        points:
+          lemon: 2
+      - text: "Романтика"
+        points:
+          strawberry: 2

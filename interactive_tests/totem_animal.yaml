@@ -1,0 +1,293 @@
+slug: totem_animal
+title: 🐺 Твое тотемное животное
+photo: h/tqDZR2/4BYR5lwK4MwPMUw+N3ZI53Chtu3L3tCK58M8rAcc4PnO1VRRTYD9uGjzj94xMuk66Ax8O/1shPM/rDzCwBt7Hirrobjp9ynYBE=
+
+description: |
+  <i><b>🐺 Твое тотемное животное</b></i>
+
+  Давай узнаем, какое у тебя тотемное животное? В нашем тесте 13 вопросов, которые помогут определить твой внутренний дух.
+
+results:
+  - slug: wolf
+    photo: ""
+    description: |
+      <b>🐺 Волк</b>
+
+      Ты независимый, сильный и верный человек. У тебя мощный характер и лидерская энергия.
+
+  - slug: owl
+    photo: ""
+    description: |
+      <b>🦉 Сова</b>
+
+      Ты мудрый, наблюдательный и спокойный человек, который любит анализировать всё вокруг.
+
+  - slug: fox
+    photo: ""
+    description: |
+      <b>🦊 Лиса</b>
+
+      Ты хитрый, харизматичный и очень сообразительный человек.
+
+  - slug: bear
+    photo: ""
+    description: |
+      <b>🐻 Медведь</b>
+
+      Ты надёжный, спокойный и сильный человек, на которого можно положиться.
+
+  - slug: panther
+    photo: ""
+    description: |
+      <b>🐆 Пантера</b>
+
+      Ты загадочный, уверенный и независимый человек с мощной энергетикой.
+
+questions:
+  - question: "Какой у вас любимый цвет?"
+    photo: JVKZlnLlj/oqoPu4ocFY+QU7de3qn3zlVySLizVdTe+D8AGtjN5wHa13kmhyZG529qU5b0xc7TPaA2fKkPLuOM0q6WUTUNSCCJu0gqxN30I=
+    options:
+      - text: "Чёрный"
+        points:
+          panther: 2
+      - text: "Серый"
+        points:
+          wolf: 2
+      - text: "Коричневый"
+        points:
+          bear: 2
+      - text: "Фиолетовый"
+        points:
+          owl: 2
+      - text: "Оранжевый"
+        points:
+          fox: 2
+
+  - question: "Какое оружие вы считаете самым действенным?"
+    photo: ER0qg9yNprAkeaBoHqDBe5oRxp9LfFJ9nopVcIjXWfZaK/bJQr2n4bjsZKU6JvNtxIQGZO0X7BGGtgJdafuGMUTNNd7g45RP+Pw+VhGTcRQ=
+    options:
+      - text: "Сила"
+        points:
+          bear: 2
+      - text: "Интеллект"
+        points:
+          owl: 2
+      - text: "Скорость"
+        points:
+          panther: 2
+      - text: "Хитрость"
+        points:
+          fox: 2
+      - text: "Командная работа"
+        points:
+          wolf: 2
+
+  - question: "Выберите самое ценное для вас"
+    photo: m5b3ekyZBwBmjijpFQf1B7ZOK6s+osbgaOoF1ubIetTxGgEBv9YeyVNl0QHEPpWX7+kZO4nJ2hfJSadSgXlKMHtcMdNOT1P3HGcS1eWdqkc=
+    options:
+      - text: "Свобода"
+        points:
+          wolf: 2
+      - text: "Мудрость"
+        points:
+          owl: 2
+      - text: "Комфорт"
+        points:
+          bear: 2
+      - text: "Власть"
+        points:
+          panther: 2
+      - text: "Успех"
+        points:
+          fox: 2
+
+  - question: "Как вы принимаете важное решение?"
+    photo: weGTnUAnJbBZcekiI6AJFeK2jcukr9pFwnFCJ9uaNcjtcXmXTXxrb5DvvBQmDbqu49DrZy2HHux6tQf67G3ZdUBg2A8kM92AWBzMtvV0J8k=
+    options:
+      - text: "Интуитивно"
+        points:
+          panther: 2
+      - text: "Долго анализирую"
+        points:
+          owl: 2
+      - text: "Решительно"
+        points:
+          wolf: 2
+      - text: "Осторожно"
+        points:
+          bear: 2
+      - text: "Ищу выгоду"
+        points:
+          fox: 2
+
+  - question: "Как вы относитесь к прыжкам с парашютом?"
+    photo: Rug3XYX22+PUetL4nftuiHdCd5y6mYBCqKBazKW9V5T0bop7l1uZu7PktYZIDzeYhsh4RFTNA6ywOjIoxbxYeaWn0s07doNOZRmUDoSoN88=
+    options:
+      - text: "Это кайф"
+        points:
+          panther: 2
+      - text: "Интересно попробовать"
+        points:
+          wolf: 2
+      - text: "Лучше без этого"
+        points:
+          bear: 2
+      - text: "Сначала изучу всё"
+        points:
+          owl: 2
+      - text: "Риск — это весело"
+        points:
+          fox: 2
+
+  - question: "Какие продукты питания для вас незаменимы?"
+    photo: vdEsME95DcfIxFRq3so/XrD8spR40rIje1Qy0xlc4/6Y5KvOpFwZ4RycZS1DZUbjoU/MQKgpmT+bHJHbntR2hNryCJrvE82cy6l1H7QMDk8=
+    options:
+      - text: "Мясо"
+        points:
+          wolf: 2
+          bear: 1
+      - text: "Фрукты"
+        points:
+          fox: 2
+      - text: "Что-то необычное"
+        points:
+          panther: 2
+      - text: "Полезная еда"
+        points:
+          owl: 2
+      - text: "Домашняя еда"
+        points:
+          bear: 2
+
+  - question: "Где бы вам было комфортно жить?"
+    photo: QL4PbV195q0LeJoPFfPqb/cSpGcnsq6RYb4whbMRhoU0u9YSim+PjEcpEh8hgo8FE9FHpXVrWM31sLwK9n2TEXFB9tfjp7xC2Q7GwyPxN0Y=
+    options:
+      - text: "В лесу"
+        points:
+          wolf: 2
+      - text: "В горах"
+        points:
+          owl: 2
+      - text: "В большом доме"
+        points:
+          bear: 2
+      - text: "В мегаполисе"
+        points:
+          fox: 2
+      - text: "В уединении"
+        points:
+          panther: 2
+
+  - question: "У вас много друзей?"
+    photo: tFMe8uZwPeqQsqmUwi9K/C8ZjJKE3xlCq2CM5ZPU9P1wjWo6bPVolqNsovc9u2hMgpE+ccwF9k/JhXEhTkESJ0KBM0c9/kFFyIVVapZG5JQ=
+    options:
+      - text: "Очень много"
+        points:
+          fox: 2
+      - text: "Несколько близких"
+        points:
+          wolf: 2
+      - text: "Мне и одному комфортно"
+        points:
+          panther: 2
+      - text: "Мало, но надёжные"
+        points:
+          bear: 2
+- text: "Люблю наблюдать со стороны"
+        points:
+          owl: 2
+
+  - question: "Вы комфортно себя чувствуете в темноте?"
+    photo: uuo8x5zIdv/EO36uPjTduAvM+zU4oq1y/C/4RBZ2mlBHKYK6powme1ruBqeeBtH7DPWswAj/yyBVrrghAOd5+3TnRK08phSb9i69WhZJNPo=
+    options:
+      - text: "Да"
+        points:
+          panther: 2
+      - text: "Скорее да"
+        points:
+          owl: 2
+      - text: "Нейтрально"
+        points:
+          wolf: 2
+      - text: "Не очень"
+        points:
+          bear: 2
+      - text: "Если весело — да"
+        points:
+          fox: 2
+
+  - question: "Какие чувства у вас вызывает высота?"
+    photo: uNX/VHI8zDPO3rl8pj+y5mo8rYmu88d2p+MZUprMYEGbE5e9J0Zq/ABTVnJtKFRxkmPyvq7y7SAe9ZQBo98uXX0coYpVDTH0f8GqnUnzQ/4=
+    options:
+      - text: "Восторг"
+        points:
+          panther: 2
+      - text: "Спокойствие"
+        points:
+          owl: 2
+      - text: "Азарт"
+        points:
+          fox: 2
+      - text: "Немного страх"
+        points:
+          bear: 2
+      - text: "Свободу"
+        points:
+          wolf: 2
+
+  - question: "Как вы относитесь к воде?"
+    photo: +f5DQbMVbypRHhJKDG2d/t2udDco6X1NOFzBCDCAoNMJ23+ndn8uQLFTCJYoymaHSmpONzQxXzE9XbvHH83lA0fZFMvscB/YrfhmvFFfJxk=
+    options:
+      - text: "Люблю плавать"
+        points:
+          wolf: 2
+      - text: "Люблю спокойствие воды"
+        points:
+          owl: 2
+      - text: "Обожаю отдых у воды"
+        points:
+          bear: 2
+      - text: "Мне нравится дождь"
+        points:
+          panther: 2
+      - text: "Весело проводить время"
+        points:
+          fox: 2
+
+  - question: "В какое время суток вы чувствуете себя на подъеме?"
+    photo: bjNMogLg6NKjTa155PX+Zevr8lqZ3IHLtr79cHOwzSLoJEa1ZR6zy/RFIwED8MG1dDPnoKUg7NqeoKH4H42NKAGk0zNi/sNGk604Alr/uaY=
+    options:
+      - text: "Ночью"
+        points:
+          panther: 2
+      - text: "Рано утром"
+        points:
+          owl: 2
+      - text: "Днём"
+        points:
+          bear: 2
+      - text: "Вечером"
+        points:
+          wolf: 2
+      - text: "Всегда"
+        points:
+          fox: 2
+
+  - question: "Какое домашнее животное вы хотели бы себе завести?"
+    photo: 8kkmX9kI8is6nOA43eazkcdw+HTDKbeAeLtiW8zUXXJPQJ53EM9QqnTVDZ1nlhHz0g1PAHwsPd7Qe8tOjzCrr4oBGHTWIKoMQFVYunzxR98=
+    options:
+      - text: "Собаку"
+        points:
+          wolf: 2
+      - text: "Кота"
+        points:
+          panther: 2
+      - text: "Сову"
+        points:
+          owl: 2
+      - text: "Большую добрую собаку"
+        points:
+          bear: 2
+      - text: "Что-то необычное"
+        points:
+          fox: 2

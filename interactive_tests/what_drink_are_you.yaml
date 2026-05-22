@@ -1,0 +1,159 @@
+slug: what_drink_are_you
+title: 🥤 Какой ты напиток?
+photo: CEAvqiNEP3beh/CbHR2hfeaTmpizQ6s3GFLIWFVKDJgBXQShwvRXy5q5X4DWpA7D6rXcIlBuwXGsBYCOQczH2+1cIYxCJZ4ZBh8VjwojOew=
+
+description: |
+  <i><b>🥤 Какой ты напиток?</b></i>
+
+  Давай узнаем, какой ты напиток! В нашем тесте 6 вопросов.
+
+results:
+  - slug: water
+    photo: ""
+    description: |
+      <b>💧 Вода</b>
+
+      Ты спокойный, чистый и универсальный человек.
+
+  - slug: coffee
+    photo: ""
+    description: |
+      <b>☕ Кофе</b>
+
+      Ты энергичный, бодрый и активный человек.
+
+  - slug: tea
+    photo: ""
+    description: |
+      <b>🍵 Чай</b>
+
+      Ты мягкий, уютный и спокойный человек.
+
+  - slug: cola
+    photo: ""
+    description: |
+      <b>🥤 Кола</b>
+
+      Ты яркий, шумный и весёлый человек.
+
+  - slug: juice
+    photo: ""
+    description: |
+      <b>🧃 Сок</b>
+
+      Ты позитивный и лёгкий человек.
+
+questions:
+  - question: "Что ты пьёшь чаще всего?"
+    photo: KyDiaezckqFOh37RWf9dpeQw5e7T/EsZG/Bs+L5rMjdqp7KOTduXG2G4TIHu3fPBfIefDWo1XT9NIcwl0odabhrtMmoCBB3umcLAzBtVAOo=
+    options:
+      - text: "Вода"
+        points:
+          water: 2
+      - text: "Кофе"
+        points:
+          coffee: 2
+      - text: "Чай"
+        points:
+          tea: 2
+      - text: "Кола"
+        points:
+          cola: 2
+      - text: "Сок"
+        points:
+          juice: 2
+
+  - question: "Какой у тебя вайб?"
+    photo: AJlo4vH542MBU9BTdES5Kl5URGn/4IDiYw2N2U3QOEDxdHgUUtJOVNweFVVKb2aQU6wzlSIFQIXbfb9cSH6SbRNugy5mXis09pIO9OioMUU=
+    options:
+      - text: "Спокойный"
+        points:
+          water: 2
+      - text: "Энергичный"
+        points:
+          coffee: 2
+      - text: "Уютный"
+        points:
+          tea: 2
+      - text: "Весёлый"
+        points:
+          cola: 2
+      - text: "Лёгкий"
+        points:
+          juice: 2
+
+  - question: "Как ты начинаешь день?"
+    photo: Bex8l3Ds38Gb3l0wLJKSsd2MIGRz926WD7cHV6ewGcPhJEiDulWvI0qS4eBuLjnYP6/0kZzIZxdP7O2C1W2GNKNT4o1VF8AFUHUAZ2g5rPA=
+    options:
+      - text: "Спокойно"
+        points:
+          water: 2
+      - text: "С кофе"
+        points:
+          coffee: 2
+      - text: "Медленно"
+        points:
+          tea: 2
+      - text: "Бодро"
+        points:
+          cola: 2
+      - text: "С улыбки"
+        points:
+          juice: 2
+
+  - question: "Как ты в компании?"
+    photo: qEkd7tg8p/WCQ/Hq99tvLRnw/W+biyGLFgT/pt4vcllCaU529f//Oz19mB0HEvtpumAScn/80z2GFmojMbQH7geji1EhBr7VXRc7W1SYj5M=
+    options:
+      - text: "Спокойный"
+        points:
+          water: 2
+      - text: "Активный"
+        points:
+          coffee: 2
+      - text: "Комфортный"
+        points:
+          tea: 2
+      - text: "Шумный"
+        points:
+          cola: 2
+      - text: "Весёлый"
+        points:
+          juice: 2
+
+  - question: "Как ты реагируешь на стресс?"
+    photo: KADJr9FfaWvpraVhQTHmzoL6JRCNJiUtNt+i9hOgheYgMKpIhFwgYf6qT7/HpNnUChtOaWZTImz51LzXcwxv200xIOq3FDHBd0rDDMQjCfY=
+    options:
+      - text: "Спокойно"
+        points:
+          water: 2
+      - text: "Бодрюсь"
+        points:
+          coffee: 2
+      - text: "Ухожу в себя"
+        points:
+          tea: 2
+      - text: "Смеюсь"
+        points:
+          cola: 2
+      - text: "Сохраняю позитив"
+        points:
+          juice: 2
+
+  - question: "Твой характер?"
+    photo: dSOKX2CRnlnrrdHm4PPpXn3Wtt4BpGkTZv9SetpIuSBUzILuSjNiJoTUA6ccN9nT2RSD4OKu7CkFJnv1ckSzK/Be7j+i3n8Rm0/GzW/8P60=
+    options:
+      - text: "Чистый"
+        points:
+          water: 2
+      - text: "Энергичный"
+        points:
+          coffee: 2
+      - text: "Мягкий"
+        points:
+          tea: 2
+      - text: "Яркий"
+        points:
+          cola: 2
+      - text: "Лёгкий"
+        points:
+          juice: 2

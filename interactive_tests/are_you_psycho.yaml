@@ -1,0 +1,118 @@
+slug: are_you_psycho
+title: 🧠 Являешься ли ты психом?
+photo: VS2tPmSR4xSdByLnmKDx/7vw0PgqLS1hSPN0f2hsU9XC/7hpWmvclf9Ny6jG2/JL0YwkEZ91TjX6LIS00oumQn6iqRJiJKxI66gzsdWWtEg=
+
+description: |
+  <i><b>🧠 Являешься ли ты психом?</b></i>
+
+  Давай узнаем, насколько у тебя странный и хаотичный вайб? В нашем тесте 5 вопросов.
+
+results:
+  - slug: normal_person
+    photo: ""
+    description: |
+      <b>🙂 Абсолютно нормальный</b>
+
+      Ты спокойный и адекватный человек. Твои действия обычно логичны и предсказуемы.
+
+  - slug: little_weird
+    photo: ""
+    description: |
+      <b>😅 Немного странный</b>
+
+      Иногда твои мысли и поступки удивляют окружающих, но это делает тебя интереснее.
+
+  - slug: chaos_energy
+    photo: ""
+    description: |
+      <b>🔥 Ходячий хаос</b>
+
+      Ты непредсказуемый человек с очень странной энергетикой. С тобой никогда не скучно.
+
+  - slug: certified_psycho
+    photo: ""
+    description: |
+      <b>🌀 Сертифицированный псих</b>
+
+      Твои идеи, реакции и поступки — отдельный уровень хаоса и безумия.
+
+questions:
+  - question: "Ты идёшь по улице и видишь огромную лужу. Что ты делаешь?"
+    photo: +9eOLUjc2P1hpLscQB0m373F1Yje0WeDxvy4Tehca3Yjxv1iQDqa0+UIPpxfSQ0WWGNv7I2GgW01YbbPOJehoFkjzKjmWyqUdIb1jzoIuT8=
+    options:
+      - text: "Обхожу её"
+        points:
+          normal_person: 2
+      - text: "Аккуратно перепрыгиваю"
+        points:
+          little_weird: 2
+      - text: "Прыгаю прямо в неё"
+        points:
+          chaos_energy: 2
+      - text: "Смотрю в неё слишком долго"
+        points:
+          certified_psycho: 2
+
+  - question: "В холодильнике осталась только банка маринованных огурцов. Что будешь делать?"
+    photo: DGTTHhIDYV9kZxCVogERpTRHEn8XA7eLxwCtNm0/LzkZ12EooU4t2jZblb0trnYyTz4vwhDjTlxSSB9yt223c6+qjfr07tF5UvyyT1lWnjE=
+    options:
+      - text: "Закажу еду"
+        points:
+          normal_person: 2
+      - text: "Съем пару огурцов"
+        points:
+          little_weird: 2
+      - text: "Съем всю банку"
+        points:
+          chaos_energy: 2
+      - text: "Выпью рассол"
+        points:
+          certified_psycho: 2
+
+  - question: "Как ты отвечаешь на телефонные звонки?"
+    photo: VcmstjnG7wjNEDg1bUYmQnoakCTIz/T8YT3trzQTXTOcxxtxbGvufih83DhUXv+YoUAIycJqEM9k8fDtl3eAfQlzC6DXIsC66OK/wnahI6Y=
+    options:
+      - text: "Обычным «алло»"
+        points:
+          normal_person: 2
+      - text: "Шучу"
+        points:
+          little_weird: 2
+      - text: "Молчу в трубку"
+        points:
+          chaos_energy: 2
+      - text: "Говорю странным голосом"
+        points:
+          certified_psycho: 2
+
+  - question: "Если бы у тебя появился невидимый друг, кто бы это был?"
+    photo: vBSvSZK+92HP1SHVwOSoL8b05GrRzMoSsAXVcS7Fp2NhfrIsZtFRaG29LZqa9Rp44QJ3n6nwpNCmau2EQCBg3XZejCzFyUacRpWWsT12qEI=
+    options:
+      - text: "Обычный человек"
+        points:
+          normal_person: 2
+      - text: "Весёлый друг"
+        points:
+          little_weird: 2
+      - text: "Странное существо"
+        points:
+          chaos_energy: 2
+      - text: "Я сам"
+        points:
+          certified_psycho: 2
+
+  - question: "Что ты делаешь, когда остаёшься один дома?"
+    photo: vBSvSZK+92HP1SHVwOSoL8b05GrRzMoSsAXVcS7Fp2NhfrIsZtFRaG29LZqa9Rp44QJ3n6nwpNCmau2EQCBg3XZejCzFyUacRpWWsT12qEI=
+    options:
+      - text: "Отдыхаю"
+        points:
+          normal_person: 2
+      - text: "Смотрю видео"
+        points:
+          little_weird: 2
+      - text: "Начинаю странно себя вести"
+        points:
+          chaos_energy: 2
+      - text: "Разговариваю сам с собой"
+        points:
+          certified_psycho: 2

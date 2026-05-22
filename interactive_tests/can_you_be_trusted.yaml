@@ -1,0 +1,207 @@
+slug: can_you_be_trusted
+title: 🤝 Можно ли тебе доверять?
+photo: 6gPgNgGDq2Q14vPEsNoiLY0KJB3PBTgURMrlArQdLTWJtc0+KYPWBfK9mjduQIttKr3u0/nmC/9mlZGuh4bRNjyJyfv5/3VkHYTA2ytibmE=
+
+description: |
+  <i><b>🤝 Можно ли тебе доверять?</b></i>
+
+  Давай узнаем, насколько тебе доверяют люди! В нашем тесте 7 вопросов, которые помогут определить твой уровень надёжности и доверия.
+
+results:
+  - slug: highly_trusted
+    photo: ""
+    description: |
+      <b>🕊️ Абсолютно надёжный человек</b>
+
+      Тебе полностью доверяют люди. Ты умеешь хранить секреты, держишь слово и всегда остаёшься верным своим принципам.
+
+  - slug: trusted
+    photo: ""
+    description: |
+      <b>🤍 Надёжный человек</b>
+
+      Тебе в целом доверяют. Иногда бывают мелкие сомнения, но ты обычно ответственный и честный.
+
+  - slug: moderate_trust
+    photo: ""
+    description: |
+      <b>🙂 Умеренное доверие</b>
+
+      Люди доверяют тебе, но не всегда полностью уверены. Иногда ты можешь быть непредсказуем в словах или действиях.
+
+  - slug: low_trust
+    photo: ""
+    description: |
+      <b>⚠️ Низкий уровень доверия</b>
+
+      Людям сложно полностью положиться на тебя. Иногда ты можешь нарушать обещания или делиться лишним.
+
+  - slug: untrusted
+    photo: ""
+    description: |
+      <b>🚫 Тебе не очень доверяют</b>
+
+      Тебе редко доверяют секреты и важные дела. Люди опасаются, что информация может стать известной другим.
+
+questions:
+  - question: "Как вы реагируете на чужие секреты?"
+    photo: pz2LOYS9no4wbNHUq4uCOBcL5W4iuKtq1cfe3AxDIwvPuDP8xd97wC35lv+fSe8bsxcbLZBdFtaXiQsxzLuNcVStlgAyBeZsJ8mx7fNdWIY=
+
+    options:
+      - text: "Храню их в тайне"
+        points:
+          highly_trusted: 2
+          trusted: 1
+
+      - text: "Слушаю, но не обсуждаю"
+        points:
+          trusted: 2
+          moderate_trust: 1
+
+      - text: "Могу случайно рассказать"
+        points:
+          low_trust: 2
+          moderate_trust: 1
+
+      - text: "Делюсь с близкими"
+        points:
+          untrusted: 2
+          low_trust: 1
+
+  - question: "Вы когда-нибудь нарушали обещание?"
+    photo: edW/tcKr0NkjZUdwS27aD7txBArza1z8HoW6rH4/z6a2GURsZhZs3yd1+5FJSBhf2lK3CB/5lI4+m+rgSvx9VV3I9Mawoir910sOrdn4uw8=
+    options:
+      - text: "Никогда"
+        points:
+          highly_trusted: 2
+          trusted: 1
+
+      - text: "Очень редко"
+        points:
+          trusted: 2
+          moderate_trust: 1
+
+      - text: "Иногда бывает"
+        points:
+          moderate_trust: 2
+          low_trust: 1
+
+      - text: "Часто"
+        points:
+          low_trust: 2
+          untrusted: 2
+
+  - question: "Как вы ведёте себя с друзьями?"
+    photo: /txL2MWm9JNIXCBbvyvG+A+UBeS5zhPDnNCmG/FVhN54YfhuJUNwuclBfhtZQ6CFtI0xcK0WZADOE6jGZ4fSpR6yOKb3JSfIbIoSud1BUAZsgJj+BuulN+EiNWb7aevn
+    options:
+      - text: "Верно и честно"
+        points:
+          highly_trusted: 2
+          trusted: 1
+
+      - text: "Обычно честно"
+        points:
+          trusted: 2
+          moderate_trust: 1
+
+      - text: "Иногда непостоянно"
+        points:
+          moderate_trust: 2
+          low_trust: 1
+
+      - text: "Могу подвести"
+        points:
+          low_trust: 2
+          untrusted: 1
+
+  - question: "Что делаете, если знаете чужую тайну?"
+    photo: q2rrdeZDtL0w7FWWkgXaoAC15n3r+1pKGGg0IWSI0IDFnXUoH4WNa3jld3NeCU6Q/W0OEzec0ANZuPgMN7TBEz3ShJ7RJWM1Ae8019ueagc=
+    options:
+      - text: "Никому не рассказываю"
+        points:
+          highly_trusted: 2
+          trusted: 1
+
+      - text: "Храню при себе"
+        points:
+          trusted: 2
+          moderate_trust: 1
+
+      - text: "Обсуждаю с близкими"
+        points:
+          low_trust: 2
+          moderate_trust: 1
+
+      - text: "Могу рассказать дальше"
+        points:
+          untrusted: 2
+          low_trust: 1
+
+  - question: "Как вы принимаете решения о помощи другим?"
+    photo: FHQXmqEaQNu45FTQMvRdW21bSNlK1JOBGHsW+8SZYirvNIJMc2cafkxAXfOxQnJ9kJezeZkxzuWs4TCyEQinuCK5tKNA1Pqr4RPIuV7sU8M=
+    options:
+      - text: "Всегда помогаю"
+        points:
+          highly_trusted: 2
+          trusted: 1
+
+      - text: "Чаще помогаю"
+        points:
+          trusted: 2
+          moderate_trust: 1
+
+      - text: "Смотря по ситуации"
+        points:
+          moderate_trust: 2
+          low_trust: 1
+
+      - text: "Редко помогаю"
+        points:
+          low_trust: 2
+          untrusted: 1
+
+  - question: "Можете ли вы хранить сложные секреты?"
+    photo: nO6shlHQQ3naPoFUTxvhLpK8udxiZjdqUejKSPoXsRqa53XMe7I4lVpWEDM7DBjjenu2L205DQNQvhKvH+2aoM8vXPmXDv5KznmLgikvgEo=
+    options:
+      - text: "Да, всегда"
+        points:
+          highly_trusted: 2
+          trusted: 1
+
+      - text: "В большинстве случаев"
+        points:
+          trusted: 2
+          moderate_trust: 1
+
+      - text: "Не всегда"
+        points:
+          moderate_trust: 2
+          low_trust: 1
+
+      - text: "Сложно"
+        points:
+low_trust: 2
+          untrusted: 1
+
+  - question: "Как вы относитесь к сплетням?"
+    photo: xfoyEeUW5EjY4GUbnjMd0Mq0G4QBxd6oL99eU8sUA+ONfpiascxoPJmsqi8hbxdjee36RsvQTXWADZyBpR6a847XEsNvwmC7UXXoChWEwhs=
+    options:
+      - text: "Не участвую"
+        points:
+          highly_trusted: 2
+          trusted: 1
+
+      - text: "Слушаю, но не распространяю"
+        points:
+          trusted: 2
+          moderate_trust: 1
+
+      - text: "Иногда обсуждаю"
+        points:
+          moderate_trust: 2
+          low_trust: 1
+
+      - text: "Люблю сплетни"
+        points:
+          untrusted: 2
+          low_trust: 1

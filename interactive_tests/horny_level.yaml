@@ -1,0 +1,140 @@
+slug: horny_level
+title: 🥵 Насколько ты пошлый?
+photo: S1Yx+iwvW7SyNWLmQI98W3Ocbg7GZEwUaJ2qKHk/fNg8YBFa2Vhfr5mYINsigF5Uo796Yc4mKkWjlZPxxQeEsO6YlfMvoTNsWlKGaWuJvdM=
+
+description: |
+  <i><b>🥵 Насколько ты пошлый?</b></i>
+
+  Давай узнаем твой уровень пошлости! В нашем тесте 5 вопросов.
+
+results:
+  - slug: pure
+    photo: ""
+    description: |
+      <b>😇 Чистый ангел</b>
+
+      Ты скромный и невинный человек.
+
+  - slug: light_flirt
+    photo: ""
+    description: |
+      <b>🙂 Лёгкий флирт</b>
+
+      Иногда ты шутишь, но в меру.
+
+  - slug: flirty
+    photo: ""
+    description: |
+      <b>😉 Флиртующий</b>
+
+      Ты любишь намёки и лёгкие шутки.
+
+  - slug: spicy
+    photo: ""
+    description: |
+      <b>🔥 Остроумный</b>
+
+      У тебя много намёков и смелого юмора.
+
+  - slug: very_spicy
+    photo: ""
+    description: |
+      <b>🥵 Очень горячий</b>
+
+      Ты часто шутишь на грани и любишь провокации.
+
+questions:
+  - question: "Как ты шутишь?"
+    photo: CK7fbPR3eh2a3DpBjYHf8julS1p6IG9g+GomWGFesV1NlGgWIx4PmQ8w6+Nl24Gxs/7V/mkKO6NXdQV2bRKrULciZEgdwiW9Yk0lO8Fwets=
+    options:
+      - text: "Без намёков"
+        points:
+          pure: 2
+      - text: "Иногда с намёками"
+        points:
+          light_flirt: 2
+      - text: "Часто с намёками"
+        points:
+          flirty: 2
+      - text: "Смело"
+        points:
+          spicy: 2
+      - text: "Очень смело"
+        points:
+          very_spicy: 2
+
+  - question: "Как ты в переписке?"
+    photo: fT5rZrqUEZ8CofABaBI59IKMhrDhKgh1emLgUUXM9U+2vvc3qjOYqP+55A++BBNxh3eZ8BCR9hPbxDGyhOLT8p2844EQEiTfjGJ4skBtvkA=
+    options:
+      - text: "Скромно"
+        points:
+          pure: 2
+      - text: "Немного флирта"
+        points:
+          light_flirt: 2
+      - text: "Флиртую"
+        points:
+          flirty: 2
+      - text: "Провоцирую"
+        points:
+          spicy: 2
+      - text: "Очень дерзко"
+        points:
+          very_spicy: 2
+
+  - question: "Как реагируешь на флирт?"
+    photo: 8xEo48HL/eQksfNLnuC9p/jQR8znUzIWIm+1z2aKY+ACMadO2FAndYrrCegBbAT+YzoC1rAZQXzutoOzYcyjGajab65mnebq/+NUG6qd2KM=
+    options:
+      - text: "Смущаюсь"
+        points:
+          pure: 2
+      - text: "Улыбаюсь"
+        points:
+          light_flirt: 2
+      - text: "Отвечаю"
+        points:
+          flirty: 2
+      - text: "Поддерживаю"
+        points:
+          spicy: 2
+      - text: "Играю в ответ"
+        points:
+          very_spicy: 2
+
+  - question: "Как ты ведёшь себя с симпатией?"
+    photo: dDSPYnflEQU9/NOmQkStjemEipOr9pb1icMC717k+Rho52gpa6SXDyFP/ACOIYsm9uHK2XyxfKdgPZnoWyUMRh66n9ywk6LjuZJTwZ/GUvc=
+    options:
+      - text: "Скромно"
+        points:
+          pure: 2
+      - text: "Аккуратно флиртую"
+        points:
+          light_flirt: 2
+      - text: "Проявляю интерес"
+        points:
+          flirty: 2
+      - text: "Активно флиртую"
+        points:
+          spicy: 2
+      - text: "Играю в открытую"
+        points:
+          very_spicy: 2
+
+  - question: "Как ты в компании?"
+    photo: MF40cOfdWEyrHJ4Wa0TQpwfAsq9/UCcxLoCdGB36QikNy6h1T74Q1hNryFd6BSf2VvL6Zz3osJdZXjR4FTRyMXZvVn6g/hVdNMcR9kUttqw=
+    options:
+      - text: "Тихий"
+        points:
+          pure: 2
+      - text: "Спокойный"
+        points:
+          light_flirt: 2
+      - text: "Общительный"
+        points:
+          flirty: 2
+      - text: "Дерзкий"
+        points:
+          spicy: 2
+      - text: "Очень яркий"
+        points:
+          very_spicy: 2
